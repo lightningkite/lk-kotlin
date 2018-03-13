@@ -5,14 +5,11 @@ buildscript {
     ext.repositoryGroupName = 'lk-kotlin'
     ext.kotlinVersion = '1.2.21'
     ext.libraryVersion = '0.0.4'
-    ext.ankoVersion = '0.10.0'
-    ext.compatVersion = '27.1.0'
     repositories {
         google()
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}"
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.0'
 

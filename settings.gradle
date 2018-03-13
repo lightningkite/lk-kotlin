@@ -1,29 +1,4 @@
-include ':app',
-
-        ':lk-android-mighty-view',
-
-        ':lk-android-activity-access',
-        ':lk-android-animations',
-        ':lk-android-animations-observable',
-        ':lk-android-design-extensions',
-        ':lk-android-dialogs',
-        ':lk-android-extensions',
-        ':lk-android-image-loading',
-        ':lk-android-image-loading-observable',
-        ':lk-android-lifecycle',
-        ':lk-android-observable',
-        ':lk-android-observable-validation',
-        ':lk-android-ui-thread',
-
-        ':lk-anko-activity-access',
-        ':lk-anko-adapters-observable',
-        ':lk-anko-adapters',
-        ':lk-anko-animations-observable',
-        ':lk-anko-animations',
-        ':lk-anko-deprection',
-        ':lk-anko-extensions',
-
-        ':lk-kotlin-utils',
+include ':lk-kotlin-utils',
         ':lk-kotlin-jvm-utils',
         ':lk-kotlin-jackson',
         ':lk-kotlin-okhttp',
@@ -33,7 +8,4 @@ include ':app',
         ':lk-kotlin-observable-property-jvm',
         ':lk-kotlin-observable-property-lifecycle',
         ':lk-kotlin-observable-list',
-        ':lk-kotlin-observable-list-lifecycle',
-
-        ':lk-anko-view-controllers-deprecated',
-        ':lk-everything-deprecated'
+        ':lk-kotlin-observable-list-lifecycle'
