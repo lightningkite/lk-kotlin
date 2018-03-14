@@ -1,0 +1,85 @@
+buildscript {
+    ext.kotlin_version = rootProject.kotlinVersion
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${rootProject.kotlinVersion}"
+        classpath "org.jetbrains.dokka:dokka-gradle-plugin:${rootProject.dokkaVersion}"
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.0'
+    }
+}
+
+apply plugin: 'kotlin'
+apply plugin: 'org.jetbrains.dokka'
+
+dokka {
+    outputFormat = 'html'
+    outputDirectory = "$buildDir/javadoc"
+
+    linkMapping {
+        // Source directory
+        dir = "src/main/kotlin"
+
+        // URL showing where the source code can be accessed through the web browser
+        url = "https://github.com/lightningkite/lk-kotlin/blob/master/${project.name}/src/main/kotlin"
+
+        // Suffix which is used to append the line number to the URL. Use #L for GitHub
+        suffix = "#L"
+    }
+}
+
+//Bintray
+
+task sourceJar(type: Jar) {
+    classifier 'sources'
+    from sourceSets.main.allJava
+}
+
+task dokkaJar(type: Jar) {
+    group = JavaBasePlugin.DOCUMENTATION_GROUP
+    description = "Assembles Kotlin docs with Dokka"
+    classifier = "javadoc"
+    from dokka
+}
+
+
+apply plugin: 'maven-publish'
+publishing {
+    publications {
+        mavenJava(MavenPublication){
+            from components.java
+            artifact tasks.sourceJar
+            artifact tasks.dokkaJar
+            groupId rootProject.repositoryGroupName
+            artifactId project.name
+            version rootProject.libraryVersion
+        }
+    }
+}
+
+def bintrayPropertiesFile = rootProject.file("bintray.properties")
+if(bintrayPropertiesFile.exists()){
+    def bintrayProperties = new Properties()
+    bintrayProperties.load(new FileInputStream(bintrayPropertiesFile))
+
+    apply plugin: 'com.jfrog.bintray'
+    bintray {
+        user = bintrayProperties['bintrayUser']
+        key = bintrayProperties['bintrayKey']
+        publications = ['mavenJava']
+        publish = bintrayProperties['bintrayPublish']
+        pkg {
+            repo = rootProject.repositoryGroupName
+            name = project.name
+            userOrg = bintrayProperties['bintrayOrganization']
+            licenses = [bintrayProperties['bintrayLicense']]
+            vcsUrl = bintrayProperties['bintrayVcs']
+            version {
+                name = rootProject.libraryVersion
+                released = new Date()
+            }
+        }
+    }
+}
