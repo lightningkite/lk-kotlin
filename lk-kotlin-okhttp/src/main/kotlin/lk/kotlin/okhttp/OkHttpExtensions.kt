@@ -6,6 +6,9 @@ package lk.kotlin.okhttp
 
 import okhttp3.*
 import okhttp3.internal.Util
+import okio.BufferedSink
+import okio.Okio
+import okio.Source
 import java.io.File
 import java.io.InputStream
 

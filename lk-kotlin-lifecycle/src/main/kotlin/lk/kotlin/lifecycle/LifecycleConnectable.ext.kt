@@ -9,6 +9,9 @@ package lk.kotlin.lifecycle
  * Created by jivie on 6/1/16.
  */
 
+/**
+ * Adds the [item] to the [collection] when the lifecycle starts and removes it when the lifecycle stops.
+ */
 fun <T> LifecycleConnectable.listen(collection: MutableCollection<T>, item: T) {
     connect(object : LifecycleListener {
         override fun onStart() {
@@ -21,6 +24,9 @@ fun <T> LifecycleConnectable.listen(collection: MutableCollection<T>, item: T) {
     })
 }
 
+/**
+ * Adds the [listener] to the events when the lifecycle starts and removes it when the lifecycle stops.
+ */
 fun <A, B> LifecycleConnectable.listen(eventA: MutableCollection<(A) -> Unit>, eventB: MutableCollection<(B) -> Unit>, listener: () -> Unit) {
     connect(object : LifecycleListener {
         val listenerA = { it: A -> listener() }
@@ -38,6 +44,9 @@ fun <A, B> LifecycleConnectable.listen(eventA: MutableCollection<(A) -> Unit>, e
     })
 }
 
+/**
+ * Adds the [listener] to the events when the lifecycle starts and removes it when the lifecycle stops.
+ */
 fun <A, B, C> LifecycleConnectable.listen(
         eventA: MutableCollection<(A) -> Unit>,
         eventB: MutableCollection<(B) -> Unit>,
@@ -63,6 +72,10 @@ fun <A, B, C> LifecycleConnectable.listen(
     })
 }
 
+/**
+ * Adds the [listener] to the [event] when the lifecycle starts and removes it when the lifecycle stops.
+ * Also runs the [listener] immediately with the [firstRunValue].
+ */
 fun <T> LifecycleConnectable.bind(event: MutableCollection<(T) -> Unit>, firstRunValue: T, listener: (T) -> Unit) {
     connect(object : LifecycleListener {
         override fun onStart() {
@@ -76,6 +89,10 @@ fun <T> LifecycleConnectable.bind(event: MutableCollection<(T) -> Unit>, firstRu
     })
 }
 
+/**
+ * Adds the [listener] to the [event] when the lifecycle starts and removes it when the lifecycle stops.
+ * Also runs the [listener] immediately.
+ */
 fun LifecycleConnectable.bind(event: MutableCollection<() -> Unit>, listener: () -> Unit) {
     connect(object : LifecycleListener {
         override fun onStart() {

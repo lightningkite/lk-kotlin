@@ -4,11 +4,7 @@
 
 package lk.kotlin.jvm.utils.lambda
 
-/**
- *
- * Created by joseph on 9/2/16.
- */
-class CooldownLambda(val time: Long, val inner: () -> Unit) : () -> Unit {
+private class CooldownLambda(val time: Long, val inner: () -> Unit) : () -> Unit {
     var lastTime = 0L
     override fun invoke() {
         val now = System.currentTimeMillis()
@@ -19,4 +15,7 @@ class CooldownLambda(val time: Long, val inner: () -> Unit) : () -> Unit {
     }
 }
 
-fun (() -> Unit).cooldown(time: Long): () -> Unit = CooldownLambda(time, this)
+/**
+ * Adds a cooldown to a lambda, such that if it happened within the last [milliseconds] milliseconds, then the lambda will not be run.
+ */
+fun (() -> Unit).cooldown(milliseconds: Long): () -> Unit = CooldownLambda(milliseconds, this)

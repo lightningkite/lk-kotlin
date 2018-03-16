@@ -3,43 +3,55 @@
 
 package lk.kotlin.utils.collection
 
-
-fun <S, T> MutableListIterator<S>.mapping(mapper: (S) -> T, reverseMapper: (T) -> S): MutableListIterator<T> {
+/**
+ * Returns a wrapper that maps the iterator to have items of a different type.
+ */
+fun <S, T> MutableListIterator<S>.mapping(read: (S) -> T, write: (T) -> S): MutableListIterator<T> {
     return object : MutableListIterator<T> {
         override fun hasPrevious(): Boolean = this@mapping.hasPrevious()
         override fun nextIndex(): Int = this@mapping.nextIndex()
-        override fun previous(): T = mapper(this@mapping.previous())
+        override fun previous(): T = read(this@mapping.previous())
         override fun previousIndex(): Int = this@mapping.previousIndex()
-        override fun add(element: T) = this@mapping.add(reverseMapper(element))
+        override fun add(element: T) = this@mapping.add(write(element))
         override fun hasNext(): Boolean = this@mapping.hasNext()
-        override fun next(): T = mapper(this@mapping.next())
+        override fun next(): T = read(this@mapping.next())
         override fun remove() = this@mapping.remove()
-        override fun set(element: T) = this@mapping.set(reverseMapper(element))
+        override fun set(element: T) = this@mapping.set(write(element))
     }
 }
 
-fun <S, T> MutableIterator<S>.mapping(mapper: (S) -> T, reverseMapper: (T) -> S): MutableIterator<T> {
+/**
+ * Returns a wrapper that maps the iterator to have items of a different type.
+ */
+@JvmName("mappingMutable")
+fun <S, T> MutableIterator<S>.mapping(read: (S) -> T): MutableIterator<T> {
     return object : MutableIterator<T> {
         override fun hasNext(): Boolean = this@mapping.hasNext()
-        override fun next(): T = mapper(this@mapping.next())
+        override fun next(): T = read(this@mapping.next())
         override fun remove() = this@mapping.remove()
     }
 }
 
-fun <S, T> Iterator<S>.mapping(mapper: (S) -> T): Iterator<T> {
+/**
+ * Returns a wrapper that maps the iterator to have items of a different type.
+ */
+fun <S, T> Iterator<S>.mapping(read: (S) -> T): Iterator<T> {
     return object : Iterator<T> {
         override fun hasNext(): Boolean = this@mapping.hasNext()
-        override fun next(): T = mapper(this@mapping.next())
+        override fun next(): T = read(this@mapping.next())
     }
 }
 
-fun <S, T> ListIterator<S>.mapping(mapper: (S) -> T): ListIterator<T> {
+/**
+ * Returns a wrapper that maps the iterator to have items of a different type.
+ */
+fun <S, T> ListIterator<S>.mapping(read: (S) -> T): ListIterator<T> {
     return object : ListIterator<T> {
         override fun hasPrevious(): Boolean = this@mapping.hasPrevious()
         override fun nextIndex(): Int = this@mapping.nextIndex()
-        override fun previous(): T = mapper(this@mapping.previous())
+        override fun previous(): T = read(this@mapping.previous())
         override fun previousIndex(): Int = this@mapping.previousIndex()
         override fun hasNext(): Boolean = this@mapping.hasNext()
-        override fun next(): T = mapper(this@mapping.next())
+        override fun next(): T = read(this@mapping.next())
     }
 }

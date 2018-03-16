@@ -5,7 +5,14 @@ package lk.kotlin.utils.lambda
 
 
 /**
- *
+ * These functions are extremely handy for using collections as events.  Example:
+ * <code>
+ *     val onIntFound = ArrayList<(Int)->Unit>()
+ *     onIntFound += { println(it) } //adds a listener
+ *     onIntFound.invokeAll(1)
+ *     onIntFound.invokeAll(2)
+ *     onIntFound.invokeAll(3)
+ * </code>
  * Created by joseph on 9/27/17.
  */
 
@@ -55,86 +62,4 @@ fun <A, B, C, D> Iterable<(A, B, C, D) -> Unit>.invokeAll(a: A, b: B, c: C, d: D
     for (item in this) {
         item(a, b, c, d)
     }
-}
-
-
-/**
- * Adds the lambda to the collection, removing it once it's been invoked.
- */
-inline fun <A> MutableCollection<(A) -> Unit>.addInvokeOnce(crossinline lambda: (A) -> Unit) {
-    add(object : (A) -> Unit {
-        override fun invoke(a: A) {
-            lambda.invoke(a)
-            remove(this)
-        }
-    })
-}
-
-/**
- * Adds the lambda to the collection, removing it once it's been invoked.
- */
-inline fun <A, B> MutableCollection<(A, B) -> Unit>.addInvokeOnce(crossinline lambda: (A, B) -> Unit) {
-    add(object : (A, B) -> Unit {
-        override fun invoke(a: A, b: B) {
-            lambda.invoke(a, b)
-            remove(this)
-        }
-    })
-}
-
-/**
- * Adds the lambda to the collection, removing it once it's been invoked.
- */
-inline fun <A, B, C> MutableCollection<(A, B, C) -> Unit>.addInvokeOnce(crossinline lambda: (A, B, C) -> Unit) {
-    add(object : (A, B, C) -> Unit {
-        override fun invoke(a: A, b: B, c: C) {
-            lambda.invoke(a, b, c)
-            remove(this)
-        }
-    })
-}
-
-/**
- * Adds the lambda to the collection, removing it once it's been invoked.
- * @arg filter Filters out calls that you want to ignore.
- */
-inline fun <A> MutableCollection<(A) -> Unit>.addInvokeOnce(crossinline filter: (A) -> Boolean, crossinline lambda: (A) -> Unit) {
-    add(object : (A) -> Unit {
-        override fun invoke(a: A) {
-            if (filter.invoke(a)) {
-                lambda.invoke(a)
-                remove(this)
-            }
-        }
-    })
-}
-
-/**
- * Adds the lambda to the collection, removing it once it's been invoked.
- * @arg filter Filters out calls that you want to ignore.
- */
-inline fun <A, B> MutableCollection<(A, B) -> Unit>.addInvokeOnce(crossinline filter: (A, B) -> Boolean, crossinline lambda: (A, B) -> Unit) {
-    add(object : (A, B) -> Unit {
-        override fun invoke(a: A, b: B) {
-            if (filter.invoke(a, b)) {
-                lambda.invoke(a, b)
-                remove(this)
-            }
-        }
-    })
-}
-
-/**
- * Adds the lambda to the collection, removing it once it's been invoked.
- * @arg filter Filters out calls that you want to ignore.
- */
-inline fun <A, B, C> MutableCollection<(A, B, C) -> Unit>.addInvokeOnce(crossinline filter: (A, B, C) -> Boolean, crossinline lambda: (A, B, C) -> Unit) {
-    add(object : (A, B, C) -> Unit {
-        override fun invoke(a: A, b: B, c: C) {
-            if (filter.invoke(a, b, c)) {
-                lambda.invoke(a, b, c)
-                remove(this)
-            }
-        }
-    })
 }
