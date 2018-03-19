@@ -1,4 +1,4 @@
-# lk-kotlin-observable-list-lifecycle
+# Module lk-kotlin-observable-list-lifecycle
 
 Extensions for listening to observable lists only during the active part of a lifecycle.
 

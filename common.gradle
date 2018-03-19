@@ -16,7 +16,8 @@ apply plugin: 'org.jetbrains.dokka'
 
 dokka {
     outputFormat = 'html'
-    outputDirectory = "$buildDir/javadoc"
+    outputDirectory = rootProject.file('docs').absolutePath
+    includes = ['README.md']
 
     linkMapping {
         // Source directory
@@ -28,6 +29,8 @@ dokka {
         // Suffix which is used to append the line number to the URL. Use #L for GitHub
         suffix = "#L"
     }
+    externalDocumentationLink { url = new URL("http://square.github.io/okhttp/3.x/okhttp/") }
+    externalDocumentationLink { url = new URL("http://fasterxml.github.io/jackson-core/javadoc/2.5/") }
 }
 
 //Bintray
@@ -48,7 +51,7 @@ task dokkaJar(type: Jar) {
 apply plugin: 'maven-publish'
 publishing {
     publications {
-        mavenJava(MavenPublication){
+        mavenJava(MavenPublication) {
             from components.java
             artifact tasks.sourceJar
             artifact tasks.dokkaJar
@@ -60,7 +63,7 @@ publishing {
 }
 
 def bintrayPropertiesFile = rootProject.file("bintray.properties")
-if(bintrayPropertiesFile.exists()){
+if (bintrayPropertiesFile.exists()) {
     def bintrayProperties = new Properties()
     bintrayProperties.load(new FileInputStream(bintrayPropertiesFile))
 

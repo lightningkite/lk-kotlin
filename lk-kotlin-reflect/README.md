@@ -1,4 +1,4 @@
-# lk-kotlin-reflect
+# Module lk-kotlin-reflect
 
 Kotlin reflection boosted with ReflectASM.
 

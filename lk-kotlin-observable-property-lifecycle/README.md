@@ -1,4 +1,4 @@
-# lk-kotlin-observable-property-lifecycle
+# Module lk-kotlin-observable-property-lifecycle
 
 Extensions for listening to observable properties only during the active part of a lifecycle.
 

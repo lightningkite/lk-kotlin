@@ -1,4 +1,4 @@
-# lk-kotlin-okhttp-jackson
+# Module lk-kotlin-okhttp-jackson
 
  Adds Jackson functionality to the OkHttp extensions.
 

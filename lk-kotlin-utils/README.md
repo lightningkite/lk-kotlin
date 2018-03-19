@@ -1,4 +1,4 @@
-# lk-kotlin-utils
+# Module lk-kotlin-utils
 
 Various useful extension functions
 

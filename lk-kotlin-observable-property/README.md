@@ -1,4 +1,4 @@
-# lk-kotlin-observable-property
+# Module lk-kotlin-observable-property
 
 Defines an *extremely* lightweight observable property for use with databinding.
 
