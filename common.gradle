@@ -92,6 +92,8 @@ if (bintrayPropertiesFile.exists()) {
             userOrg = bintrayProperties['bintrayOrganization']
             licenses = [bintrayProperties['bintrayLicense']]
             vcsUrl = bintrayProperties['bintrayVcs']
+            websiteUrl = bintrayProperties['bintrayWebsite']
+            issueTrackerUrl = bintrayProperties['bintrayIssues']
             version {
                 name = rootProject.libraryVersion
                 released = new Date()
