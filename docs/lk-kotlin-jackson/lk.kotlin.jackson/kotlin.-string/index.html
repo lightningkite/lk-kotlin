@@ -1,107 +1,37 @@
 <HTML>
 <HEAD>
-    <meta charset="UTF-8">
-    <title>lk.kotlin.jackson.kotlin.String - lk-kotlin-jackson</title>
-    <link rel="stylesheet" href="../../../style.css">
+<meta charset="UTF-8">
+<title>lk.kotlin.jackson.kotlin.String - lk-kotlin-jackson</title>
+<link rel="stylesheet" href="../../../style.css">
 </HEAD>
 <BODY>
-<a href="../../index.html">lk-kotlin-jackson</a>&nbsp;/&nbsp;<a
-        href="../index.html">lk.kotlin.jackson</a>&nbsp;/&nbsp;<a href="./index.html">kotlin.String</a><br/>
+<a href="../../index.html">lk-kotlin-jackson</a>&nbsp;/&nbsp;<a href="../index.html">lk.kotlin.jackson</a>&nbsp;/&nbsp;<a href="./index.html">kotlin.String</a><br/>
 <br/>
 <h3>Extensions for kotlin.String</h3>
 <table>
-    <tbody>
-    <tr>
-        <td>
-            <p><a href="jackson-from-string.html">jacksonFromString</a></p>
-        </td>
-        <td>
-            <code><span class="keyword">fun </span><span class="symbol">&lt;</span><span
-                    class="identifier">T</span><span class="symbol">&gt;</span> <a
-                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
-                    class="identifier">String</span></a><span class="symbol">.</span><span class="identifier">jacksonFromString</span><span
-                    class="symbol">(</span><span class="identifier"
-                                                 id="lk.kotlin.jackson$jacksonFromString(kotlin.String, com.fasterxml.jackson.databind.ObjectMapper)/mapper">mapper</span><span
-                    class="symbol">:</span>&nbsp;<a
-                    href="http://fasterxml.github.io/jackson-databind/javadoc/2.9/com/fasterxml/jackson/databind/ObjectMapper.html"><span
-                    class="identifier">ObjectMapper</span></a>&nbsp;<span
-                    class="symbol">=</span>&nbsp;MyJackson.mapper<span class="symbol">)</span><span
-                    class="symbol">: </span><a
-                    href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-jackson/lk.kotlin.jackson/jackson-from-string/-t/index.html"><span
-                    class="identifier">T</span></a></code>
-            <p>Converts a JSON string back into an object <a
-                    href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-jackson/lk.kotlin.jackson/jackson-from-string/mapper.html">mapper</a>,
-                specifically in terms of the given type <a
-                        href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-jackson/lk.kotlin.jackson/jackson-from-string/-t/index.html">T</a>.
-            </p>
-            <code><span class="keyword">fun </span><span class="symbol">&lt;</span><span
-                    class="identifier">T</span><span class="symbol">&gt;</span> <a
-                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
-                    class="identifier">String</span></a><span class="symbol">.</span><span class="identifier">jacksonFromString</span><span
-                    class="symbol">(</span><span class="identifier"
-                                                 id="lk.kotlin.jackson$jacksonFromString(kotlin.String, java.lang.Class((lk.kotlin.jackson.jacksonFromString.T)), com.fasterxml.jackson.databind.ObjectMapper)/type">type</span><span
-                    class="symbol">:</span>&nbsp;<a
-                    href="http://docs.oracle.com/javase/6/docs/api/java/lang/Class.html"><span
-                    class="identifier">Class</span></a><span class="symbol">&lt;</span><a
-                    href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-jackson/lk.kotlin.jackson/jackson-from-string/-t/index.html"><span
-                    class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span
-                    class="identifier"
-                    id="lk.kotlin.jackson$jacksonFromString(kotlin.String, java.lang.Class((lk.kotlin.jackson.jacksonFromString.T)), com.fasterxml.jackson.databind.ObjectMapper)/mapper">mapper</span><span
-                    class="symbol">:</span>&nbsp;<a
-                    href="http://fasterxml.github.io/jackson-databind/javadoc/2.9/com/fasterxml/jackson/databind/ObjectMapper.html"><span
-                    class="identifier">ObjectMapper</span></a>&nbsp;<span
-                    class="symbol">=</span>&nbsp;MyJackson.mapper<span class="symbol">)</span><span
-                    class="symbol">: </span><a
-                    href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-jackson/lk.kotlin.jackson/jackson-from-string/-t/index.html"><span
-                    class="identifier">T</span></a></code><br/>
-            <code><span class="keyword">fun </span><span class="symbol">&lt;</span><span
-                    class="identifier">T</span><span class="symbol">&gt;</span> <a
-                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
-                    class="identifier">String</span></a><span class="symbol">.</span><span class="identifier">jacksonFromString</span><span
-                    class="symbol">(</span><span class="identifier"
-                                                 id="lk.kotlin.jackson$jacksonFromString(kotlin.String, com.fasterxml.jackson.core.type.TypeReference((lk.kotlin.jackson.jacksonFromString.T)), com.fasterxml.jackson.databind.ObjectMapper)/type">type</span><span
-                    class="symbol">:</span>&nbsp;<a
-                    href="http://fasterxml.github.io/jackson-core/javadoc/2.9/com/fasterxml/jackson/core/type/TypeReference.html"><span
-                    class="identifier">TypeReference</span></a><span class="symbol">&lt;</span><a
-                    href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-jackson/lk.kotlin.jackson/jackson-from-string/-t/index.html"><span
-                    class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span
-                    class="identifier"
-                    id="lk.kotlin.jackson$jacksonFromString(kotlin.String, com.fasterxml.jackson.core.type.TypeReference((lk.kotlin.jackson.jacksonFromString.T)), com.fasterxml.jackson.databind.ObjectMapper)/mapper">mapper</span><span
-                    class="symbol">:</span>&nbsp;<a
-                    href="http://fasterxml.github.io/jackson-databind/javadoc/2.9/com/fasterxml/jackson/databind/ObjectMapper.html"><span
-                    class="identifier">ObjectMapper</span></a>&nbsp;<span
-                    class="symbol">=</span>&nbsp;MyJackson.mapper<span class="symbol">)</span><span
-                    class="symbol">: </span><a
-                    href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-jackson/lk.kotlin.jackson/jackson-from-string/-t/index.html"><span
-                    class="identifier">T</span></a></code>
-            <p>Converts a JSON string back into an object <a
-                    href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-jackson/lk.kotlin.jackson/jackson-from-string/mapper.html">mapper</a>,
-                specifically in terms of the given type <a
-                        href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-jackson/lk.kotlin.jackson/jackson-from-string/type.html">type</a>.
-            </p>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p><a href="jackson-from-string-node.html">jacksonFromStringNode</a></p>
-        </td>
-        <td>
-            <code><span class="keyword">fun </span><a
-                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
-                    class="identifier">String</span></a><span class="symbol">.</span><span class="identifier">jacksonFromStringNode</span><span
-                    class="symbol">(</span><span class="identifier"
-                                                 id="lk.kotlin.jackson$jacksonFromStringNode(kotlin.String, com.fasterxml.jackson.databind.ObjectMapper)/mapper">mapper</span><span
-                    class="symbol">:</span>&nbsp;<a
-                    href="http://fasterxml.github.io/jackson-databind/javadoc/2.9/com/fasterxml/jackson/databind/ObjectMapper.html"><span
-                    class="identifier">ObjectMapper</span></a>&nbsp;<span
-                    class="symbol">=</span>&nbsp;MyJackson.mapper<span class="symbol">)</span><span
-                    class="symbol">: </span><a
-                    href="http://fasterxml.github.io/jackson-databind/javadoc/2.9/com/fasterxml/jackson/databind/JsonNode.html"><span
-                    class="identifier">JsonNode</span></a></code>
-            <p>Converts a JSON string into a Jackson node.</p>
-        </td>
-    </tr>
-    </tbody>
+<tbody>
+<tr>
+<td>
+<p><a href="jackson-from-string.html">jacksonFromString</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">.</span><span class="identifier">jacksonFromString</span><span class="symbol">(</span><span class="identifier" id="lk.kotlin.jackson$jacksonFromString(kotlin.String, com.fasterxml.jackson.databind.ObjectMapper)/mapper">mapper</span><span class="symbol">:</span>&nbsp;<a href="http://fasterxml.github.io/jackson-databind/javadoc/2.9/com/fasterxml/jackson/databind/ObjectMapper.html"><span class="identifier">ObjectMapper</span></a>&nbsp;<span class="symbol">=</span>&nbsp;MyJackson.mapper<span class="symbol">)</span><span class="symbol">: </span><a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-jackson/lk.kotlin.jackson/jackson-from-string/-t/index.html"><span class="identifier">T</span></a></code>
+<p>Converts a JSON string back into an object <a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-jackson/lk.kotlin.jackson/jackson-from-string/mapper.html">mapper</a>, specifically in terms of the given type <a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-jackson/lk.kotlin.jackson/jackson-from-string/-t/index.html">T</a>.</p>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">.</span><span class="identifier">jacksonFromString</span><span class="symbol">(</span><span class="identifier" id="lk.kotlin.jackson$jacksonFromString(kotlin.String, java.lang.Class((lk.kotlin.jackson.jacksonFromString.T)), com.fasterxml.jackson.databind.ObjectMapper)/type">type</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Class.html"><span class="identifier">Class</span></a><span class="symbol">&lt;</span><a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-jackson/lk.kotlin.jackson/jackson-from-string/-t/index.html"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="lk.kotlin.jackson$jacksonFromString(kotlin.String, java.lang.Class((lk.kotlin.jackson.jacksonFromString.T)), com.fasterxml.jackson.databind.ObjectMapper)/mapper">mapper</span><span class="symbol">:</span>&nbsp;<a href="http://fasterxml.github.io/jackson-databind/javadoc/2.9/com/fasterxml/jackson/databind/ObjectMapper.html"><span class="identifier">ObjectMapper</span></a>&nbsp;<span class="symbol">=</span>&nbsp;MyJackson.mapper<span class="symbol">)</span><span class="symbol">: </span><a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-jackson/lk.kotlin.jackson/jackson-from-string/-t/index.html"><span class="identifier">T</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">.</span><span class="identifier">jacksonFromString</span><span class="symbol">(</span><span class="identifier" id="lk.kotlin.jackson$jacksonFromString(kotlin.String, com.fasterxml.jackson.core.type.TypeReference((lk.kotlin.jackson.jacksonFromString.T)), com.fasterxml.jackson.databind.ObjectMapper)/type">type</span><span class="symbol">:</span>&nbsp;<a href="http://fasterxml.github.io/jackson-core/javadoc/2.9/com/fasterxml/jackson/core/type/TypeReference.html"><span class="identifier">TypeReference</span></a><span class="symbol">&lt;</span><a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-jackson/lk.kotlin.jackson/jackson-from-string/-t/index.html"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="lk.kotlin.jackson$jacksonFromString(kotlin.String, com.fasterxml.jackson.core.type.TypeReference((lk.kotlin.jackson.jacksonFromString.T)), com.fasterxml.jackson.databind.ObjectMapper)/mapper">mapper</span><span class="symbol">:</span>&nbsp;<a href="http://fasterxml.github.io/jackson-databind/javadoc/2.9/com/fasterxml/jackson/databind/ObjectMapper.html"><span class="identifier">ObjectMapper</span></a>&nbsp;<span class="symbol">=</span>&nbsp;MyJackson.mapper<span class="symbol">)</span><span class="symbol">: </span><a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-jackson/lk.kotlin.jackson/jackson-from-string/-t/index.html"><span class="identifier">T</span></a></code>
+<p>Converts a JSON string back into an object <a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-jackson/lk.kotlin.jackson/jackson-from-string/mapper.html">mapper</a>, specifically in terms of the given type <a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-jackson/lk.kotlin.jackson/jackson-from-string/type.html">type</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="jackson-from-string-node.html">jacksonFromStringNode</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">.</span><span class="identifier">jacksonFromStringNode</span><span class="symbol">(</span><span class="identifier" id="lk.kotlin.jackson$jacksonFromStringNode(kotlin.String, com.fasterxml.jackson.databind.ObjectMapper)/mapper">mapper</span><span class="symbol">:</span>&nbsp;<a href="http://fasterxml.github.io/jackson-databind/javadoc/2.9/com/fasterxml/jackson/databind/ObjectMapper.html"><span class="identifier">ObjectMapper</span></a>&nbsp;<span class="symbol">=</span>&nbsp;MyJackson.mapper<span class="symbol">)</span><span class="symbol">: </span><a href="http://fasterxml.github.io/jackson-databind/javadoc/2.9/com/fasterxml/jackson/databind/JsonNode.html"><span class="identifier">JsonNode</span></a></code>
+<p>Converts a JSON string into a Jackson node.</p>
+</td>
+</tr>
+</tbody>
 </table>
 </BODY>
 </HTML>

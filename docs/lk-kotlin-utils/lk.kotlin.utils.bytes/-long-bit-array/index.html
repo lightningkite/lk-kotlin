@@ -1,150 +1,95 @@
 <HTML>
 <HEAD>
-    <meta charset="UTF-8">
-    <title>LongBitArray - lk-kotlin-utils</title>
-    <link rel="stylesheet" href="../../../style.css">
+<meta charset="UTF-8">
+<title>LongBitArray - lk-kotlin-utils</title>
+<link rel="stylesheet" href="../../../style.css">
 </HEAD>
 <BODY>
-<a href="../../index.html">lk-kotlin-utils</a>&nbsp;/&nbsp;<a href="../index.html">lk.kotlin.utils.bytes</a>&nbsp;/&nbsp;<a
-        href="./index.html">LongBitArray</a><br/>
+<a href="../../index.html">lk-kotlin-utils</a>&nbsp;/&nbsp;<a href="../index.html">lk.kotlin.utils.bytes</a>&nbsp;/&nbsp;<a href="./index.html">LongBitArray</a><br/>
 <br/>
 <h1>LongBitArray</h1>
-<code><span class="keyword">class </span><span class="identifier">LongBitArray</span>&nbsp;<span class="symbol">:</span>&nbsp;<a
-        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html"><span
-        class="identifier">Iterable</span></a><span class="symbol">&lt;</span><a
-        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
-        class="identifier">Boolean</span></a><span class="symbol">&gt;</span></code>
+<code><span class="keyword">class </span><span class="identifier">LongBitArray</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html"><span class="identifier">Iterable</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">&gt;</span></code>
 <p>A mutable container for a long integer that allows access to individual bits.
-    Created by shanethompson on 6/29/17.</p>
+Created by shanethompson on 6/29/17.</p>
 <h3>Constructors</h3>
 <table>
-    <tbody>
-    <tr>
-        <td>
-            <p><a href="-init-.html">&lt;init&gt;</a></p>
-        </td>
-        <td>
-            <code><span class="identifier">LongBitArray</span><span class="symbol">(</span><span class="identifier"
-                                                                                                 id="lk.kotlin.utils.bytes.LongBitArray$<init>(kotlin.Long)/value">value</span><span
-                    class="symbol">:</span>&nbsp;<a
-                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span
-                    class="identifier">Long</span></a>&nbsp;<span class="symbol">=</span>&nbsp;0<span
-                    class="symbol">)</span></code>
-            <p>A mutable container for a long integer that allows access to individual bits.
-                Created by shanethompson on 6/29/17.</p>
-        </td>
-    </tr>
-    </tbody>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">LongBitArray</span><span class="symbol">(</span><span class="identifier" id="lk.kotlin.utils.bytes.LongBitArray$<init>(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a>&nbsp;<span class="symbol">=</span>&nbsp;0<span class="symbol">)</span></code>
+<p>A mutable container for a long integer that allows access to individual bits.
+Created by shanethompson on 6/29/17.</p>
+</td>
+</tr>
+</tbody>
 </table>
 <h3>Properties</h3>
 <table>
-    <tbody>
-    <tr>
-        <td>
-            <p><a href="value.html">value</a></p>
-        </td>
-        <td>
-            <code><span class="keyword">var </span><span class="identifier">value</span><span class="symbol">: </span><a
-                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span
-                    class="identifier">Long</span></a></code></td>
-    </tr>
-    </tbody>
+<tbody>
+<tr>
+<td>
+<p><a href="value.html">value</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">value</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+</tbody>
 </table>
 <h3>Functions</h3>
 <table>
-    <tbody>
-    <tr>
-        <td>
-            <p><a href="get.html">get</a></p>
-        </td>
-        <td>
-            <code><span class="keyword">operator</span> <span class="keyword">fun </span><span
-                    class="identifier">get</span><span class="symbol">(</span><span class="identifier"
-                                                                                    id="lk.kotlin.utils.bytes.LongBitArray$get(kotlin.Int)/index">index</span><span
-                    class="symbol">:</span>&nbsp;<a
-                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span
-                    class="symbol">)</span><span class="symbol">: </span><a
-                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
-                    class="identifier">Boolean</span></a></code>
-            <p>Gets whether or not the bit at <a
-                    href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-utils/lk.kotlin.utils.bytes/-long-bit-array/get/--index--.html">index</a>
-                is on.
-                Index starts with the right-most bit at zero and increases going left.</p>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p><a href="iterator.html">iterator</a></p>
-        </td>
-        <td>
-            <code><span class="keyword">fun </span><span class="identifier">iterator</span><span class="symbol">(</span><span
-                    class="symbol">)</span><span class="symbol">: </span><a
-                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html"><span
-                    class="identifier">Iterator</span></a><span class="symbol">&lt;</span><a
-                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
-                    class="identifier">Boolean</span></a><span class="symbol">&gt;</span></code>
-            <p>Allows you to iterate through all 32 bits from right-most to left-most.</p>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p><a href="set.html">set</a></p>
-        </td>
-        <td>
-            <code><span class="keyword">operator</span> <span class="keyword">fun </span><span
-                    class="identifier">set</span><span class="symbol">(</span><span class="identifier"
-                                                                                    id="lk.kotlin.utils.bytes.LongBitArray$set(kotlin.Int, kotlin.Boolean)/index">index</span><span
-                    class="symbol">:</span>&nbsp;<a
-                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span
-                    class="symbol">, </span><span class="identifier"
-                                                  id="lk.kotlin.utils.bytes.LongBitArray$set(kotlin.Int, kotlin.Boolean)/isTrue">isTrue</span><span
-                    class="symbol">:</span>&nbsp;<a
-                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
-                    class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a
-                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
-                    class="identifier">Unit</span></a></code>
-            <p>Sets whether or not the bit at <a
-                    href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-utils/lk.kotlin.utils.bytes/-long-bit-array/set/--index--.html">index</a>
-                is on.
-                Index starts with the right-most bit at zero and increases going left.</p>
-        </td>
-    </tr>
-    </tbody>
+<tbody>
+<tr>
+<td>
+<p><a href="get.html">get</a></p>
+</td>
+<td>
+<code><span class="keyword">operator</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="lk.kotlin.utils.bytes.LongBitArray$get(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Gets whether or not the bit at <a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-utils/lk.kotlin.utils.bytes/-long-bit-array/get/--index--.html">index</a> is on.
+Index starts with the right-most bit at zero and increases going left.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="iterator.html">iterator</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">iterator</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html"><span class="identifier">Iterator</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">&gt;</span></code>
+<p>Allows you to iterate through all 32 bits from right-most to left-most.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="set.html">set</a></p>
+</td>
+<td>
+<code><span class="keyword">operator</span> <span class="keyword">fun </span><span class="identifier">set</span><span class="symbol">(</span><span class="identifier" id="lk.kotlin.utils.bytes.LongBitArray$set(kotlin.Int, kotlin.Boolean)/index">index</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="lk.kotlin.utils.bytes.LongBitArray$set(kotlin.Int, kotlin.Boolean)/isTrue">isTrue</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Sets whether or not the bit at <a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-utils/lk.kotlin.utils.bytes/-long-bit-array/set/--index--.html">index</a> is on.
+Index starts with the right-most bit at zero and increases going left.</p>
+</td>
+</tr>
+</tbody>
 </table>
 <h3>Extension Functions</h3>
 <table>
-    <tbody>
-    <tr>
-        <td>
-            <p><a href="../../lk.kotlin.utils/kotlin.-any/cast.html">cast</a></p>
-        </td>
-        <td>
-            <code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span
-                    class="symbol">:</span>&nbsp;<a
-                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span
-                    class="symbol">&gt;</span> <a
-                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span
-                    class="symbol">.</span><span class="identifier">cast</span><span class="symbol">(</span><span
-                    class="symbol">)</span><span class="symbol">: </span><a
-                    href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-utils/lk.kotlin.utils/cast/-t/index.html"><span
-                    class="identifier">T</span></a></code></td>
-    </tr>
-    <tr>
-        <td>
-            <p><a href="../../lk.kotlin.utils/kotlin.-any/cast-or-null.html">castOrNull</a></p>
-        </td>
-        <td>
-            <code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span
-                    class="symbol">:</span>&nbsp;<a
-                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span
-                    class="symbol">&gt;</span> <a
-                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span
-                    class="symbol">.</span><span class="identifier">castOrNull</span><span class="symbol">(</span><span
-                    class="symbol">)</span><span class="symbol">: </span><a
-                    href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-utils/lk.kotlin.utils/cast-or-null/-t/index.html"><span
-                    class="identifier">T</span></a><span class="symbol">?</span></code></td>
-    </tr>
-    </tbody>
+<tbody>
+<tr>
+<td>
+<p><a href="../../lk.kotlin.utils/kotlin.-any/cast.html">cast</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">.</span><span class="identifier">cast</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-utils/lk.kotlin.utils/cast/-t/index.html"><span class="identifier">T</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../lk.kotlin.utils/kotlin.-any/cast-or-null.html">castOrNull</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">.</span><span class="identifier">castOrNull</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-utils/lk.kotlin.utils/cast-or-null/-t/index.html"><span class="identifier">T</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
 </table>
 </BODY>
 </HTML>

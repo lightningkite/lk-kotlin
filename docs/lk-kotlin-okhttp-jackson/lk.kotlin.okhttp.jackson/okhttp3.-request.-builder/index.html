@@ -1,137 +1,40 @@
 <HTML>
 <HEAD>
-    <meta charset="UTF-8">
-    <title>lk.kotlin.okhttp.jackson.okhttp3.Request.Builder - lk-kotlin-okhttp-jackson</title>
-    <link rel="stylesheet" href="../../../style.css">
+<meta charset="UTF-8">
+<title>lk.kotlin.okhttp.jackson.okhttp3.Request.Builder - lk-kotlin-okhttp-jackson</title>
+<link rel="stylesheet" href="../../../style.css">
 </HEAD>
 <BODY>
-<a href="../../index.html">lk-kotlin-okhttp-jackson</a>&nbsp;/&nbsp;<a href="../index.html">lk.kotlin.okhttp.jackson</a>&nbsp;/&nbsp;<a
-        href="./index.html">okhttp3.Request.Builder</a><br/>
+<a href="../../index.html">lk-kotlin-okhttp-jackson</a>&nbsp;/&nbsp;<a href="../index.html">lk.kotlin.okhttp.jackson</a>&nbsp;/&nbsp;<a href="./index.html">okhttp3.Request.Builder</a><br/>
 <br/>
 <h3>Extensions for okhttp3.Request.Builder</h3>
 <table>
-    <tbody>
-    <tr>
-        <td>
-            <p><a href="lambda-jackson.html">lambdaJackson</a></p>
-        </td>
-        <td>
-            <code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span
-                    class="symbol">:</span>&nbsp;<a
-                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span
-                    class="symbol">&gt;</span> <a
-                    href="http://square.github.io/okhttp/3.x/okhttp/okhttp3/Request/Builder.html"><span
-                    class="identifier">Builder</span></a><span class="symbol">.</span><span class="identifier">lambdaJackson</span><span
-                    class="symbol">(</span><span class="identifier"
-                                                 id="lk.kotlin.okhttp.jackson$lambdaJackson(okhttp3.Request.Builder, okhttp3.OkHttpClient, com.fasterxml.jackson.databind.ObjectMapper)/client">client</span><span
-                    class="symbol">:</span>&nbsp;<a
-                    href="http://square.github.io/okhttp/3.x/okhttp/okhttp3/OkHttpClient.html"><span class="identifier">OkHttpClient</span></a>&nbsp;<span
-                    class="symbol">=</span>&nbsp;defaultClient<span class="symbol">, </span><span class="identifier"
-                                                                                                  id="lk.kotlin.okhttp.jackson$lambdaJackson(okhttp3.Request.Builder, okhttp3.OkHttpClient, com.fasterxml.jackson.databind.ObjectMapper)/mapper">mapper</span><span
-                    class="symbol">:</span>&nbsp;<a
-                    href="http://fasterxml.github.io/jackson-databind/javadoc/2.9/com/fasterxml/jackson/databind/ObjectMapper.html"><span
-                    class="identifier">ObjectMapper</span></a>&nbsp;<span
-                    class="symbol">=</span>&nbsp;MyJackson.mapper<span class="symbol">)</span><span
-                    class="symbol">: </span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span
-                    class="symbol">-&gt;</span>&nbsp;<a
-                    href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-okhttp/lk.kotlin.okhttp/-typed-response/index.html"><span
-                    class="identifier">TypedResponse</span></a><span class="symbol">&lt;</span><a
-                    href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-okhttp-jackson/lk.kotlin.okhttp.jackson/lambda-jackson/-t/index.html"><span
-                    class="identifier">T</span></a><span class="symbol">&gt;</span></code>
-            <p>Transforms the request into a lambda to be executed later.
-                The lambda will return an object of type <a
-                        href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-okhttp-jackson/lk.kotlin.okhttp.jackson/lambda-jackson/-t/index.html">T</a>
-                by using Jackson to convert from JSON, as well as other data about the response.</p>
-            <code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span
-                    class="symbol">:</span>&nbsp;<a
-                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span
-                    class="symbol">&gt;</span> <a
-                    href="http://square.github.io/okhttp/3.x/okhttp/okhttp3/Request/Builder.html"><span
-                    class="identifier">Builder</span></a><span class="symbol">.</span><span class="identifier">lambdaJackson</span><span
-                    class="symbol">(</span><span class="identifier"
-                                                 id="lk.kotlin.okhttp.jackson$lambdaJackson(okhttp3.Request.Builder, com.fasterxml.jackson.databind.JavaType, okhttp3.OkHttpClient, com.fasterxml.jackson.databind.ObjectMapper)/type">type</span><span
-                    class="symbol">:</span>&nbsp;<a
-                    href="http://fasterxml.github.io/jackson-databind/javadoc/2.9/com/fasterxml/jackson/databind/JavaType.html"><span
-                    class="identifier">JavaType</span></a><span class="symbol">, </span><span class="identifier"
-                                                                                              id="lk.kotlin.okhttp.jackson$lambdaJackson(okhttp3.Request.Builder, com.fasterxml.jackson.databind.JavaType, okhttp3.OkHttpClient, com.fasterxml.jackson.databind.ObjectMapper)/client">client</span><span
-                    class="symbol">:</span>&nbsp;<a
-                    href="http://square.github.io/okhttp/3.x/okhttp/okhttp3/OkHttpClient.html"><span class="identifier">OkHttpClient</span></a>&nbsp;<span
-                    class="symbol">=</span>&nbsp;defaultClient<span class="symbol">, </span><span class="identifier"
-                                                                                                  id="lk.kotlin.okhttp.jackson$lambdaJackson(okhttp3.Request.Builder, com.fasterxml.jackson.databind.JavaType, okhttp3.OkHttpClient, com.fasterxml.jackson.databind.ObjectMapper)/mapper">mapper</span><span
-                    class="symbol">:</span>&nbsp;<a
-                    href="http://fasterxml.github.io/jackson-databind/javadoc/2.9/com/fasterxml/jackson/databind/ObjectMapper.html"><span
-                    class="identifier">ObjectMapper</span></a>&nbsp;<span
-                    class="symbol">=</span>&nbsp;MyJackson.mapper<span class="symbol">)</span><span
-                    class="symbol">: </span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span
-                    class="symbol">-&gt;</span>&nbsp;<a
-                    href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-okhttp/lk.kotlin.okhttp/-typed-response/index.html"><span
-                    class="identifier">TypedResponse</span></a><span class="symbol">&lt;</span><a
-                    href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-okhttp-jackson/lk.kotlin.okhttp.jackson/lambda-jackson/-t/index.html"><span
-                    class="identifier">T</span></a><span class="symbol">&gt;</span></code><br/>
-            <code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span
-                    class="symbol">:</span>&nbsp;<a
-                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span
-                    class="symbol">&gt;</span> <a
-                    href="http://square.github.io/okhttp/3.x/okhttp/okhttp3/Request/Builder.html"><span
-                    class="identifier">Builder</span></a><span class="symbol">.</span><span class="identifier">lambdaJackson</span><span
-                    class="symbol">(</span><span class="identifier"
-                                                 id="lk.kotlin.okhttp.jackson$lambdaJackson(okhttp3.Request.Builder, com.fasterxml.jackson.core.type.TypeReference((lk.kotlin.okhttp.jackson.lambdaJackson.T)), okhttp3.OkHttpClient, com.fasterxml.jackson.databind.ObjectMapper)/type">type</span><span
-                    class="symbol">:</span>&nbsp;<a
-                    href="http://fasterxml.github.io/jackson-core/javadoc/2.9/com/fasterxml/jackson/core/type/TypeReference.html"><span
-                    class="identifier">TypeReference</span></a><span class="symbol">&lt;</span><a
-                    href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-okhttp-jackson/lk.kotlin.okhttp.jackson/lambda-jackson/-t/index.html"><span
-                    class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span
-                    class="identifier"
-                    id="lk.kotlin.okhttp.jackson$lambdaJackson(okhttp3.Request.Builder, com.fasterxml.jackson.core.type.TypeReference((lk.kotlin.okhttp.jackson.lambdaJackson.T)), okhttp3.OkHttpClient, com.fasterxml.jackson.databind.ObjectMapper)/client">client</span><span
-                    class="symbol">:</span>&nbsp;<a
-                    href="http://square.github.io/okhttp/3.x/okhttp/okhttp3/OkHttpClient.html"><span class="identifier">OkHttpClient</span></a>&nbsp;<span
-                    class="symbol">=</span>&nbsp;defaultClient<span class="symbol">, </span><span class="identifier"
-                                                                                                  id="lk.kotlin.okhttp.jackson$lambdaJackson(okhttp3.Request.Builder, com.fasterxml.jackson.core.type.TypeReference((lk.kotlin.okhttp.jackson.lambdaJackson.T)), okhttp3.OkHttpClient, com.fasterxml.jackson.databind.ObjectMapper)/mapper">mapper</span><span
-                    class="symbol">:</span>&nbsp;<a
-                    href="http://fasterxml.github.io/jackson-databind/javadoc/2.9/com/fasterxml/jackson/databind/ObjectMapper.html"><span
-                    class="identifier">ObjectMapper</span></a>&nbsp;<span
-                    class="symbol">=</span>&nbsp;MyJackson.mapper<span class="symbol">)</span><span
-                    class="symbol">: </span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span
-                    class="symbol">-&gt;</span>&nbsp;<a
-                    href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-okhttp/lk.kotlin.okhttp/-typed-response/index.html"><span
-                    class="identifier">TypedResponse</span></a><span class="symbol">&lt;</span><a
-                    href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-okhttp-jackson/lk.kotlin.okhttp.jackson/lambda-jackson/-t/index.html"><span
-                    class="identifier">T</span></a><span class="symbol">&gt;</span></code>
-            <p>Transforms the request into a lambda to be executed later.
-                The lambda will return an object of type <a
-                        href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-okhttp-jackson/lk.kotlin.okhttp.jackson/lambda-jackson/type.html">type</a>
-                by using Jackson to convert from JSON, as well as other data about the response.</p>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p><a href="lambda-jackson-node.html">lambdaJacksonNode</a></p>
-        </td>
-        <td>
-            <code><span class="keyword">fun </span><a
-                    href="http://square.github.io/okhttp/3.x/okhttp/okhttp3/Request/Builder.html"><span
-                    class="identifier">Builder</span></a><span class="symbol">.</span><span class="identifier">lambdaJacksonNode</span><span
-                    class="symbol">(</span><span class="identifier"
-                                                 id="lk.kotlin.okhttp.jackson$lambdaJacksonNode(okhttp3.Request.Builder, okhttp3.OkHttpClient, com.fasterxml.jackson.databind.ObjectMapper)/client">client</span><span
-                    class="symbol">:</span>&nbsp;<a
-                    href="http://square.github.io/okhttp/3.x/okhttp/okhttp3/OkHttpClient.html"><span class="identifier">OkHttpClient</span></a>&nbsp;<span
-                    class="symbol">=</span>&nbsp;defaultClient<span class="symbol">, </span><span class="identifier"
-                                                                                                  id="lk.kotlin.okhttp.jackson$lambdaJacksonNode(okhttp3.Request.Builder, okhttp3.OkHttpClient, com.fasterxml.jackson.databind.ObjectMapper)/mapper">mapper</span><span
-                    class="symbol">:</span>&nbsp;<a
-                    href="http://fasterxml.github.io/jackson-databind/javadoc/2.9/com/fasterxml/jackson/databind/ObjectMapper.html"><span
-                    class="identifier">ObjectMapper</span></a>&nbsp;<span
-                    class="symbol">=</span>&nbsp;MyJackson.mapper<span class="symbol">)</span><span
-                    class="symbol">: </span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span
-                    class="symbol">-&gt;</span>&nbsp;<a
-                    href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-okhttp/lk.kotlin.okhttp/-typed-response/index.html"><span
-                    class="identifier">TypedResponse</span></a><span class="symbol">&lt;</span><a
-                    href="http://fasterxml.github.io/jackson-databind/javadoc/2.9/com/fasterxml/jackson/databind/JsonNode.html"><span
-                    class="identifier">JsonNode</span></a><span class="symbol">&gt;</span></code>
-            <p>Transforms the request into a lambda to be executed later.
-                The lambda will return a Jackson node and other data about the response.</p>
-        </td>
-    </tr>
-    </tbody>
+<tbody>
+<tr>
+<td>
+<p><a href="lambda-jackson.html">lambdaJackson</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <a href="http://square.github.io/okhttp/3.x/okhttp/okhttp3/Request/Builder.html"><span class="identifier">Builder</span></a><span class="symbol">.</span><span class="identifier">lambdaJackson</span><span class="symbol">(</span><span class="identifier" id="lk.kotlin.okhttp.jackson$lambdaJackson(okhttp3.Request.Builder, okhttp3.OkHttpClient, com.fasterxml.jackson.databind.ObjectMapper)/client">client</span><span class="symbol">:</span>&nbsp;<a href="http://square.github.io/okhttp/3.x/okhttp/okhttp3/OkHttpClient.html"><span class="identifier">OkHttpClient</span></a>&nbsp;<span class="symbol">=</span>&nbsp;defaultClient<span class="symbol">, </span><span class="identifier" id="lk.kotlin.okhttp.jackson$lambdaJackson(okhttp3.Request.Builder, okhttp3.OkHttpClient, com.fasterxml.jackson.databind.ObjectMapper)/mapper">mapper</span><span class="symbol">:</span>&nbsp;<a href="http://fasterxml.github.io/jackson-databind/javadoc/2.9/com/fasterxml/jackson/databind/ObjectMapper.html"><span class="identifier">ObjectMapper</span></a>&nbsp;<span class="symbol">=</span>&nbsp;MyJackson.mapper<span class="symbol">)</span><span class="symbol">: </span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-okhttp/lk.kotlin.okhttp/-typed-response/index.html"><span class="identifier">TypedResponse</span></a><span class="symbol">&lt;</span><a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-okhttp-jackson/lk.kotlin.okhttp.jackson/lambda-jackson/-t/index.html"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Transforms the request into a lambda to be executed later.
+The lambda will return an object of type <a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-okhttp-jackson/lk.kotlin.okhttp.jackson/lambda-jackson/-t/index.html">T</a> by using Jackson to convert from JSON, as well as other data about the response.</p>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <a href="http://square.github.io/okhttp/3.x/okhttp/okhttp3/Request/Builder.html"><span class="identifier">Builder</span></a><span class="symbol">.</span><span class="identifier">lambdaJackson</span><span class="symbol">(</span><span class="identifier" id="lk.kotlin.okhttp.jackson$lambdaJackson(okhttp3.Request.Builder, com.fasterxml.jackson.databind.JavaType, okhttp3.OkHttpClient, com.fasterxml.jackson.databind.ObjectMapper)/type">type</span><span class="symbol">:</span>&nbsp;<a href="http://fasterxml.github.io/jackson-databind/javadoc/2.9/com/fasterxml/jackson/databind/JavaType.html"><span class="identifier">JavaType</span></a><span class="symbol">, </span><span class="identifier" id="lk.kotlin.okhttp.jackson$lambdaJackson(okhttp3.Request.Builder, com.fasterxml.jackson.databind.JavaType, okhttp3.OkHttpClient, com.fasterxml.jackson.databind.ObjectMapper)/client">client</span><span class="symbol">:</span>&nbsp;<a href="http://square.github.io/okhttp/3.x/okhttp/okhttp3/OkHttpClient.html"><span class="identifier">OkHttpClient</span></a>&nbsp;<span class="symbol">=</span>&nbsp;defaultClient<span class="symbol">, </span><span class="identifier" id="lk.kotlin.okhttp.jackson$lambdaJackson(okhttp3.Request.Builder, com.fasterxml.jackson.databind.JavaType, okhttp3.OkHttpClient, com.fasterxml.jackson.databind.ObjectMapper)/mapper">mapper</span><span class="symbol">:</span>&nbsp;<a href="http://fasterxml.github.io/jackson-databind/javadoc/2.9/com/fasterxml/jackson/databind/ObjectMapper.html"><span class="identifier">ObjectMapper</span></a>&nbsp;<span class="symbol">=</span>&nbsp;MyJackson.mapper<span class="symbol">)</span><span class="symbol">: </span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-okhttp/lk.kotlin.okhttp/-typed-response/index.html"><span class="identifier">TypedResponse</span></a><span class="symbol">&lt;</span><a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-okhttp-jackson/lk.kotlin.okhttp.jackson/lambda-jackson/-t/index.html"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code><br/>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <a href="http://square.github.io/okhttp/3.x/okhttp/okhttp3/Request/Builder.html"><span class="identifier">Builder</span></a><span class="symbol">.</span><span class="identifier">lambdaJackson</span><span class="symbol">(</span><span class="identifier" id="lk.kotlin.okhttp.jackson$lambdaJackson(okhttp3.Request.Builder, com.fasterxml.jackson.core.type.TypeReference((lk.kotlin.okhttp.jackson.lambdaJackson.T)), okhttp3.OkHttpClient, com.fasterxml.jackson.databind.ObjectMapper)/type">type</span><span class="symbol">:</span>&nbsp;<a href="http://fasterxml.github.io/jackson-core/javadoc/2.9/com/fasterxml/jackson/core/type/TypeReference.html"><span class="identifier">TypeReference</span></a><span class="symbol">&lt;</span><a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-okhttp-jackson/lk.kotlin.okhttp.jackson/lambda-jackson/-t/index.html"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="lk.kotlin.okhttp.jackson$lambdaJackson(okhttp3.Request.Builder, com.fasterxml.jackson.core.type.TypeReference((lk.kotlin.okhttp.jackson.lambdaJackson.T)), okhttp3.OkHttpClient, com.fasterxml.jackson.databind.ObjectMapper)/client">client</span><span class="symbol">:</span>&nbsp;<a href="http://square.github.io/okhttp/3.x/okhttp/okhttp3/OkHttpClient.html"><span class="identifier">OkHttpClient</span></a>&nbsp;<span class="symbol">=</span>&nbsp;defaultClient<span class="symbol">, </span><span class="identifier" id="lk.kotlin.okhttp.jackson$lambdaJackson(okhttp3.Request.Builder, com.fasterxml.jackson.core.type.TypeReference((lk.kotlin.okhttp.jackson.lambdaJackson.T)), okhttp3.OkHttpClient, com.fasterxml.jackson.databind.ObjectMapper)/mapper">mapper</span><span class="symbol">:</span>&nbsp;<a href="http://fasterxml.github.io/jackson-databind/javadoc/2.9/com/fasterxml/jackson/databind/ObjectMapper.html"><span class="identifier">ObjectMapper</span></a>&nbsp;<span class="symbol">=</span>&nbsp;MyJackson.mapper<span class="symbol">)</span><span class="symbol">: </span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-okhttp/lk.kotlin.okhttp/-typed-response/index.html"><span class="identifier">TypedResponse</span></a><span class="symbol">&lt;</span><a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-okhttp-jackson/lk.kotlin.okhttp.jackson/lambda-jackson/-t/index.html"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Transforms the request into a lambda to be executed later.
+The lambda will return an object of type <a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-okhttp-jackson/lk.kotlin.okhttp.jackson/lambda-jackson/type.html">type</a> by using Jackson to convert from JSON, as well as other data about the response.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="lambda-jackson-node.html">lambdaJacksonNode</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="http://square.github.io/okhttp/3.x/okhttp/okhttp3/Request/Builder.html"><span class="identifier">Builder</span></a><span class="symbol">.</span><span class="identifier">lambdaJacksonNode</span><span class="symbol">(</span><span class="identifier" id="lk.kotlin.okhttp.jackson$lambdaJacksonNode(okhttp3.Request.Builder, okhttp3.OkHttpClient, com.fasterxml.jackson.databind.ObjectMapper)/client">client</span><span class="symbol">:</span>&nbsp;<a href="http://square.github.io/okhttp/3.x/okhttp/okhttp3/OkHttpClient.html"><span class="identifier">OkHttpClient</span></a>&nbsp;<span class="symbol">=</span>&nbsp;defaultClient<span class="symbol">, </span><span class="identifier" id="lk.kotlin.okhttp.jackson$lambdaJacksonNode(okhttp3.Request.Builder, okhttp3.OkHttpClient, com.fasterxml.jackson.databind.ObjectMapper)/mapper">mapper</span><span class="symbol">:</span>&nbsp;<a href="http://fasterxml.github.io/jackson-databind/javadoc/2.9/com/fasterxml/jackson/databind/ObjectMapper.html"><span class="identifier">ObjectMapper</span></a>&nbsp;<span class="symbol">=</span>&nbsp;MyJackson.mapper<span class="symbol">)</span><span class="symbol">: </span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-okhttp/lk.kotlin.okhttp/-typed-response/index.html"><span class="identifier">TypedResponse</span></a><span class="symbol">&lt;</span><a href="http://fasterxml.github.io/jackson-databind/javadoc/2.9/com/fasterxml/jackson/databind/JsonNode.html"><span class="identifier">JsonNode</span></a><span class="symbol">&gt;</span></code>
+<p>Transforms the request into a lambda to be executed later.
+The lambda will return a Jackson node and other data about the response.</p>
+</td>
+</tr>
+</tbody>
 </table>
 </BODY>
 </HTML>
