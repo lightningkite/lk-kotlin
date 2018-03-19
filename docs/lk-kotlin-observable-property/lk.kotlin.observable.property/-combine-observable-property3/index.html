@@ -1,0 +1,467 @@
+<HTML>
+<HEAD>
+    <meta charset="UTF-8">
+    <title>CombineObservableProperty3 - lk-kotlin-observable-property</title>
+    <link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">lk-kotlin-observable-property</a>&nbsp;/&nbsp;<a href="../index.html">lk.kotlin.observable.property</a>&nbsp;/&nbsp;<a
+        href="./index.html">CombineObservableProperty3</a><br/>
+<br/>
+<h1>CombineObservableProperty3</h1>
+<code><span class="keyword">class </span><span class="identifier">CombineObservableProperty3</span><span class="symbol">&lt;</span><span
+        class="identifier">A</span><span class="symbol">, </span><span class="identifier">B</span><span
+        class="symbol">, </span><span class="identifier">C</span><span class="symbol">, </span><span class="identifier">T</span><span
+        class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a
+        href="../-enabling-mutable-collection/index.html"><span
+        class="identifier">EnablingMutableCollection</span></a><span class="symbol">&lt;</span><span
+        class="symbol">(</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">)</span>&nbsp;<span
+        class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+        class="identifier">Unit</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><a
+        href="../-observable-property/index.html"><span class="identifier">ObservableProperty</span></a><span
+        class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span
+        class="symbol">&gt;</span></code>
+<p>Combines several observable properties into one.
+    Created by joseph on 12/2/16.</p>
+<h3>Constructors</h3>
+<table>
+    <tbody>
+    <tr>
+        <td>
+            <p><a href="-init-.html">&lt;init&gt;</a></p>
+        </td>
+        <td>
+            <code><span class="identifier">CombineObservableProperty3</span><span class="symbol">(</span><span
+                    class="identifier"
+                    id="lk.kotlin.observable.property.CombineObservableProperty3$<init>(lk.kotlin.observable.property.ObservableProperty((lk.kotlin.observable.property.CombineObservableProperty3.A)), lk.kotlin.observable.property.ObservableProperty((lk.kotlin.observable.property.CombineObservableProperty3.B)), lk.kotlin.observable.property.ObservableProperty((lk.kotlin.observable.property.CombineObservableProperty3.C)), kotlin.Function3((lk.kotlin.observable.property.CombineObservableProperty3.A, lk.kotlin.observable.property.CombineObservableProperty3.B, lk.kotlin.observable.property.CombineObservableProperty3.C, lk.kotlin.observable.property.CombineObservableProperty3.T)))/observableA">observableA</span><span
+                    class="symbol">:</span>&nbsp;<a href="../-observable-property/index.html"><span class="identifier">ObservableProperty</span></a><span
+                    class="symbol">&lt;</span><a href="index.html#A"><span class="identifier">A</span></a><span
+                    class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier"
+                                                                                  id="lk.kotlin.observable.property.CombineObservableProperty3$<init>(lk.kotlin.observable.property.ObservableProperty((lk.kotlin.observable.property.CombineObservableProperty3.A)), lk.kotlin.observable.property.ObservableProperty((lk.kotlin.observable.property.CombineObservableProperty3.B)), lk.kotlin.observable.property.ObservableProperty((lk.kotlin.observable.property.CombineObservableProperty3.C)), kotlin.Function3((lk.kotlin.observable.property.CombineObservableProperty3.A, lk.kotlin.observable.property.CombineObservableProperty3.B, lk.kotlin.observable.property.CombineObservableProperty3.C, lk.kotlin.observable.property.CombineObservableProperty3.T)))/observableB">observableB</span><span
+                    class="symbol">:</span>&nbsp;<a href="../-observable-property/index.html"><span class="identifier">ObservableProperty</span></a><span
+                    class="symbol">&lt;</span><a href="index.html#B"><span class="identifier">B</span></a><span
+                    class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier"
+                                                                                  id="lk.kotlin.observable.property.CombineObservableProperty3$<init>(lk.kotlin.observable.property.ObservableProperty((lk.kotlin.observable.property.CombineObservableProperty3.A)), lk.kotlin.observable.property.ObservableProperty((lk.kotlin.observable.property.CombineObservableProperty3.B)), lk.kotlin.observable.property.ObservableProperty((lk.kotlin.observable.property.CombineObservableProperty3.C)), kotlin.Function3((lk.kotlin.observable.property.CombineObservableProperty3.A, lk.kotlin.observable.property.CombineObservableProperty3.B, lk.kotlin.observable.property.CombineObservableProperty3.C, lk.kotlin.observable.property.CombineObservableProperty3.T)))/observableC">observableC</span><span
+                    class="symbol">:</span>&nbsp;<a href="../-observable-property/index.html"><span class="identifier">ObservableProperty</span></a><span
+                    class="symbol">&lt;</span><a href="index.html#C"><span class="identifier">C</span></a><span
+                    class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier"
+                                                                                  id="lk.kotlin.observable.property.CombineObservableProperty3$<init>(lk.kotlin.observable.property.ObservableProperty((lk.kotlin.observable.property.CombineObservableProperty3.A)), lk.kotlin.observable.property.ObservableProperty((lk.kotlin.observable.property.CombineObservableProperty3.B)), lk.kotlin.observable.property.ObservableProperty((lk.kotlin.observable.property.CombineObservableProperty3.C)), kotlin.Function3((lk.kotlin.observable.property.CombineObservableProperty3.A, lk.kotlin.observable.property.CombineObservableProperty3.B, lk.kotlin.observable.property.CombineObservableProperty3.C, lk.kotlin.observable.property.CombineObservableProperty3.T)))/combine">combine</span><span
+                    class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="index.html#A"><span
+                    class="identifier">A</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#B"><span
+                    class="identifier">B</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#C"><span
+                    class="identifier">C</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a
+                    href="index.html#T"><span class="identifier">T</span></a><span class="symbol">)</span></code>
+            <p>Combines several observable properties into one.
+                Created by joseph on 12/2/16.</p>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<h3>Properties</h3>
+<table>
+    <tbody>
+    <tr>
+        <td>
+            <p><a href="callback-a.html">callbackA</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">val </span><span class="identifier">callbackA</span><span
+                    class="symbol">: </span><span class="symbol">(</span><a href="index.html#A"><span
+                    class="identifier">A</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="callback-b.html">callbackB</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">val </span><span class="identifier">callbackB</span><span
+                    class="symbol">: </span><span class="symbol">(</span><a href="index.html#B"><span
+                    class="identifier">B</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="callback-c.html">callbackC</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">val </span><span class="identifier">callbackC</span><span
+                    class="symbol">: </span><span class="symbol">(</span><a href="index.html#C"><span
+                    class="identifier">C</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="combine.html">combine</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">val </span><span class="identifier">combine</span><span class="symbol">: </span><span
+                    class="symbol">(</span><a href="index.html#A"><span class="identifier">A</span></a><span
+                    class="symbol">,</span>&nbsp;<a href="index.html#B"><span class="identifier">B</span></a><span
+                    class="symbol">,</span>&nbsp;<a href="index.html#C"><span class="identifier">C</span></a><span
+                    class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="index.html#T"><span
+                    class="identifier">T</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="observable-a.html">observableA</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">val </span><span class="identifier">observableA</span><span
+                    class="symbol">: </span><a href="../-observable-property/index.html"><span class="identifier">ObservableProperty</span></a><span
+                    class="symbol">&lt;</span><a href="index.html#A"><span class="identifier">A</span></a><span
+                    class="symbol">&gt;</span></code></td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="observable-b.html">observableB</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">val </span><span class="identifier">observableB</span><span
+                    class="symbol">: </span><a href="../-observable-property/index.html"><span class="identifier">ObservableProperty</span></a><span
+                    class="symbol">&lt;</span><a href="index.html#B"><span class="identifier">B</span></a><span
+                    class="symbol">&gt;</span></code></td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="observable-c.html">observableC</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">val </span><span class="identifier">observableC</span><span
+                    class="symbol">: </span><a href="../-observable-property/index.html"><span class="identifier">ObservableProperty</span></a><span
+                    class="symbol">&lt;</span><a href="index.html#C"><span class="identifier">C</span></a><span
+                    class="symbol">&gt;</span></code></td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="value.html">value</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">var </span><span class="identifier">value</span><span class="symbol">: </span><a
+                    href="index.html#T"><span class="identifier">T</span></a></code>
+            <p>The current value of the observable property.</p>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+    <tbody>
+    <tr>
+        <td>
+            <p><a href="../-enabling-mutable-collection/active.html">active</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">var </span><span class="identifier">active</span><span
+                    class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
+                    class="identifier">Boolean</span></a></code></td>
+    </tr>
+    </tbody>
+</table>
+<h3>Functions</h3>
+<table>
+    <tbody>
+    <tr>
+        <td>
+            <p><a href="disable.html">disable</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">disable</span><span
+                    class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="enable.html">enable</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">enable</span><span
+                    class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="update.html">update</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">update</span><span
+                    class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code></td>
+    </tr>
+    </tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+    <tbody>
+    <tr>
+        <td>
+            <p><a href="../-enabling-mutable-collection/add.html">add</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">add</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="lk.kotlin.observable.property.EnablingMutableCollection$add(lk.kotlin.observable.property.EnablingMutableCollection.E)/element">element</span><span
+                    class="symbol">:</span>&nbsp;<a href="../-enabling-mutable-collection/index.html#E"><span
+                    class="identifier">E</span></a><span class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
+                    class="identifier">Boolean</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="../-enabling-mutable-collection/add-all.html">addAll</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">open</span> <span class="keyword">fun </span><span
+                    class="identifier">addAll</span><span class="symbol">(</span><span class="identifier"
+                                                                                       id="lk.kotlin.observable.property.EnablingMutableCollection$addAll(kotlin.collections.Collection((lk.kotlin.observable.property.EnablingMutableCollection.E)))/elements">elements</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html"><span
+                    class="identifier">Collection</span></a><span class="symbol">&lt;</span><a
+                    href="../-enabling-mutable-collection/index.html#E"><span class="identifier">E</span></a><span
+                    class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
+                    class="identifier">Boolean</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="../-enabling-mutable-collection/check-down.html">checkDown</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">checkDown</span><span
+                    class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="../-enabling-mutable-collection/check-up.html">checkUp</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">checkUp</span><span
+                    class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="../-enabling-mutable-collection/clear.html">clear</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">open</span> <span class="keyword">fun </span><span
+                    class="identifier">clear</span><span class="symbol">(</span><span class="symbol">)</span><span
+                    class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="../-observable-property/get-value.html">getValue</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">open</span> <span class="keyword">operator</span> <span
+                    class="keyword">fun </span><span class="identifier">getValue</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="lk.kotlin.observable.property.ObservableProperty$getValue(kotlin.Any, kotlin.reflect.KProperty((kotlin.Any)))/thisRef">thisRef</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span
+                    class="symbol">?</span><span class="symbol">, </span><span class="identifier"
+                                                                               id="lk.kotlin.observable.property.ObservableProperty$getValue(kotlin.Any, kotlin.reflect.KProperty((kotlin.Any)))/prop">prop</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-property/index.html"><span
+                    class="identifier">KProperty</span></a><span class="symbol">&lt;</span><span
+                    class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">)</span><span
+                    class="symbol">: </span><a href="../-observable-property/index.html#T"><span
+                    class="identifier">T</span></a></code>
+            <p>Simply retrieves the value.
+                Used for property delegates.</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="../-enabling-mutable-collection/remove.html">remove</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">open</span> <span class="keyword">fun </span><span
+                    class="identifier">remove</span><span class="symbol">(</span><span class="identifier"
+                                                                                       id="lk.kotlin.observable.property.EnablingMutableCollection$remove(lk.kotlin.observable.property.EnablingMutableCollection.E)/element">element</span><span
+                    class="symbol">:</span>&nbsp;<a href="../-enabling-mutable-collection/index.html#E"><span
+                    class="identifier">E</span></a><span class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
+                    class="identifier">Boolean</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="../-enabling-mutable-collection/remove-all.html">removeAll</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">open</span> <span class="keyword">fun </span><span
+                    class="identifier">removeAll</span><span class="symbol">(</span><span class="identifier"
+                                                                                          id="lk.kotlin.observable.property.EnablingMutableCollection$removeAll(kotlin.collections.Collection((lk.kotlin.observable.property.EnablingMutableCollection.E)))/elements">elements</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html"><span
+                    class="identifier">Collection</span></a><span class="symbol">&lt;</span><a
+                    href="../-enabling-mutable-collection/index.html#E"><span class="identifier">E</span></a><span
+                    class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
+                    class="identifier">Boolean</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="../-enabling-mutable-collection/retain-all.html">retainAll</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">open</span> <span class="keyword">fun </span><span
+                    class="identifier">retainAll</span><span class="symbol">(</span><span class="identifier"
+                                                                                          id="lk.kotlin.observable.property.EnablingMutableCollection$retainAll(kotlin.collections.Collection((lk.kotlin.observable.property.EnablingMutableCollection.E)))/elements">elements</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html"><span
+                    class="identifier">Collection</span></a><span class="symbol">&lt;</span><a
+                    href="../-enabling-mutable-collection/index.html#E"><span class="identifier">E</span></a><span
+                    class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
+                    class="identifier">Boolean</span></a></code></td>
+    </tr>
+    </tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+    <tbody>
+    <tr>
+        <td>
+            <p><a href="../add-and-invoke.html">addAndInvoke</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="symbol">&lt;</span><span
+                    class="identifier">A</span><span class="symbol">&gt;</span> <a
+                    href="../-observable-property/index.html"><span
+                    class="identifier">ObservableProperty</span></a><span class="symbol">&lt;</span><a
+                    href="../add-and-invoke.html#A"><span class="identifier">A</span></a><span
+                    class="symbol">&gt;</span><span class="symbol">.</span><span
+                    class="identifier">addAndInvoke</span><span class="symbol">(</span><span class="identifier"
+                                                                                             id="lk.kotlin.observable.property$addAndInvoke(lk.kotlin.observable.property.ObservableProperty((lk.kotlin.observable.property.addAndInvoke.A)), kotlin.Function1((lk.kotlin.observable.property.addAndInvoke.A, kotlin.Unit)))/lambda">lambda</span><span
+                    class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../add-and-invoke.html#A"><span
+                    class="identifier">A</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="../minus-assign.html">minusAssign</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">operator</span> <span class="keyword">fun </span><span
+                    class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <a
+                    href="../-observable-property/index.html"><span
+                    class="identifier">ObservableProperty</span></a><span class="symbol">&lt;</span><a
+                    href="../minus-assign.html#T"><span class="identifier">T</span></a><span
+                    class="symbol">&gt;</span><span class="symbol">.</span><span
+                    class="identifier">minusAssign</span><span class="symbol">(</span><span class="identifier"
+                                                                                            id="lk.kotlin.observable.property$minusAssign(lk.kotlin.observable.property.ObservableProperty((lk.kotlin.observable.property.minusAssign.T)), kotlin.Function1((lk.kotlin.observable.property.minusAssign.T, kotlin.Unit)))/lambda">lambda</span><span
+                    class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../minus-assign.html#T"><span
+                    class="identifier">T</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="../plus-assign.html">plusAssign</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">operator</span> <span class="keyword">fun </span><span
+                    class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <a
+                    href="../-observable-property/index.html"><span
+                    class="identifier">ObservableProperty</span></a><span class="symbol">&lt;</span><a
+                    href="../plus-assign.html#T"><span class="identifier">T</span></a><span
+                    class="symbol">&gt;</span><span class="symbol">.</span><span
+                    class="identifier">plusAssign</span><span class="symbol">(</span><span class="identifier"
+                                                                                           id="lk.kotlin.observable.property$plusAssign(lk.kotlin.observable.property.ObservableProperty((lk.kotlin.observable.property.plusAssign.T)), kotlin.Function1((lk.kotlin.observable.property.plusAssign.T, kotlin.Unit)))/lambda">lambda</span><span
+                    class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../plus-assign.html#T"><span
+                    class="identifier">T</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="../sub.html">sub</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="symbol">&lt;</span><span
+                    class="identifier">A</span><span class="symbol">, </span><span class="identifier">B</span><span
+                    class="symbol">&gt;</span> <a href="../-observable-property/index.html"><span class="identifier">ObservableProperty</span></a><span
+                    class="symbol">&lt;</span><a href="../sub.html#A"><span class="identifier">A</span></a><span
+                    class="symbol">&gt;</span><span class="symbol">.</span><s><span
+                    class="identifier">sub</span></s><span class="symbol">(</span><span class="identifier"
+                                                                                        id="lk.kotlin.observable.property$sub(lk.kotlin.observable.property.ObservableProperty((lk.kotlin.observable.property.sub.A)), kotlin.Function1((lk.kotlin.observable.property.sub.A, lk.kotlin.observable.property.sub.B)))/getterFun">getterFun</span><span
+                    class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../sub.html#A"><span
+                    class="identifier">A</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a
+                    href="../sub.html#B"><span class="identifier">B</span></a><span class="symbol">)</span><span
+                    class="symbol">: </span><a href="../-observable-property-mapped/index.html"><span
+                    class="identifier">ObservablePropertyMapped</span></a><span class="symbol">&lt;</span><a
+                    href="../sub.html#A"><span class="identifier">A</span></a><span class="symbol">,</span>&nbsp;<a
+                    href="../sub.html#B"><span class="identifier">B</span></a><span class="symbol">&gt;</span></code>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="../sub-obs.html">subObs</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="symbol">&lt;</span><span
+                    class="identifier">A</span><span class="symbol">, </span><span class="identifier">B</span><span
+                    class="symbol">&gt;</span> <a href="../-observable-property/index.html"><span class="identifier">ObservableProperty</span></a><span
+                    class="symbol">&lt;</span><a href="../sub-obs.html#A"><span class="identifier">A</span></a><span
+                    class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">subObs</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="lk.kotlin.observable.property$subObs(lk.kotlin.observable.property.ObservableProperty((lk.kotlin.observable.property.subObs.A)), kotlin.Function1((lk.kotlin.observable.property.subObs.A, lk.kotlin.observable.property.ObservableProperty((lk.kotlin.observable.property.subObs.B)))))/getterFun">getterFun</span><span
+                    class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../sub-obs.html#A"><span
+                    class="identifier">A</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a
+                    href="../-observable-property/index.html"><span
+                    class="identifier">ObservableProperty</span></a><span class="symbol">&lt;</span><a
+                    href="../sub-obs.html#B"><span class="identifier">B</span></a><span class="symbol">&gt;</span><span
+                    class="symbol">)</span><span class="symbol">: </span><a
+                    href="../-observable-property-sub-observable/index.html"><span class="identifier">ObservablePropertySubObservable</span></a><span
+                    class="symbol">&lt;</span><a href="../sub-obs.html#A"><span class="identifier">A</span></a><span
+                    class="symbol">,</span>&nbsp;<a href="../sub-obs.html#B"><span class="identifier">B</span></a><span
+                    class="symbol">&gt;</span></code>
+            <p>Transforms an observable to observe an observable within the observable.
+                Trippy, right?</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="../transform.html">transform</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="symbol">&lt;</span><span
+                    class="identifier">S</span><span class="symbol">, </span><span class="identifier">T</span><span
+                    class="symbol">&gt;</span> <a href="../-observable-property/index.html"><span class="identifier">ObservableProperty</span></a><span
+                    class="symbol">&lt;</span><a href="../transform.html#S"><span class="identifier">S</span></a><span
+                    class="symbol">&gt;</span><span class="symbol">.</span><span
+                    class="identifier">transform</span><span class="symbol">(</span><span class="identifier"
+                                                                                          id="lk.kotlin.observable.property$transform(lk.kotlin.observable.property.ObservableProperty((lk.kotlin.observable.property.transform.S)), kotlin.Function1((lk.kotlin.observable.property.transform.S, lk.kotlin.observable.property.transform.T)))/mapper">mapper</span><span
+                    class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../transform.html#S"><span
+                    class="identifier">S</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a
+                    href="../transform.html#T"><span class="identifier">T</span></a><span class="symbol">)</span><span
+                    class="symbol">: </span><a href="../-observable-property-mapped/index.html"><span
+                    class="identifier">ObservablePropertyMapped</span></a><span class="symbol">&lt;</span><a
+                    href="../transform.html#S"><span class="identifier">S</span></a><span
+                    class="symbol">,</span>&nbsp;<a href="../transform.html#T"><span
+                    class="identifier">T</span></a><span class="symbol">&gt;</span></code></td>
+    </tr>
+    </tbody>
+</table>
+</BODY>
+</HTML>

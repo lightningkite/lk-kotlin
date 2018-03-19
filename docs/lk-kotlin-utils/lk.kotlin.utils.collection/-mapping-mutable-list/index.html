@@ -1,0 +1,596 @@
+<HTML>
+<HEAD>
+    <meta charset="UTF-8">
+    <title>MappingMutableList - lk-kotlin-utils</title>
+    <link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">lk-kotlin-utils</a>&nbsp;/&nbsp;<a href="../index.html">lk.kotlin.utils.collection</a>&nbsp;/&nbsp;<a
+        href="./index.html">MappingMutableList</a><br/>
+<br/>
+<h1>MappingMutableList</h1>
+<code><span class="keyword">class </span><span class="identifier">MappingMutableList</span><span
+        class="symbol">&lt;</span><span class="identifier">S</span><span class="symbol">, </span><span
+        class="identifier">T</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span
+        class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span
+        class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>A class that makes a mutable list's elements act as if it were of a different type.</p>
+<h3>Constructors</h3>
+<table>
+    <tbody>
+    <tr>
+        <td>
+            <p><a href="-init-.html">&lt;init&gt;</a></p>
+        </td>
+        <td>
+            <code><span class="identifier">MappingMutableList</span><span class="symbol">(</span><span
+                    class="identifier"
+                    id="lk.kotlin.utils.collection.MappingMutableList$<init>(kotlin.collections.MutableList((lk.kotlin.utils.collection.MappingMutableList.S)), kotlin.Function1((lk.kotlin.utils.collection.MappingMutableList.S, lk.kotlin.utils.collection.MappingMutableList.T)), kotlin.Function1((lk.kotlin.utils.collection.MappingMutableList.T, lk.kotlin.utils.collection.MappingMutableList.S)))/around">around</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span
+                    class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a
+                    href="index.html#S"><span class="identifier">S</span></a><span class="symbol">&gt;</span><span
+                    class="symbol">, </span><span class="identifier"
+                                                  id="lk.kotlin.utils.collection.MappingMutableList$<init>(kotlin.collections.MutableList((lk.kotlin.utils.collection.MappingMutableList.S)), kotlin.Function1((lk.kotlin.utils.collection.MappingMutableList.S, lk.kotlin.utils.collection.MappingMutableList.T)), kotlin.Function1((lk.kotlin.utils.collection.MappingMutableList.T, lk.kotlin.utils.collection.MappingMutableList.S)))/mapper">mapper</span><span
+                    class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="index.html#S"><span
+                    class="identifier">S</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a
+                    href="index.html#T"><span class="identifier">T</span></a><span class="symbol">, </span><span
+                    class="identifier"
+                    id="lk.kotlin.utils.collection.MappingMutableList$<init>(kotlin.collections.MutableList((lk.kotlin.utils.collection.MappingMutableList.S)), kotlin.Function1((lk.kotlin.utils.collection.MappingMutableList.S, lk.kotlin.utils.collection.MappingMutableList.T)), kotlin.Function1((lk.kotlin.utils.collection.MappingMutableList.T, lk.kotlin.utils.collection.MappingMutableList.S)))/reverseMapper">reverseMapper</span><span
+                    class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="index.html#T"><span
+                    class="identifier">T</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a
+                    href="index.html#S"><span class="identifier">S</span></a><span class="symbol">)</span></code>
+            <p>A class that makes a mutable list's elements act as if it were of a different type.</p>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<h3>Properties</h3>
+<table>
+    <tbody>
+    <tr>
+        <td>
+            <p><a href="around.html">around</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">val </span><span class="identifier">around</span><span
+                    class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span
+                    class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a
+                    href="index.html#S"><span class="identifier">S</span></a><span class="symbol">&gt;</span></code>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="mapper.html">mapper</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">val </span><span class="identifier">mapper</span><span
+                    class="symbol">: </span><span class="symbol">(</span><a href="index.html#S"><span
+                    class="identifier">S</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a
+                    href="index.html#T"><span class="identifier">T</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="reverse-mapper.html">reverseMapper</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">val </span><span class="identifier">reverseMapper</span><span
+                    class="symbol">: </span><span class="symbol">(</span><a href="index.html#T"><span
+                    class="identifier">T</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a
+                    href="index.html#S"><span class="identifier">S</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="size.html">size</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">val </span><span class="identifier">size</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<h3>Functions</h3>
+<table>
+    <tbody>
+    <tr>
+        <td>
+            <p><a href="add.html">add</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span
+                    class="identifier"
+                    id="lk.kotlin.utils.collection.MappingMutableList$add(lk.kotlin.utils.collection.MappingMutableList.T)/element">element</span><span
+                    class="symbol">:</span>&nbsp;<a href="index.html#T"><span class="identifier">T</span></a><span
+                    class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
+                    class="identifier">Boolean</span></a></code><br/>
+            <code><span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span
+                    class="identifier"
+                    id="lk.kotlin.utils.collection.MappingMutableList$add(kotlin.Int, lk.kotlin.utils.collection.MappingMutableList.T)/index">index</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span
+                    class="symbol">, </span><span class="identifier"
+                                                  id="lk.kotlin.utils.collection.MappingMutableList$add(kotlin.Int, lk.kotlin.utils.collection.MappingMutableList.T)/element">element</span><span
+                    class="symbol">:</span>&nbsp;<a href="index.html#T"><span class="identifier">T</span></a><span
+                    class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="add-all.html">addAll</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">addAll</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="lk.kotlin.utils.collection.MappingMutableList$addAll(kotlin.Int, kotlin.collections.Collection((lk.kotlin.utils.collection.MappingMutableList.T)))/index">index</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span
+                    class="symbol">, </span><span class="identifier"
+                                                  id="lk.kotlin.utils.collection.MappingMutableList$addAll(kotlin.Int, kotlin.collections.Collection((lk.kotlin.utils.collection.MappingMutableList.T)))/elements">elements</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html"><span
+                    class="identifier">Collection</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span
+                    class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span
+                    class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
+                    class="identifier">Boolean</span></a></code><br/>
+            <code><span class="keyword">fun </span><span class="identifier">addAll</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="lk.kotlin.utils.collection.MappingMutableList$addAll(kotlin.collections.Collection((lk.kotlin.utils.collection.MappingMutableList.T)))/elements">elements</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html"><span
+                    class="identifier">Collection</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span
+                    class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span
+                    class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
+                    class="identifier">Boolean</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="clear.html">clear</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">clear</span><span
+                    class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="contains.html">contains</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">contains</span><span class="symbol">(</span><span
+                    class="identifier"
+                    id="lk.kotlin.utils.collection.MappingMutableList$contains(lk.kotlin.utils.collection.MappingMutableList.T)/element">element</span><span
+                    class="symbol">:</span>&nbsp;<a href="index.html#T"><span class="identifier">T</span></a><span
+                    class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
+                    class="identifier">Boolean</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="contains-all.html">containsAll</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">containsAll</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="lk.kotlin.utils.collection.MappingMutableList$containsAll(kotlin.collections.Collection((lk.kotlin.utils.collection.MappingMutableList.T)))/elements">elements</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html"><span
+                    class="identifier">Collection</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span
+                    class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span
+                    class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
+                    class="identifier">Boolean</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="get.html">get</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span
+                    class="identifier"
+                    id="lk.kotlin.utils.collection.MappingMutableList$get(kotlin.Int)/index">index</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span
+                    class="symbol">)</span><span class="symbol">: </span><a href="index.html#T"><span
+                    class="identifier">T</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="index-of.html">indexOf</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">indexOf</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="lk.kotlin.utils.collection.MappingMutableList$indexOf(lk.kotlin.utils.collection.MappingMutableList.T)/element">element</span><span
+                    class="symbol">:</span>&nbsp;<a href="index.html#T"><span class="identifier">T</span></a><span
+                    class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="is-empty.html">isEmpty</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">isEmpty</span><span
+                    class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
+                    class="identifier">Boolean</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="iterator.html">iterator</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">iterator</span><span class="symbol">(</span><span
+                    class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-iterator/index.html"><span
+                    class="identifier">MutableIterator</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span
+                    class="identifier">T</span></a><span class="symbol">&gt;</span></code></td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="last-index-of.html">lastIndexOf</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">lastIndexOf</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="lk.kotlin.utils.collection.MappingMutableList$lastIndexOf(lk.kotlin.utils.collection.MappingMutableList.T)/element">element</span><span
+                    class="symbol">:</span>&nbsp;<a href="index.html#T"><span class="identifier">T</span></a><span
+                    class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="list-iterator.html">listIterator</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">listIterator</span><span
+                    class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list-iterator/index.html"><span
+                    class="identifier">MutableListIterator</span></a><span class="symbol">&lt;</span><a
+                    href="index.html#T"><span class="identifier">T</span></a><span
+                    class="symbol">&gt;</span></code><br/>
+            <code><span class="keyword">fun </span><span class="identifier">listIterator</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="lk.kotlin.utils.collection.MappingMutableList$listIterator(kotlin.Int)/index">index</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span
+                    class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list-iterator/index.html"><span
+                    class="identifier">MutableListIterator</span></a><span class="symbol">&lt;</span><a
+                    href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="remove.html">remove</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">remove</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="lk.kotlin.utils.collection.MappingMutableList$remove(lk.kotlin.utils.collection.MappingMutableList.T)/element">element</span><span
+                    class="symbol">:</span>&nbsp;<a href="index.html#T"><span class="identifier">T</span></a><span
+                    class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
+                    class="identifier">Boolean</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="remove-all.html">removeAll</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">removeAll</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="lk.kotlin.utils.collection.MappingMutableList$removeAll(kotlin.collections.Collection((lk.kotlin.utils.collection.MappingMutableList.T)))/elements">elements</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html"><span
+                    class="identifier">Collection</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span
+                    class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span
+                    class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
+                    class="identifier">Boolean</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="remove-at.html">removeAt</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">removeAt</span><span class="symbol">(</span><span
+                    class="identifier" id="lk.kotlin.utils.collection.MappingMutableList$removeAt(kotlin.Int)/index">index</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span
+                    class="symbol">)</span><span class="symbol">: </span><a href="index.html#T"><span
+                    class="identifier">T</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="retain-all.html">retainAll</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">retainAll</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="lk.kotlin.utils.collection.MappingMutableList$retainAll(kotlin.collections.Collection((lk.kotlin.utils.collection.MappingMutableList.T)))/elements">elements</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html"><span
+                    class="identifier">Collection</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span
+                    class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span
+                    class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
+                    class="identifier">Boolean</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="set.html">set</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">set</span><span class="symbol">(</span><span
+                    class="identifier"
+                    id="lk.kotlin.utils.collection.MappingMutableList$set(kotlin.Int, lk.kotlin.utils.collection.MappingMutableList.T)/index">index</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span
+                    class="symbol">, </span><span class="identifier"
+                                                  id="lk.kotlin.utils.collection.MappingMutableList$set(kotlin.Int, lk.kotlin.utils.collection.MappingMutableList.T)/element">element</span><span
+                    class="symbol">:</span>&nbsp;<a href="index.html#T"><span class="identifier">T</span></a><span
+                    class="symbol">)</span><span class="symbol">: </span><a href="index.html#T"><span
+                    class="identifier">T</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="sub-list.html">subList</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">subList</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="lk.kotlin.utils.collection.MappingMutableList$subList(kotlin.Int, kotlin.Int)/fromIndex">fromIndex</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span
+                    class="symbol">, </span><span class="identifier"
+                                                  id="lk.kotlin.utils.collection.MappingMutableList$subList(kotlin.Int, kotlin.Int)/toIndex">toIndex</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span
+                    class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span
+                    class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a
+                    href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+    <tbody>
+    <tr>
+        <td>
+            <p><a href="../kotlin.collections.-mutable-list/add-all-sorted.html">addAllSorted</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">E</span>&nbsp;<span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html"><span
+                    class="identifier">Comparable</span></a><span class="symbol">&lt;</span><a
+                    href="../kotlin.collections.-mutable-list/add-all-sorted.html#E"><span
+                    class="identifier">E</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span> <a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span
+                    class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a
+                    href="../kotlin.collections.-mutable-list/add-all-sorted.html#E"><span
+                    class="identifier">E</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span
+                    class="identifier">addAllSorted</span><span class="symbol">(</span><span class="identifier"
+                                                                                             id="lk.kotlin.utils.collection$addAllSorted(kotlin.collections.MutableList((lk.kotlin.utils.collection.addAllSorted.E)), kotlin.collections.Collection((lk.kotlin.utils.collection.addAllSorted.E)))/items">items</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html"><span
+                    class="identifier">Collection</span></a><span class="symbol">&lt;</span><a
+                    href="../kotlin.collections.-mutable-list/add-all-sorted.html#E"><span
+                    class="identifier">E</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span
+                    class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code>
+            <p>Finds the position an item belongs in the list (assuming it's sorted) and inserts it there.</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="../kotlin.collections.-mutable-list/add-sorted.html">addSorted</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="symbol">&lt;</span><span
+                    class="identifier">E</span><span class="symbol">&gt;</span> <a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span
+                    class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a
+                    href="../kotlin.collections.-mutable-list/add-sorted.html#E"><span
+                    class="identifier">E</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span
+                    class="identifier">addSorted</span><span class="symbol">(</span><span class="identifier"
+                                                                                          id="lk.kotlin.utils.collection$addSorted(kotlin.collections.MutableList((lk.kotlin.utils.collection.addSorted.E)), lk.kotlin.utils.collection.addSorted.E, kotlin.Function2((lk.kotlin.utils.collection.addSorted.E, , kotlin.Boolean)))/item">item</span><span
+                    class="symbol">:</span>&nbsp;<a href="../kotlin.collections.-mutable-list/add-sorted.html#E"><span
+                    class="identifier">E</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                       id="lk.kotlin.utils.collection$addSorted(kotlin.collections.MutableList((lk.kotlin.utils.collection.addSorted.E)), lk.kotlin.utils.collection.addSorted.E, kotlin.Function2((lk.kotlin.utils.collection.addSorted.E, , kotlin.Boolean)))/compare">compare</span><span
+                    class="symbol">:</span>&nbsp;<span class="symbol">(</span><a
+                    href="../kotlin.collections.-mutable-list/add-sorted.html#E"><span
+                    class="identifier">E</span></a><span class="symbol">,</span>&nbsp;<a
+                    href="../kotlin.collections.-mutable-list/add-sorted.html#E"><span
+                    class="identifier">E</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
+                    class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+            <p>Finds the position an item belongs in the list (assuming it's sorted) according to <a
+                    href="../kotlin.collections.-mutable-list/add-sorted.html#lk.kotlin.utils.collection$addSorted(kotlin.collections.MutableList((lk.kotlin.utils.collection.addSorted.E)), lk.kotlin.utils.collection.addSorted.E, kotlin.Function2((lk.kotlin.utils.collection.addSorted.E, , kotlin.Boolean)))/compare">compare</a>
+                and inserts it there.</p>
+            <code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">E</span>&nbsp;<span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html"><span
+                    class="identifier">Comparable</span></a><span class="symbol">&lt;</span><a
+                    href="../kotlin.collections.-mutable-list/add-sorted.html#E"><span
+                    class="identifier">E</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span> <a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span
+                    class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a
+                    href="../kotlin.collections.-mutable-list/add-sorted.html#E"><span
+                    class="identifier">E</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span
+                    class="identifier">addSorted</span><span class="symbol">(</span><span class="identifier"
+                                                                                          id="lk.kotlin.utils.collection$addSorted(kotlin.collections.MutableList((lk.kotlin.utils.collection.addSorted.E)), lk.kotlin.utils.collection.addSorted.E)/item">item</span><span
+                    class="symbol">:</span>&nbsp;<a href="../kotlin.collections.-mutable-list/add-sorted.html#E"><span
+                    class="identifier">E</span></a><span class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+            <p>Finds the position an item belongs in the list (assuming it's sorted) according to <a
+                    href="#">compare</a> and inserts it there.</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="../kotlin.collections.-mutable-list/add-sorted-reverse.html">addSortedReverse</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">E</span>&nbsp;<span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html"><span
+                    class="identifier">Comparable</span></a><span class="symbol">&lt;</span><a
+                    href="../kotlin.collections.-mutable-list/add-sorted-reverse.html#E"><span
+                    class="identifier">E</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span> <a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span
+                    class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a
+                    href="../kotlin.collections.-mutable-list/add-sorted-reverse.html#E"><span
+                    class="identifier">E</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span
+                    class="identifier">addSortedReverse</span><span class="symbol">(</span><span class="identifier"
+                                                                                                 id="lk.kotlin.utils.collection$addSortedReverse(kotlin.collections.MutableList((lk.kotlin.utils.collection.addSortedReverse.E)), lk.kotlin.utils.collection.addSortedReverse.E)/item">item</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="../kotlin.collections.-mutable-list/add-sorted-reverse.html#E"><span
+                    class="identifier">E</span></a><span class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+            <p>Finds the position an item belongs in the list (assuming it's sorted) and inserts it there.</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="../../lk.kotlin.utils/kotlin.-any/cast.html">cast</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span
+                    class="symbol">&gt;</span> <a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span
+                    class="symbol">.</span><span class="identifier">cast</span><span class="symbol">(</span><span
+                    class="symbol">)</span><span class="symbol">: </span><a
+                    href="../../lk.kotlin.utils/kotlin.-any/cast.html#T"><span class="identifier">T</span></a></code>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="../../lk.kotlin.utils/kotlin.-any/cast-or-null.html">castOrNull</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span
+                    class="symbol">&gt;</span> <a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span
+                    class="symbol">.</span><span class="identifier">castOrNull</span><span class="symbol">(</span><span
+                    class="symbol">)</span><span class="symbol">: </span><a
+                    href="../../lk.kotlin.utils/kotlin.-any/cast-or-null.html#T"><span
+                    class="identifier">T</span></a><span class="symbol">?</span></code></td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="../kotlin.collections.-list/mapping.html">mapping</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="symbol">&lt;</span><span
+                    class="identifier">S</span><span class="symbol">, </span><span class="identifier">T</span><span
+                    class="symbol">&gt;</span> <a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span
+                    class="identifier">List</span></a><span class="symbol">&lt;</span><a
+                    href="../kotlin.collections.-list/mapping.html#S"><span class="identifier">S</span></a><span
+                    class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">mapping</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="lk.kotlin.utils.collection$mapping(kotlin.collections.List((lk.kotlin.utils.collection.mapping.S)), kotlin.Function1((lk.kotlin.utils.collection.mapping.S, lk.kotlin.utils.collection.mapping.T)), kotlin.Function1((lk.kotlin.utils.collection.mapping.T, lk.kotlin.utils.collection.mapping.S)))/read">read</span><span
+                    class="symbol">:</span>&nbsp;<span class="symbol">(</span><a
+                    href="../kotlin.collections.-list/mapping.html#S"><span class="identifier">S</span></a><span
+                    class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a
+                    href="../kotlin.collections.-list/mapping.html#T"><span class="identifier">T</span></a><span
+                    class="symbol">, </span><span class="identifier"
+                                                  id="lk.kotlin.utils.collection$mapping(kotlin.collections.List((lk.kotlin.utils.collection.mapping.S)), kotlin.Function1((lk.kotlin.utils.collection.mapping.S, lk.kotlin.utils.collection.mapping.T)), kotlin.Function1((lk.kotlin.utils.collection.mapping.T, lk.kotlin.utils.collection.mapping.S)))/write">write</span><span
+                    class="symbol">:</span>&nbsp;<span class="symbol">(</span><a
+                    href="../kotlin.collections.-list/mapping.html#T"><span class="identifier">T</span></a><span
+                    class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a
+                    href="../kotlin.collections.-list/mapping.html#S"><span class="identifier">S</span></a><span
+                    class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span
+                    class="identifier">List</span></a><span class="symbol">&lt;</span><a
+                    href="../kotlin.collections.-list/mapping.html#T"><span class="identifier">T</span></a><span
+                    class="symbol">&gt;</span></code>
+            <p>Wraps a list, making it act as if the elements were of type <a
+                    href="../kotlin.collections.-list/mapping.html#T">T</a> instead of <a
+                    href="../kotlin.collections.-list/mapping.html#S">S</a>.</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="../kotlin.collections.-mutable-list/mapping-mutable.html">mappingMutable</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="symbol">&lt;</span><span
+                    class="identifier">S</span><span class="symbol">, </span><span class="identifier">T</span><span
+                    class="symbol">&gt;</span> <a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span
+                    class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a
+                    href="../kotlin.collections.-mutable-list/mapping-mutable.html#S"><span class="identifier">S</span></a><span
+                    class="symbol">&gt;</span><span class="symbol">.</span><span
+                    class="identifier">mappingMutable</span><span class="symbol">(</span><span class="identifier"
+                                                                                               id="lk.kotlin.utils.collection$mappingMutable(kotlin.collections.MutableList((lk.kotlin.utils.collection.mappingMutable.S)), kotlin.Function1((lk.kotlin.utils.collection.mappingMutable.S, lk.kotlin.utils.collection.mappingMutable.T)), kotlin.Function1((lk.kotlin.utils.collection.mappingMutable.T, lk.kotlin.utils.collection.mappingMutable.S)))/read">read</span><span
+                    class="symbol">:</span>&nbsp;<span class="symbol">(</span><a
+                    href="../kotlin.collections.-mutable-list/mapping-mutable.html#S"><span class="identifier">S</span></a><span
+                    class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a
+                    href="../kotlin.collections.-mutable-list/mapping-mutable.html#T"><span class="identifier">T</span></a><span
+                    class="symbol">, </span><span class="identifier"
+                                                  id="lk.kotlin.utils.collection$mappingMutable(kotlin.collections.MutableList((lk.kotlin.utils.collection.mappingMutable.S)), kotlin.Function1((lk.kotlin.utils.collection.mappingMutable.S, lk.kotlin.utils.collection.mappingMutable.T)), kotlin.Function1((lk.kotlin.utils.collection.mappingMutable.T, lk.kotlin.utils.collection.mappingMutable.S)))/write">write</span><span
+                    class="symbol">:</span>&nbsp;<span class="symbol">(</span><a
+                    href="../kotlin.collections.-mutable-list/mapping-mutable.html#T"><span class="identifier">T</span></a><span
+                    class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a
+                    href="../kotlin.collections.-mutable-list/mapping-mutable.html#S"><span class="identifier">S</span></a><span
+                    class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span
+                    class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a
+                    href="../kotlin.collections.-mutable-list/mapping-mutable.html#T"><span class="identifier">T</span></a><span
+                    class="symbol">&gt;</span></code>
+            <p>Wraps a list, making it act as if the elements were of type <a
+                    href="../kotlin.collections.-mutable-list/mapping-mutable.html#T">T</a> instead of <a
+                    href="../kotlin.collections.-mutable-list/mapping-mutable.html#S">S</a>.</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="../kotlin.collections.-mutable-collection/mapping-write-only.html">mappingWriteOnly</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="symbol">&lt;</span><span
+                    class="identifier">S</span><span class="symbol">, </span><span class="identifier">E</span><span
+                    class="symbol">&gt;</span> <a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-collection/index.html"><span
+                    class="identifier">MutableCollection</span></a><span class="symbol">&lt;</span><a
+                    href="../kotlin.collections.-mutable-collection/mapping-write-only.html#S"><span class="identifier">S</span></a><span
+                    class="symbol">&gt;</span><span class="symbol">.</span><span
+                    class="identifier">mappingWriteOnly</span><span class="symbol">(</span><span class="identifier"
+                                                                                                 id="lk.kotlin.utils.collection$mappingWriteOnly(kotlin.collections.MutableCollection((lk.kotlin.utils.collection.mappingWriteOnly.S)), kotlin.Function1((lk.kotlin.utils.collection.mappingWriteOnly.E, lk.kotlin.utils.collection.mappingWriteOnly.S)))/inputMapper">inputMapper</span><span
+                    class="symbol">:</span>&nbsp;<span class="symbol">(</span><a
+                    href="../kotlin.collections.-mutable-collection/mapping-write-only.html#E"><span class="identifier">E</span></a><span
+                    class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a
+                    href="../kotlin.collections.-mutable-collection/mapping-write-only.html#S"><span class="identifier">S</span></a><span
+                    class="symbol">)</span><span class="symbol">: </span><a
+                    href="../-collection-write-only-mapping/index.html"><span class="identifier">CollectionWriteOnlyMapping</span></a><span
+                    class="symbol">&lt;</span><a
+                    href="../kotlin.collections.-mutable-collection/mapping-write-only.html#S"><span class="identifier">S</span></a><span
+                    class="symbol">,</span>&nbsp;<a
+                    href="../kotlin.collections.-mutable-collection/mapping-write-only.html#E"><span class="identifier">E</span></a><span
+                    class="symbol">&gt;</span></code></td>
+    </tr>
+    </tbody>
+</table>
+</BODY>
+</HTML>
