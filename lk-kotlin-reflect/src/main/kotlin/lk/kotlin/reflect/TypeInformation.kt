@@ -4,7 +4,9 @@ import kotlin.reflect.KClass
 import kotlin.reflect.KType
 import kotlin.reflect.jvm.jvmErasure
 
-//Ser/des
+/**
+ * Information about the Kotlin type of a parameter or return type without type erasure.
+ */
 class TypeInformation(
         val kclass: KClass<*>,
         val nullable: Boolean = false,

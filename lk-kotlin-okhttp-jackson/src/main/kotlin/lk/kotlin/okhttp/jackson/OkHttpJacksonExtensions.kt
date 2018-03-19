@@ -63,7 +63,6 @@ fun Request.Builder.lambdaJacksonNode(client: OkHttpClient = defaultClient, mapp
  */
 inline fun <reified T : Any> Request.Builder.lambdaJackson(client: OkHttpClient = defaultClient, mapper: ObjectMapper = MyJackson.mapper): () -> TypedResponse<T> = lambda<T>(client) {
     val str = it.body()!!.string()
-    println(str)
     mapper.readValue<T>(str, object : TypeReference<T>() {})
 }
 
@@ -73,7 +72,6 @@ inline fun <reified T : Any> Request.Builder.lambdaJackson(client: OkHttpClient 
  */
 fun <T : Any> Request.Builder.lambdaJackson(type: JavaType, client: OkHttpClient = defaultClient, mapper: ObjectMapper = MyJackson.mapper): () -> TypedResponse<T> = lambda<T>(client) {
     val str = it.body()!!.string()
-    println(str)
     mapper.readValue<T>(str, type)
 }
 
@@ -83,6 +81,5 @@ fun <T : Any> Request.Builder.lambdaJackson(type: JavaType, client: OkHttpClient
  */
 fun <T : Any> Request.Builder.lambdaJackson(type: TypeReference<T>, client: OkHttpClient = defaultClient, mapper: ObjectMapper = MyJackson.mapper): () -> TypedResponse<T> = lambda<T>(client) {
     val str = it.body()!!.string()
-    println(str)
     mapper.readValue<T>(str, type)
 }

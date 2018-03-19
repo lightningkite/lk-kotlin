@@ -23,5 +23,6 @@ dependencies {
     testImplementation "org.jetbrains.kotlin:kotlin-test-junit:${rootProject.kotlinVersion}"
 
     implementation project(':lk-kotlin-utils')
+    implementation project(':lk-kotlin-jvm-utils')
     implementation project(':lk-kotlin-observable-property')
 }

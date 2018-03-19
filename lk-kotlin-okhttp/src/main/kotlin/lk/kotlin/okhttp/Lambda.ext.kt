@@ -6,7 +6,9 @@ package lk.kotlin.okhttp
 
 import java.util.concurrent.Executor
 
-
+/**
+ * Runs [onSuccess] on the [executor] with the successful result.
+ */
 inline fun <T> (() -> TypedResponse<T>).thenOnSuccess(executor: Executor, crossinline onSuccess: (T) -> Unit): () -> TypedResponse<T> {
     return {
         val response = this.invoke()
@@ -17,6 +19,9 @@ inline fun <T> (() -> TypedResponse<T>).thenOnSuccess(executor: Executor, crossi
     }
 }
 
+/**
+ * Runs [onFailure] on the [executor] with the successful result.
+ */
 inline fun <T> (() -> TypedResponse<T>).thenOnFailure(executor: Executor, crossinline onFailure: (TypedResponse<T>) -> Unit): () -> TypedResponse<T> {
     return {
         val response = this.invoke()
@@ -27,6 +32,10 @@ inline fun <T> (() -> TypedResponse<T>).thenOnFailure(executor: Executor, crossi
     }
 }
 
+
+/**
+ * Allows you to chain successful calls from one to the next.
+ */
 inline fun <A, B> (() -> TypedResponse<A>).chain(crossinline otherLambdaGenerator: (A) -> () -> TypedResponse<B>): () -> TypedResponse<B> {
     return {
         val response = this.invoke()
@@ -38,6 +47,9 @@ inline fun <A, B> (() -> TypedResponse<A>).chain(crossinline otherLambdaGenerato
     }
 }
 
+/**
+ * Allows you to chain successful calls from one to the next.
+ */
 inline fun <A, B> (() -> TypedResponse<A>).chainTypeless(crossinline default: (TypedResponse<A>) -> B, crossinline otherLambdaGenerator: (A) -> () -> B): () -> B {
     return {
         val response = this.invoke()
@@ -49,6 +61,10 @@ inline fun <A, B> (() -> TypedResponse<A>).chainTypeless(crossinline default: (T
     }
 }
 
+
+/**
+ * Transforms the result of successful calls.
+ */
 inline fun <A, B> (() -> TypedResponse<A>).transformResult(crossinline mapper: (A) -> B): () -> TypedResponse<B> {
     return {
         try {
