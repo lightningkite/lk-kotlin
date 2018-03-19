@@ -1,13 +1,13 @@
-include ':lk-kotlin-utils',
-        ':lk-kotlin-jvm-utils',
-        ':lk-kotlin-jackson',
-        ':lk-kotlin-okhttp',
-        ':lk-kotlin-okhttp-jackson',
-        ':lk-kotlin-lifecycle',
-        ':lk-kotlin-observable-property',
-        ':lk-kotlin-observable-property-jvm',
-        ':lk-kotlin-observable-property-lifecycle',
-        ':lk-kotlin-observable-list',
-        ':lk-kotlin-observable-list-lifecycle'
-include 'lk-kotlin-reflect'
+include ':lk-kotlin-utils'
+include ':lk-kotlin-jvm-utils'
+include ':lk-kotlin-jackson'
+include ':lk-kotlin-okhttp'
+include ':lk-kotlin-okhttp-jackson'
+include ':lk-kotlin-lifecycle'
+include ':lk-kotlin-observable-property'
+include ':lk-kotlin-observable-property-jvm'
+include ':lk-kotlin-observable-property-lifecycle'
+include ':lk-kotlin-observable-list'
+include ':lk-kotlin-observable-list-lifecycle'
+include ':lk-kotlin-reflect'
 
