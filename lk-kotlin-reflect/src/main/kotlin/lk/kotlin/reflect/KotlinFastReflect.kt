@@ -70,7 +70,7 @@ val <T : Any> KClass<T>.reflectAsmConstructorAccess
 private val KProperty1ReflectAsmGet = HashMap<KProperty1<*, *>, (Any) -> Any?>()
 fun KProperty1<*, *>.reflectAsmGet(instance: Any) = KProperty1ReflectAsmGet[this]!!.invoke(instance)
 private val KProperty1ReflectAsmSet = HashMap<KProperty1<*, *>, (Any, Any?) -> Unit>()
-fun KProperty1<*, *>.reflectAsmSet(instance: Any, value: Any?) = KProperty1ReflectAsmSet[this]!!.invoke(instance, value)
+fun KMutableProperty1<*, *>.reflectAsmSet(instance: Any, value: Any?) = KProperty1ReflectAsmSet[this]!!.invoke(instance, value)
 
 fun KProperty1<*, *>.fastSetup(kClass: KClass<*>) {
     val methodAccess = kClass.reflectAsmMethodAccess
@@ -87,7 +87,7 @@ fun KMutableProperty1<*, *>.fastSetup(kClass: KClass<*>) {
     val indexGet = methodAccess.getIndex(getMethodName)
     val indexSet = methodAccess.getIndex("set" + this.name.capitalize())
     KProperty1ReflectAsmGet.putIfAbsent(this) { instance: Any -> methodAccess.invoke(instance, indexGet) }
-    KProperty1ReflectAsmSet.putIfAbsent(this) { instance: Any, value: Any? -> methodAccess.invoke(instance, indexSet) }
+    KProperty1ReflectAsmSet.putIfAbsent(this) { instance: Any, value: Any? -> methodAccess.invoke(instance, indexSet, value) }
 }
 
 private val KProperty1FastType = HashMap<KProperty1<*, *>, TypeInformation>()
