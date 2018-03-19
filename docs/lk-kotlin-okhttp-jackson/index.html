@@ -8,7 +8,28 @@
 <a href="./index.html">lk-kotlin-okhttp-jackson</a><br/>
 <br/>
 <p><a href="../">Return to Index</a></p>
-<p> Adds Jackson functionality to the OkHttp extensions.</p>
+<h2>Package description</h2>
+<p>Adds Jackson functionality to the OkHttp extensions.</p>
+<h2>Gradle Inclusion</h2>
+<p><a href="https://bintray.com/lightningkite/lk-kotlin/lk-kotlin-okhttp-jackson/_latestVersion"> !<a href="https://api.bintray.com/packages/lightningkite/lk-kotlin/lk-kotlin-okhttp-jackson/images/download.svg">Download</a> </a></p>
+<p>Add the repository:</p>
+<pre><code>repositories {
+    maven {
+        url "https://dl.bintray.com/lightningkite/lk-kotlin"
+    }
+}
+</code></pre>
+<p>Include the desired libraries:</p>
+<pre><code>dependencies {
+    implementation "com.fasterxml.jackson.core:jackson-databind:2.9.+"
+    implementation "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.+"
+    implementation 'com.squareup.okhttp3:okhttp:3.9.0'
+    implementation "lk-kotlin:lk-kotlin-jackson:[version]"
+    implementation "lk-kotlin:lk-kotlin-okhttp:[version]"
+    implementation "lk-kotlin:lk-kotlin-okhttp-jackson:[version]"
+}
+</code></pre>
+<h2>Resources</h2>
 <p><a href="https://github.com/lightningkite/lk-kotlin/tree/master/lk-kotlin-okhttp-jackson/src/test/kotlin/lk/kotlin/okhttp/jackson/example">Examples</a></p>
 <h3>Packages</h3>
 <table>

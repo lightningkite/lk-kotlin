@@ -21,10 +21,11 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:${rootProject.kotlinVersion}"
     testImplementation 'junit:junit:4.12'
     testImplementation "org.jetbrains.kotlin:kotlin-test-junit:${rootProject.kotlinVersion}"
+    implementation project(':lk-kotlin-utils')
     implementation project(':lk-kotlin-jackson')
     implementation project(':lk-kotlin-okhttp')
 
-    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.+'
+    implementation "com.fasterxml.jackson.core:jackson-databind:2.9.+"
     implementation "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.+"
     implementation 'com.squareup.okhttp3:okhttp:3.9.0'
 }

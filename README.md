@@ -27,6 +27,51 @@ This includes the following packages:
 Seriously, check out those example unit tests.  They show you exactly how to use the functionality provided.
 
 
+## Gradle Inclusion
+
+Add the repository:
+
+```
+repositories {
+    maven {
+        url "https://dl.bintray.com/lightningkite/lk-kotlin"
+    }
+}
+```
+
+Include the desired libraries:
+
+```
+dependencies {
+    implementation "lk-kotlin:lk-kotlin-utils:[version]"
+
+    implementation "lk-kotlin:lk-kotlin-jvm-utils:[version]"
+
+    implementation "lk-kotlin:lk-kotlin-jackson:[version]"
+    implementation "com.fasterxml.jackson.core:jackson-databind:2.9.+"
+    implementation "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.+"
+
+    implementation "lk-kotlin:lk-kotlin-okhttp:[version]"
+    implementation 'com.squareup.okhttp3:okhttp:3.9.0'
+
+    implementation "lk-kotlin:lk-kotlin-okhttp-jackson:[version]"
+
+    implementation "lk-kotlin:lk-kotlin-lifecycle:[version]"
+
+    implementation "lk-kotlin:lk-kotlin-observable-property:[version]"
+
+    implementation "lk-kotlin:lk-kotlin-observable-property-jvm:[version]"
+
+    implementation "lk-kotlin:lk-kotlin-observable-property-lifecycle:[version]"
+
+    implementation "lk-kotlin:lk-kotlin-observable-list:[version]"
+
+    implementation "lk-kotlin:lk-kotlin-observable-list-lifecycle:[version]"
+
+    implementation 'com.esotericsoftware:reflectasm:1.11.3'
+    implementation "lk-kotlin:lk-kotlin-reflect:[version]"
+}
+```
 
 # TODO Notes
 
