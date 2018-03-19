@@ -1,5 +1,7 @@
 # Module lk-kotlin-utils
 
+[Return to Index](../)
+
 Various useful extension functions
 
-[Examples](src/test/kotlin/lk/kotlin/utils/example)
+[Examples](https://github.com/lightningkite/lk-kotlin/tree/master/lk-kotlin-utils/src/test/kotlin/lk/kotlin/utils/example)
