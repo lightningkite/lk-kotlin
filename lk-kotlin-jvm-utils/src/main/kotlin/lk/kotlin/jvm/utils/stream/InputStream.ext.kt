@@ -25,8 +25,8 @@ fun InputStream.toString(estimatedSize: Int = DEFAULT_BUFFER_SIZE, charset: Char
 /**
  * Writes the stream into the file and closes it.
  */
-fun File.writeStream(stream: InputStream) = outputStream().use { outputStream ->
-    stream.use { inputStream ->
+fun InputStream.toFile(file: File) = file.outputStream().use { outputStream ->
+    use { inputStream ->
         inputStream.copyTo(outputStream)
     }
 }

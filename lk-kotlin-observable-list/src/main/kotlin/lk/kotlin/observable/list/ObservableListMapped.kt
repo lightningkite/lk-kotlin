@@ -37,7 +37,7 @@ class ObservableListMapped<S, E>(val source: ObservableList<S>, val mapper: (S) 
 
     override fun listIterator(): MutableListIterator<E> = source.listIterator().mapping(mapper, reverseMapper)
     override fun listIterator(index: Int): MutableListIterator<E> = source.listIterator(index).mapping(mapper, reverseMapper)
-    override fun iterator(): MutableIterator<E> = source.iterator().mapping(mapper, reverseMapper)
+    override fun iterator(): MutableIterator<E> = source.iterator().mapping(mapper)
     override fun replace(list: List<E>) = source.replace(list.map(reverseMapper))
 
     val listenerMapper = { input: (E, Int) -> Unit ->
@@ -62,5 +62,5 @@ class ObservableListMapped<S, E>(val source: ObservableList<S>, val mapper: (S) 
     override val onReplace: MutableCollection<(ObservableList<E>) -> Unit> = source.onReplace.mappingWriteOnly({ input -> { input(this) } })
 }
 
-fun <S, E> ObservableList<S>.mapping(mapper: (S) -> E, reverseMapper: (E) -> S): ObservableListMapped<S, E> = ObservableListMapped(this, mapper, reverseMapper)
-fun <S, E> ObservableList<S>.mapping(mapper: (S) -> E): ObservableListMapped<S, E> = ObservableListMapped(this, mapper, { throw IllegalArgumentException() })
+fun <S, E> ObservableList<S>.mapping(read: (S) -> E, write: (E) -> S): ObservableListMapped<S, E> = ObservableListMapped(this, read, write)
+fun <S, E> ObservableList<S>.mapping(read: (S) -> E): ObservableListMapped<S, E> = ObservableListMapped(this, read, { throw IllegalArgumentException() })

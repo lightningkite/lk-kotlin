@@ -1,0 +1,58 @@
+@file:JvmName("LkKotlinUtils")
+@file:JvmMultifileClass
+
+package lk.kotlin.utils.collection
+
+/**
+ * Finds the position an item belongs in the list (assuming it's sorted) according to [compare] and inserts it there.
+ */
+fun <E> MutableList<E>.addSorted(item: E, compare: (E, E) -> Boolean): Int {
+    var index = 0
+    for (it in this) {
+        if (compare(item, it)) {
+            break
+        }
+        index++
+    }
+    add(index, item)
+    return index
+}
+
+/**
+ * Finds the position an item belongs in the list (assuming it's sorted) according to [compare] and inserts it there.
+ */
+fun <E : Comparable<E>> MutableList<E>.addSorted(item: E): Int {
+    var index = 0
+    for (it in this) {
+        if (item.compareTo(it) < 0) {
+            break
+        }
+        index++
+    }
+    add(index, item)
+    return index
+}
+
+/**
+ * Finds the position an item belongs in the list (assuming it's sorted) and inserts it there.
+ */
+fun <E : Comparable<E>> MutableList<E>.addAllSorted(items: Collection<E>) {
+    for (item in items) {
+        addSorted(item)
+    }
+}
+
+/**
+ * Finds the position an item belongs in the list (assuming it's sorted) and inserts it there.
+ */
+inline fun <E : Comparable<E>> MutableList<E>.addSortedReverse(item: E): Int {
+    var index = 0
+    for (it in this) {
+        if (item.compareTo(it) > 0) {
+            break
+        }
+        index++
+    }
+    add(index, item)
+    return index
+}

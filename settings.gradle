@@ -9,3 +9,5 @@ include ':lk-kotlin-utils',
         ':lk-kotlin-observable-property-lifecycle',
         ':lk-kotlin-observable-list',
         ':lk-kotlin-observable-list-lifecycle'
+include 'lk-kotlin-reflect'
+

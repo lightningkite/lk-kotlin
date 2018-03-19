@@ -123,7 +123,7 @@ class ObservableListSorted<E>(val source: ObservableList<E>, val sorter: (E, E) 
 
     override fun listIterator(): MutableListIterator<E> = throw UnsupportedOperationException()
     override fun listIterator(index: Int): MutableListIterator<E> = throw UnsupportedOperationException()
-    override fun iterator(): MutableIterator<E> = indexList.iterator().mapping({ source[it] }, { indexOf(it) })
+    override fun iterator(): MutableIterator<E> = indexList.iterator().mapping({ source[it] })
     override fun replace(list: List<E>) = source.replace(list)
 
     val listenerMapper = { input: (E, Int) -> Unit ->

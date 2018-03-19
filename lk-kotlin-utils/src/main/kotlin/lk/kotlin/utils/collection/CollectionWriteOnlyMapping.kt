@@ -6,6 +6,8 @@ package lk.kotlin.utils.collection
 
 /**
  * Maps a collection to a different type for writing only.
+ * Why is this important?  Because you can add and removed mapped listeners to an event using this!
+ * See the example in the tests.
  *
  * Created by joseph on 12/14/16.
  */
