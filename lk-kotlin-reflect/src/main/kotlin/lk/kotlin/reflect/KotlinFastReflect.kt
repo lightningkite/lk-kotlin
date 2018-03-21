@@ -99,6 +99,7 @@ private val KProperty1ReflectAsmGet = HashMap<KProperty1<*, *>, (Any) -> Any?>()
  * Gets the value of the property using ReflectASM.
  */
 fun KProperty1<*, *>.reflectAsmGet(instance: Any) = KProperty1ReflectAsmGet[this]!!.invoke(instance)
+
 private val KProperty1ReflectAsmSet = HashMap<KProperty1<*, *>, (Any, Any?) -> Unit>()
 /**
  * Sets the value of the property using ReflectASM.
@@ -140,15 +141,23 @@ private val KFunctionReflectAsmInvoke = HashMap<KFunction<*>, (Any, Array<out An
 /**
  * Invokes the function using ReflectASM.
  */
-fun KFunction<*>.reflectAsmInvoke(instance: Any, vararg args: Any?) = KFunctionReflectAsmInvoke[this]!!.invoke(instance, args)
+fun KFunction<*>.reflectAsmInvoke(instance: Any, vararg args: Any?): Any? {
+    val quick = KFunctionReflectAsmInvoke[this]
+    return if(quick != null) quick.invoke(instance, args)
+    else this.call(instance, *args)
+}
 
 /**
  * Sets up the function to use ReflectASM.
  */
 private fun KFunction<*>.fastSetup(kClass: KClass<*>) {
-    val methodAccess = kClass.reflectAsmMethodAccess
-    val index = methodAccess.getIndex(this.name, this.parameters.size)
-    KFunctionReflectAsmInvoke[this] = { instance, params -> methodAccess.invoke(instance, index, *params) }
+    try {
+        val methodAccess = kClass.reflectAsmMethodAccess
+        val index = methodAccess.getIndex(this.name, this.parameters.size - 1)
+        KFunctionReflectAsmInvoke[this] = { instance, params -> methodAccess.invoke(instance, index, *params) }
+    } catch(e:Exception){
+        e.printStackTrace()
+    }
 }
 
 
