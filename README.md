@@ -14,8 +14,8 @@ Each piece of the library is built to be read - in other words, you should be ab
 
 This includes the following packages:
 
-- [lk-kotlin-utils](lk-kotlin-utils/README.md) - Various useful extension functions
-- [lk-kotlin-jvm-utils](lk-kotlin-jvm-utils/README.md) - Various useful extensions depending on the JVM
+- [lk-kotlin-utils](lk-kotlin-utils/README.md) - Various useful extension functions.  Includes things for manipulating ByteArrays, lambdas, and collections, as well as extensions functions for doing math the Kotlin way and simple email validation.
+- [lk-kotlin-jvm-utils](lk-kotlin-jvm-utils/README.md) - Various useful extensions depending on the JVM.  Includes things like stream manipulation, asyncronous execution, date reading, files, and randomness.
 - [lk-kotlin-jackson](lk-kotlin-jackson/README.md) - Adds some DSL for the Jackson JSON library, as well as extension functions for using Jackson on various objects.
 - [lk-kotlin-okhttp](lk-kotlin-okhttp/README.md) - Extensions for the OkHttp networking library that convert calls to lambdas and allow you to manipulate them conveniently.
 - [lk-kotlin-okhttp-jackson](lk-kotlin-okhttp-jackson/README.md) - Adds Jackson functionality to the OkHttp extensions.
