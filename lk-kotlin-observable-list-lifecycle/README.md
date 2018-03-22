@@ -24,11 +24,11 @@ Include the desired libraries:
 
 ```
 dependencies {
-    implementation "lk-kotlin:lk-kotlin-utils:[version]"
-    implementation "lk-kotlin:lk-kotlin-observable-property:[version]"
-    implementation "lk-kotlin:lk-kotlin-observable-property-lifecycle:[version]"
-    implementation "lk-kotlin:lk-kotlin-observable-list:[version]"
-    implementation "lk-kotlin:lk-kotlin-observable-list-lifecycle:[version]"
+    implementation "com.lightningkite.kotlin:lk-kotlin-utils:[version]"
+    implementation "com.lightningkite.kotlin:lk-kotlin-observable-property:[version]"
+    implementation "com.lightningkite.kotlin:lk-kotlin-observable-property-lifecycle:[version]"
+    implementation "com.lightningkite.kotlin:lk-kotlin-observable-list:[version]"
+    implementation "com.lightningkite.kotlin:lk-kotlin-observable-list-lifecycle:[version]"
 }
 ```
 

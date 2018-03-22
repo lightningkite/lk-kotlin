@@ -25,8 +25,8 @@ Include the desired libraries:
 ```
 dependencies {
     implementation 'com.esotericsoftware:reflectasm:1.11.3'
-    implementation "lk-kotlin:lk-kotlin-utils:[version]"
-    implementation "lk-kotlin:lk-kotlin-reflect:[version]"
+    implementation "com.lightningkite.kotlin:lk-kotlin-utils:[version]"
+    implementation "com.lightningkite.kotlin:lk-kotlin-reflect:[version]"
 }
 ```
 

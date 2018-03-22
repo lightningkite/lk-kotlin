@@ -22,7 +22,7 @@ Include the desired libraries:
 
 ```
 dependencies {
-    implementation "lk-kotlin:lk-kotlin-utils:[version]"
+    implementation "com.lightningkite.kotlin:lk-kotlin-utils:[version]"
 }
 ```
 

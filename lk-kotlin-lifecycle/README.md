@@ -24,7 +24,7 @@ Include the desired libraries:
 
 ```
 dependencies {
-    implementation "lk-kotlin:lk-kotlin-lifecycle:[version]"
+    implementation "com.lightningkite.kotlin:lk-kotlin-lifecycle:[version]"
 }
 ```
 

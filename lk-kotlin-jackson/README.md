@@ -22,7 +22,7 @@ Include the desired libraries:
 
 ```
 dependencies {
-    implementation "lk-kotlin:lk-kotlin-jackson:[version]"
+    implementation "com.lightningkite.kotlin:lk-kotlin-jackson:[version]"
     implementation "com.fasterxml.jackson.core:jackson-databind:2.9.+"
 }
 ```

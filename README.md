@@ -47,33 +47,33 @@ Include the desired libraries:
 
 ```
 dependencies {
-    implementation "lk-kotlin:lk-kotlin-utils:[version]"
+    implementation "com.lightningkite.kotlin:lk-kotlin-utils:[version]"
 
-    implementation "lk-kotlin:lk-kotlin-jvm-utils:[version]"
+    implementation "com.lightningkite.kotlin:lk-kotlin-jvm-utils:[version]"
 
-    implementation "lk-kotlin:lk-kotlin-jackson:[version]"
+    implementation "com.lightningkite.kotlin:lk-kotlin-jackson:[version]"
     implementation "com.fasterxml.jackson.core:jackson-databind:2.9.+"
     implementation "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.+"
 
-    implementation "lk-kotlin:lk-kotlin-okhttp:[version]"
+    implementation "com.lightningkite.kotlin:lk-kotlin-okhttp:[version]"
     implementation 'com.squareup.okhttp3:okhttp:3.9.0'
 
-    implementation "lk-kotlin:lk-kotlin-okhttp-jackson:[version]"
+    implementation "com.lightningkite.kotlin:lk-kotlin-okhttp-jackson:[version]"
 
-    implementation "lk-kotlin:lk-kotlin-lifecycle:[version]"
+    implementation "com.lightningkite.kotlin:lk-kotlin-lifecycle:[version]"
 
-    implementation "lk-kotlin:lk-kotlin-observable-property:[version]"
+    implementation "com.lightningkite.kotlin:lk-kotlin-observable-property:[version]"
 
-    implementation "lk-kotlin:lk-kotlin-observable-property-jvm:[version]"
+    implementation "com.lightningkite.kotlin:lk-kotlin-observable-property-jvm:[version]"
 
-    implementation "lk-kotlin:lk-kotlin-observable-property-lifecycle:[version]"
+    implementation "com.lightningkite.kotlin:lk-kotlin-observable-property-lifecycle:[version]"
 
-    implementation "lk-kotlin:lk-kotlin-observable-list:[version]"
+    implementation "com.lightningkite.kotlin:lk-kotlin-observable-list:[version]"
 
-    implementation "lk-kotlin:lk-kotlin-observable-list-lifecycle:[version]"
+    implementation "com.lightningkite.kotlin:lk-kotlin-observable-list-lifecycle:[version]"
 
     implementation 'com.esotericsoftware:reflectasm:1.11.3'
-    implementation "lk-kotlin:lk-kotlin-reflect:[version]"
+    implementation "com.lightningkite.kotlin:lk-kotlin-reflect:[version]"
 }
 ```
 

@@ -25,7 +25,7 @@ Include the desired libraries:
 ```
 dependencies {
     implementation 'com.squareup.okhttp3:okhttp:3.9.0'
-    implementation "lk-kotlin:lk-kotlin-okhttp:[version]"
+    implementation "com.lightningkite.kotlin:lk-kotlin-okhttp:[version]"
 }
 ```
 
