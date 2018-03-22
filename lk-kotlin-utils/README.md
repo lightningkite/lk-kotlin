@@ -4,8 +4,10 @@
 
 ## Package description
 
-Various useful extension functions
-
+Various useful extension functions.  Includes:
+- functions for manipulating ByteArrays, lambdas, and collections
+- extensions functions for doing math the Kotlin way
+- simple email validation
 ## Gradle Inclusion
 
 Add the repository:

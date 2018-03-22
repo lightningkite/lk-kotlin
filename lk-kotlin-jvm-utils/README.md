@@ -4,7 +4,8 @@
 
 ## Package description
 
-Various useful extensions depending on the JVM
+Various useful extensions depending on the JVM.
+Includes things like stream manipulation, asynchronous execution, date reading, files, and randomness.
 
 ## Gradle Inclusion
 
