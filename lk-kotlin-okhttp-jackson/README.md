@@ -13,7 +13,7 @@ Add the repository:
 ```
 repositories {
     maven {
-        url "https://dl.bintray.com/lightningkite/lk-kotlin"
+        url "https://dl.bintray.com/lightningkite/com.lightningkite.kotlin"
     }
 }
 ```

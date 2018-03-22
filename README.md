@@ -1,6 +1,6 @@
 # LK Kotlin
 
-[ ![Download](https://api.bintray.com/packages/lightningkite/lk-kotlin/lk-kotlin-utils/images/download.svg) ](https://bintray.com/lightningkite/lk-kotlin/lk-kotlin-utils/_latestVersion)
+[ ![Download](https://api.bintray.com/packages/lightningkite/com.lightningkite.kotlin/lk-kotlin-utils/images/download.svg) ](https://bintray.com/lightningkite/lk-kotlin/lk-kotlin-utils/_latestVersion)
 
 Lightning Kite's project to make Kotlin even more awesome for speedy development
 
@@ -31,14 +31,14 @@ Seriously, check out those example unit tests.  They show you exactly how to use
 
 ## Gradle Inclusion
 
-Bintray: [ ![Download](https://api.bintray.com/packages/lightningkite/lk-kotlin/lk-kotlin-utils/images/download.svg) ](https://bintray.com/lightningkite/lk-kotlin/lk-kotlin-utils/_latestVersion)
+Bintray: [ ![Download](https://api.bintray.com/packages/lightningkite/com.lightningkite.kotlin/lk-kotlin-utils/images/download.svg) ](https://bintray.com/lightningkite/lk-kotlin/lk-kotlin-utils/_latestVersion)
 
 Add the repository:
 
 ```
 repositories {
     maven {
-        url "https://dl.bintray.com/lightningkite/lk-kotlin"
+        url "https://dl.bintray.com/lightningkite/com.lightningkite.kotlin"
     }
 }
 ```
