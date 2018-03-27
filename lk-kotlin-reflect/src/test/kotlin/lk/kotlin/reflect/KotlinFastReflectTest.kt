@@ -33,4 +33,20 @@ class KotlinFastReflectTest() {
         TestDataClass::class.fastFunctions.find { it.name == "equals" }!!
                 .reflectAsmInvoke(instance, instance)
     }
+
+    @Test
+    fun testToken() {
+        run{
+            val info = typeInformation<List<TestDataClass>>()
+            assert(info.kclass == List::class)
+            assert(info.typeParameters.first().kclass == TestDataClass::class)
+        }
+
+        run{
+            val info = typeInformation<Map<String, TestDataClass>>()
+            assert(info.kclass == Map::class)
+            assert(info.typeParameters[0].kclass == String::class)
+            assert(info.typeParameters[1].kclass == TestDataClass::class)
+        }
+    }
 }

@@ -2,6 +2,7 @@ package lk.kotlin.reflect
 
 import java.lang.reflect.ParameterizedType
 import java.lang.reflect.Type
+import java.lang.reflect.WildcardType
 import kotlin.reflect.KClass
 import kotlin.reflect.KType
 import kotlin.reflect.jvm.jvmErasure
@@ -28,6 +29,7 @@ class TypeInformation(
                     typeParameters = type.actualTypeArguments.map {TypeInformation.fromType(it) }
             )
             is Class<*> -> TypeInformation(type.kotlin)
+            is WildcardType -> TypeInformation.fromType(type.upperBounds.first(), annotations)
             else -> throw IllegalArgumentException()
         }
     }
@@ -37,6 +39,6 @@ abstract class TypeInformationToken<T>{
     val type = javaClass.genericSuperclass
 }
 inline fun <reified T: Any> typeInformation():TypeInformation {
-    return TypeInformation.fromType(object : TypeInformationToken<T>(){}.type)
+    return TypeInformation.fromType(object : TypeInformationToken<T>(){}.type.let { it as ParameterizedType }.actualTypeArguments.first())
 }
 
