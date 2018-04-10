@@ -3,6 +3,7 @@ package lk.kotlin.reflect
 import java.lang.reflect.ParameterizedType
 import java.lang.reflect.Type
 import java.lang.reflect.WildcardType
+import kotlin.reflect.KAnnotatedElement
 import kotlin.reflect.KClass
 import kotlin.reflect.KType
 import kotlin.reflect.jvm.jvmErasure
@@ -14,8 +15,8 @@ class TypeInformation(
         val kclass: KClass<*>,
         val nullable: Boolean = false,
         val typeParameters: List<TypeInformation> = listOf(),
-        val annotations: List<Annotation> = listOf()
-) {
+        override val annotations: List<Annotation> = listOf()
+): KAnnotatedElement {
     constructor(type: KType, annotations: List<Annotation> = listOf()) : this(
             type.jvmErasure,
             type.isMarkedNullable,

@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-jackson/lk-kotlin-jackson.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-jackson/lk-kotlin-jackson.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-jackson/lk-kotlin-jackson_main.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-jackson/lk-kotlin-jackson_main.iml" group="lk-kotlin-jackson" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-jackson/lk-kotlin-jackson_test.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-jackson/lk-kotlin-jackson_test.iml" group="lk-kotlin-jackson" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-json.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-json.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-jvm-utils/lk-kotlin-jvm-utils.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-jvm-utils/lk-kotlin-jvm-utils.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-jvm-utils/lk-kotlin-jvm-utils_main.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-jvm-utils/lk-kotlin-jvm-utils_main.iml" group="lk-kotlin-jvm-utils" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-jvm-utils/lk-kotlin-jvm-utils_test.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-jvm-utils/lk-kotlin-jvm-utils_test.iml" group="lk-kotlin-jvm-utils" />
