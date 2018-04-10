@@ -1,7 +1,6 @@
 package lk.kotlin.reflect
 
 import org.junit.Test
-import java.lang.reflect.Field
 import java.lang.reflect.Method
 import java.util.*
 import kotlin.reflect.KClass
@@ -40,6 +39,11 @@ class KotlinFastReflectTest() {
     }
 
     @Test
+    fun testPropertyOrder() {
+        println(TestDataClass::class.fastMutableProperties.values.joinToString { it.name })
+    }
+
+    @Test
     fun fetchClass() {
         val handle = TestDataClass::class
         val ns = performance(10000000) {
@@ -54,12 +58,13 @@ class KotlinFastReflectTest() {
     fun useJavaFetch() {
         val map = HashMap<KProperty1<*, *>, Method?>()
         map[TestDataClass::name] = TestDataClass::name.javaGetter
-        val ns = performance(10000000) {
+        val nsJava = performance(10000000) {
             TestDataClass::name.javaGetter
-        } - performance(10000000) {
+        }
+        val nsCache = performance(10000000) {
             map[TestDataClass::name]
         }
-        println("Direct cost: $ns")
+        println("Get javaGetter nsJava $nsJava nsCache $nsCache")
     }
 
     @Test

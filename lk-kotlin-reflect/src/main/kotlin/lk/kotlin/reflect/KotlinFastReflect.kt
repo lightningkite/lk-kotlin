@@ -4,10 +4,7 @@ import kotlin.reflect.KClass
 import kotlin.reflect.KFunction
 import kotlin.reflect.KMutableProperty1
 import kotlin.reflect.KProperty1
-import kotlin.reflect.full.isSubclassOf
-import kotlin.reflect.full.memberFunctions
-import kotlin.reflect.full.memberProperties
-import kotlin.reflect.full.superclasses
+import kotlin.reflect.full.*
 
 private val KClassFastProperties = HashMap<KClass<*>, Map<String, KProperty1<*, *>>>()
 /**
@@ -17,6 +14,11 @@ private val KClassFastProperties = HashMap<KClass<*>, Map<String, KProperty1<*, 
 val <T : Any> KClass<T>.fastProperties
     get() = KClassFastProperties.getOrPut(this) {
         val list = this.memberProperties.toList()
+                .sortedBy { prop ->
+                    this.primaryConstructor?.parameters?.indexOfFirst {
+                        it.name == prop.name
+                    }?.takeIf { it != -1 } ?: Int.MAX_VALUE
+                }
         list.forEach { KPropertyOwner[it] = this }
         list.associateBy { it.name }
     } as Map<String, KProperty1<T, *>>
@@ -30,6 +32,11 @@ private val KClassFastMutableProperties = HashMap<KClass<*>, Map<String, KMutabl
 val <T : Any> KClass<T>.fastMutableProperties
     get() = KClassFastMutableProperties.getOrPut(this) {
         val list = this.memberProperties.mapNotNull { it as? KMutableProperty1<T, *> }
+                .sortedBy { prop ->
+                    this.primaryConstructor?.parameters?.indexOfFirst {
+                        it.name == prop.name
+                    }?.takeIf { it != -1 } ?: Int.MAX_VALUE
+                }
         list.forEach { KPropertyOwner[it] = this }
         list.associateBy { it.name }
     } as Map<String, KMutableProperty1<T, *>>
