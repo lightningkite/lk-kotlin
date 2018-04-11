@@ -1,8 +1,0 @@
-$dokka.format:html
-$dokka.linkExtension:html
-$dokka.location:lk.kotlin.okhttp.jackson$lambdaJackson(okhttp3.Request.Builder, com.fasterxml.jackson.core.type.TypeReference((lk.kotlin.okhttp.jackson.lambdaJackson.T)), okhttp3.OkHttpClient, com.fasterxml.jackson.databind.ObjectMapper)lk.kotlin.okhttp.jackson/okhttp3.-request.-builder/lambda-jackson.html
-$dokka.location:lk.kotlin.okhttp.jackson$lambdaJackson(okhttp3.Request.Builder, com.fasterxml.jackson.databind.JavaType, okhttp3.OkHttpClient, com.fasterxml.jackson.databind.ObjectMapper)lk.kotlin.okhttp.jackson/okhttp3.-request.-builder/lambda-jackson.html
-$dokka.location:lk.kotlin.okhttp.jackson$lambdaJackson(okhttp3.Request.Builder, okhttp3.OkHttpClient, com.fasterxml.jackson.databind.ObjectMapper)lk.kotlin.okhttp.jackson/okhttp3.-request.-builder/lambda-jackson.html
-$dokka.location:lk.kotlin.okhttp.jackson$lambdaJacksonNode(okhttp3.Request.Builder, okhttp3.OkHttpClient, com.fasterxml.jackson.databind.ObjectMapper)lk.kotlin.okhttp.jackson/okhttp3.-request.-builder/lambda-jackson-node.html
-$dokka.location:lk.kotlin.okhttp.jackson$toRequestBody(com.fasterxml.jackson.databind.JsonNode)lk.kotlin.okhttp.jackson/com.fasterxml.jackson.databind.-json-node/to-request-body.html
-lk.kotlin.okhttp.jackson
