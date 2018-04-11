@@ -1,0 +1,6 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:lk.kotlin.observable.property$reducing(kotlin.collections.List((lk.kotlin.observable.property.ObservableProperty((lk.kotlin.observable.property.reducing.E)))), kotlin.Function1((kotlin.collections.List((lk.kotlin.observable.property.reducing.E)), lk.kotlin.observable.property.reducing.T)))lk.kotlin.observable.property/kotlin.collections.-list/reducing.html
+$dokka.location:lk.kotlin.observable.property$toObservablePropertyReference(kotlin.reflect.KMutableProperty0((lk.kotlin.observable.property.toObservablePropertyReference.T)))lk.kotlin.observable.property/kotlin.reflect.-k-mutable-property0/to-observable-property-reference.html
+$dokka.location:lk.kotlin.observable.property$toObservablePropertyReference(kotlin.reflect.KMutableProperty1((lk.kotlin.observable.property.toObservablePropertyReference.R, lk.kotlin.observable.property.toObservablePropertyReference.T)), lk.kotlin.observable.property.toObservablePropertyReference.R)lk.kotlin.observable.property/kotlin.reflect.-k-mutable-property1/to-observable-property-reference.html
+lk.kotlin.observable.property

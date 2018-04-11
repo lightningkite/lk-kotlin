@@ -1,0 +1,155 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>TypeInformation - reflect</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">reflect</a>&nbsp;/&nbsp;<a href="../index.html">lk.kotlin.reflect</a>&nbsp;/&nbsp;<a href="./index.html">TypeInformation</a><br/>
+<br/>
+<h1>TypeInformation</h1>
+<code><span class="keyword">class </span><span class="identifier">TypeInformation</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-annotated-element/index.html"><span class="identifier">KAnnotatedElement</span></a></code>
+<p>Information about the Kotlin type of a parameter or return type without type erasure.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">TypeInformation</span><span class="symbol">(</span><span class="identifier" id="lk.kotlin.reflect.TypeInformation$<init>(kotlin.reflect.KType, kotlin.collections.List((kotlin.Annotation)))/type">type</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-type/index.html"><span class="identifier">KType</span></a><span class="symbol">, </span><span class="identifier" id="lk.kotlin.reflect.TypeInformation$<init>(kotlin.reflect.KType, kotlin.collections.List((kotlin.Annotation)))/annotations">annotations</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-annotation/index.html"><span class="identifier">Annotation</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;listOf()<span class="symbol">)</span></code><code><span class="identifier">TypeInformation</span><span class="symbol">(</span><span class="identifier" id="lk.kotlin.reflect.TypeInformation$<init>(kotlin.reflect.KClass((kotlin.Any)), kotlin.Boolean, kotlin.collections.List((lk.kotlin.reflect.TypeInformation)), kotlin.collections.List((kotlin.Annotation)))/kclass">kclass</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html"><span class="identifier">KClass</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="lk.kotlin.reflect.TypeInformation$<init>(kotlin.reflect.KClass((kotlin.Any)), kotlin.Boolean, kotlin.collections.List((lk.kotlin.reflect.TypeInformation)), kotlin.collections.List((kotlin.Annotation)))/nullable">nullable</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">, </span><span class="identifier" id="lk.kotlin.reflect.TypeInformation$<init>(kotlin.reflect.KClass((kotlin.Any)), kotlin.Boolean, kotlin.collections.List((lk.kotlin.reflect.TypeInformation)), kotlin.collections.List((kotlin.Annotation)))/typeParameters">typeParameters</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="./index.html"><span class="identifier">TypeInformation</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;listOf()<span class="symbol">, </span><span class="identifier" id="lk.kotlin.reflect.TypeInformation$<init>(kotlin.reflect.KClass((kotlin.Any)), kotlin.Boolean, kotlin.collections.List((lk.kotlin.reflect.TypeInformation)), kotlin.collections.List((kotlin.Annotation)))/annotations">annotations</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-annotation/index.html"><span class="identifier">Annotation</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;listOf()<span class="symbol">)</span></code>
+<p>Information about the Kotlin type of a parameter or return type without type erasure.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="annotations.html">annotations</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">annotations</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-annotation/index.html"><span class="identifier">Annotation</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="kclass.html">kclass</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">kclass</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html"><span class="identifier">KClass</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="nullable.html">nullable</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">nullable</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="type-parameters.html">typeParameters</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">typeParameters</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="./index.html"><span class="identifier">TypeInformation</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="from-type.html">fromType</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">fromType</span><span class="symbol">(</span><span class="identifier" id="lk.kotlin.reflect.TypeInformation.Companion$fromType(java.lang.reflect.Type, kotlin.collections.List((kotlin.Annotation)))/type">type</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/reflect/Type.html"><span class="identifier">Type</span></a><span class="symbol">, </span><span class="identifier" id="lk.kotlin.reflect.TypeInformation.Companion$fromType(java.lang.reflect.Type, kotlin.collections.List((kotlin.Annotation)))/annotations">annotations</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-annotation/index.html"><span class="identifier">Annotation</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;listOf()<span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">TypeInformation</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../lk.kotlin.reflect.annotations/kotlin.reflect.-k-annotated-element/decimal-points.html">decimalPoints</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-annotated-element/index.html"><span class="identifier">KAnnotatedElement</span></a><span class="symbol">.</span><span class="identifier">decimalPoints</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../lk.kotlin.reflect.annotations/kotlin.reflect.-k-annotated-element/description.html">description</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-annotated-element/index.html"><span class="identifier">KAnnotatedElement</span></a><span class="symbol">.</span><span class="identifier">description</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../lk.kotlin.reflect.annotations/kotlin.reflect.-k-annotated-element/estimated-length.html">estimatedLength</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-annotated-element/index.html"><span class="identifier">KAnnotatedElement</span></a><span class="symbol">.</span><span class="identifier">estimatedLength</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../lk.kotlin.reflect.annotations/kotlin.reflect.-k-annotated-element/external-name.html">externalName</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-annotated-element/index.html"><span class="identifier">KAnnotatedElement</span></a><span class="symbol">.</span><span class="identifier">externalName</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../lk.kotlin.reflect.annotations/kotlin.reflect.-k-annotated-element/friendly-name.html">friendlyName</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-annotated-element/index.html"><span class="identifier">KAnnotatedElement</span></a><span class="symbol">.</span><span class="identifier">friendlyName</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../lk.kotlin.reflect.annotations/kotlin.reflect.-k-annotated-element/hidden.html">hidden</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-annotated-element/index.html"><span class="identifier">KAnnotatedElement</span></a><span class="symbol">.</span><span class="identifier">hidden</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../lk.kotlin.reflect.annotations/kotlin.reflect.-k-annotated-element/password.html">password</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-annotated-element/index.html"><span class="identifier">KAnnotatedElement</span></a><span class="symbol">.</span><span class="identifier">password</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../lk.kotlin.reflect.annotations/kotlin.reflect.-k-annotated-element/reference-to.html">referenceTo</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-annotated-element/index.html"><span class="identifier">KAnnotatedElement</span></a><span class="symbol">.</span><span class="identifier">referenceTo</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html"><span class="identifier">KClass</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../lk.kotlin.reflect.annotations/kotlin.reflect.-k-annotated-element/type-detail.html">typeDetail</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-annotated-element/index.html"><span class="identifier">KAnnotatedElement</span></a><span class="symbol">.</span><span class="identifier">typeDetail</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span class="identifier">Array</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../lk.kotlin.reflect.annotations/kotlin.reflect.-k-annotated-element/unique-identifier.html">uniqueIdentifier</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-annotated-element/index.html"><span class="identifier">KAnnotatedElement</span></a><span class="symbol">.</span><span class="identifier">uniqueIdentifier</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../lk.kotlin.reflect.annotations/kotlin.reflect.-k-annotated-element/units.html">units</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-annotated-element/index.html"><span class="identifier">KAnnotatedElement</span></a><span class="symbol">.</span><span class="identifier">units</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,5 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:lk.kotlin.observable.property.jvm$captureProgress(kotlin.Function0((lk.kotlin.observable.property.jvm.captureProgress.T)), lk.kotlin.observable.property.MutableObservableProperty((kotlin.Boolean)), java.util.concurrent.Executor)lk.kotlin.observable.property.jvm/kotlin.-function0/capture-progress.html
+$dokka.location:lk.kotlin.observable.property.jvm$captureProgress(kotlin.Function0((lk.kotlin.observable.property.jvm.captureProgress.T)), lk.kotlin.observable.property.MutableObservableProperty((kotlin.Int)), java.util.concurrent.Executor)lk.kotlin.observable.property.jvm/kotlin.-function0/capture-progress.html
+lk.kotlin.observable.property.jvm

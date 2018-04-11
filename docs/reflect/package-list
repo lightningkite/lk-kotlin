@@ -1,0 +1,32 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:lk.kotlin.reflect$classedName#kotlin.reflect.KClass((kotlin.Any))lk.kotlin.reflect/kotlin.reflect.-k-class/classed-name.html
+$dokka.location:lk.kotlin.reflect$closest(kotlin.collections.Collection((kotlin.reflect.KClass((kotlin.Any)))), kotlin.reflect.KClass((kotlin.Any)))lk.kotlin.reflect/kotlin.collections.-collection/closest.html
+$dokka.location:lk.kotlin.reflect$enumValues#kotlin.reflect.KClass((kotlin.Any))lk.kotlin.reflect/kotlin.reflect.-k-class/enum-values.html
+$dokka.location:lk.kotlin.reflect$fastFunctions#kotlin.reflect.KClass((kotlin.Any))lk.kotlin.reflect/kotlin.reflect.-k-class/fast-functions.html
+$dokka.location:lk.kotlin.reflect$fastMutableProperties#kotlin.reflect.KClass((lk.kotlin.reflect.fastMutableProperties.T))lk.kotlin.reflect/kotlin.reflect.-k-class/fast-mutable-properties.html
+$dokka.location:lk.kotlin.reflect$fastProperties#kotlin.reflect.KClass((lk.kotlin.reflect.fastProperties.T))lk.kotlin.reflect/kotlin.reflect.-k-class/fast-properties.html
+$dokka.location:lk.kotlin.reflect$fastSuperclasses#kotlin.reflect.KClass((kotlin.Any))lk.kotlin.reflect/kotlin.reflect.-k-class/fast-superclasses.html
+$dokka.location:lk.kotlin.reflect$fastType#kotlin.reflect.KProperty1((kotlin.Any, ))lk.kotlin.reflect/kotlin.reflect.-k-property1/fast-type.html
+$dokka.location:lk.kotlin.reflect$findType(kotlin.collections.Collection((kotlin.Any)))lk.kotlin.reflect/kotlin.collections.-collection/find-type.html
+$dokka.location:lk.kotlin.reflect$getJava(kotlin.reflect.KProperty1((lk.kotlin.reflect.getJava.T, lk.kotlin.reflect.getJava.V)), lk.kotlin.reflect.getJava.T)lk.kotlin.reflect/kotlin.reflect.-k-property1/get-java.html
+$dokka.location:lk.kotlin.reflect$getUntyped(kotlin.reflect.KProperty1((kotlin.Any, )), kotlin.Any)lk.kotlin.reflect/kotlin.reflect.-k-property1/get-untyped.html
+$dokka.location:lk.kotlin.reflect$isEnum#kotlin.reflect.KClass((kotlin.Any))lk.kotlin.reflect/kotlin.reflect.-k-class/is-enum.html
+$dokka.location:lk.kotlin.reflect$nameify(kotlin.String)lk.kotlin.reflect/kotlin.-string/nameify.html
+$dokka.location:lk.kotlin.reflect$owner#kotlin.reflect.KFunction((kotlin.Any))lk.kotlin.reflect/kotlin.reflect.-k-function/owner.html
+$dokka.location:lk.kotlin.reflect$owner#kotlin.reflect.KProperty1((kotlin.Any, ))lk.kotlin.reflect/kotlin.reflect.-k-property1/owner.html
+$dokka.location:lk.kotlin.reflect$setJava(kotlin.reflect.KMutableProperty1((lk.kotlin.reflect.setJava.T, lk.kotlin.reflect.setJava.V)), lk.kotlin.reflect.setJava.T, lk.kotlin.reflect.setJava.V)lk.kotlin.reflect/kotlin.reflect.-k-mutable-property1/set-java.html
+$dokka.location:lk.kotlin.reflect$setUntyped(kotlin.reflect.KMutableProperty1((kotlin.Any, )), kotlin.Any, kotlin.Any)lk.kotlin.reflect/kotlin.reflect.-k-mutable-property1/set-untyped.html
+$dokka.location:lk.kotlin.reflect.annotations$decimalPoints#kotlin.reflect.KAnnotatedElementlk.kotlin.reflect.annotations/kotlin.reflect.-k-annotated-element/decimal-points.html
+$dokka.location:lk.kotlin.reflect.annotations$description#kotlin.reflect.KAnnotatedElementlk.kotlin.reflect.annotations/kotlin.reflect.-k-annotated-element/description.html
+$dokka.location:lk.kotlin.reflect.annotations$estimatedLength#kotlin.reflect.KAnnotatedElementlk.kotlin.reflect.annotations/kotlin.reflect.-k-annotated-element/estimated-length.html
+$dokka.location:lk.kotlin.reflect.annotations$externalName#kotlin.reflect.KAnnotatedElementlk.kotlin.reflect.annotations/kotlin.reflect.-k-annotated-element/external-name.html
+$dokka.location:lk.kotlin.reflect.annotations$friendlyName#kotlin.reflect.KAnnotatedElementlk.kotlin.reflect.annotations/kotlin.reflect.-k-annotated-element/friendly-name.html
+$dokka.location:lk.kotlin.reflect.annotations$hidden#kotlin.reflect.KAnnotatedElementlk.kotlin.reflect.annotations/kotlin.reflect.-k-annotated-element/hidden.html
+$dokka.location:lk.kotlin.reflect.annotations$password#kotlin.reflect.KAnnotatedElementlk.kotlin.reflect.annotations/kotlin.reflect.-k-annotated-element/password.html
+$dokka.location:lk.kotlin.reflect.annotations$referenceTo#kotlin.reflect.KAnnotatedElementlk.kotlin.reflect.annotations/kotlin.reflect.-k-annotated-element/reference-to.html
+$dokka.location:lk.kotlin.reflect.annotations$typeDetail#kotlin.reflect.KAnnotatedElementlk.kotlin.reflect.annotations/kotlin.reflect.-k-annotated-element/type-detail.html
+$dokka.location:lk.kotlin.reflect.annotations$uniqueIdentifier#kotlin.reflect.KAnnotatedElementlk.kotlin.reflect.annotations/kotlin.reflect.-k-annotated-element/unique-identifier.html
+$dokka.location:lk.kotlin.reflect.annotations$units#kotlin.reflect.KAnnotatedElementlk.kotlin.reflect.annotations/kotlin.reflect.-k-annotated-element/units.html
+lk.kotlin.reflect
+lk.kotlin.reflect.annotations

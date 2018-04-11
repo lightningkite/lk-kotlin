@@ -1,0 +1,17 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:lk.kotlin.jackson$jacksonFromString(kotlin.String, com.fasterxml.jackson.core.type.TypeReference((lk.kotlin.jackson.jacksonFromString.T)), com.fasterxml.jackson.databind.ObjectMapper)lk.kotlin.jackson/kotlin.-string/jackson-from-string.html
+$dokka.location:lk.kotlin.jackson$jacksonFromString(kotlin.String, com.fasterxml.jackson.databind.ObjectMapper)lk.kotlin.jackson/kotlin.-string/jackson-from-string.html
+$dokka.location:lk.kotlin.jackson$jacksonFromString(kotlin.String, java.lang.Class((lk.kotlin.jackson.jacksonFromString.T)), com.fasterxml.jackson.databind.ObjectMapper)lk.kotlin.jackson/kotlin.-string/jackson-from-string.html
+$dokka.location:lk.kotlin.jackson$jacksonFromStringNode(kotlin.String, com.fasterxml.jackson.databind.ObjectMapper)lk.kotlin.jackson/kotlin.-string/jackson-from-string-node.html
+$dokka.location:lk.kotlin.jackson$jacksonToNode(kotlin.Any, com.fasterxml.jackson.databind.ObjectMapper)lk.kotlin.jackson/kotlin.-any/jackson-to-node.html
+$dokka.location:lk.kotlin.jackson$jacksonToNodeAs(kotlin.Any, com.fasterxml.jackson.databind.ObjectMapper)lk.kotlin.jackson/kotlin.-any/jackson-to-node-as.html
+$dokka.location:lk.kotlin.jackson$jacksonToString(kotlin.Any, com.fasterxml.jackson.databind.ObjectMapper)lk.kotlin.jackson/kotlin.-any/jackson-to-string.html
+$dokka.location:lk.kotlin.jackson$jacksonToStringAs(kotlin.Any, com.fasterxml.jackson.databind.ObjectMapper)lk.kotlin.jackson/kotlin.-any/jackson-to-string-as.html
+$dokka.location:lk.kotlin.jackson$toJackson(kotlin.Any)lk.kotlin.jackson/kotlin.-any/to-jackson.html
+$dokka.location:lk.kotlin.jackson$toJacksonArray(kotlin.collections.List((kotlin.Any)))lk.kotlin.jackson/kotlin.collections.-list/to-jackson-array.html
+$dokka.location:lk.kotlin.jackson$toJacksonObject(kotlin.collections.Map((kotlin.String, kotlin.Any)))lk.kotlin.jackson/kotlin.collections.-map/to-jackson-object.html
+$dokka.location:lk.kotlin.jackson$toValue(com.fasterxml.jackson.databind.JsonNode, com.fasterxml.jackson.databind.JavaType, com.fasterxml.jackson.databind.ObjectMapper)lk.kotlin.jackson/com.fasterxml.jackson.databind.-json-node/to-value.html
+$dokka.location:lk.kotlin.jackson$toValue(com.fasterxml.jackson.databind.JsonNode, com.fasterxml.jackson.databind.ObjectMapper)lk.kotlin.jackson/com.fasterxml.jackson.databind.-json-node/to-value.html
+$dokka.location:lk.kotlin.jackson$toValue(com.fasterxml.jackson.databind.JsonNode, java.lang.Class((lk.kotlin.jackson.toValue.T)), com.fasterxml.jackson.databind.ObjectMapper)lk.kotlin.jackson/com.fasterxml.jackson.databind.-json-node/to-value.html
+lk.kotlin.jackson
