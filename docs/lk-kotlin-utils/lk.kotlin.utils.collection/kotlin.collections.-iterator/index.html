@@ -1,11 +1,11 @@
 <HTML>
 <HEAD>
 <meta charset="UTF-8">
-<title>lk.kotlin.utils.collection.kotlin.collections.Iterator - lk-kotlin-utils</title>
-<link rel="stylesheet" href="..\..\..\style.css">
+<title>lk.kotlin.utils.collection.kotlin.collections.Iterator - utils</title>
+<link rel="stylesheet" href="../../../style.css">
 </HEAD>
 <BODY>
-<a href="../../index.html">lk-kotlin-utils</a>&nbsp;/&nbsp;<a href="../index.html">lk.kotlin.utils.collection</a>&nbsp;/&nbsp;<a href="./index.html">kotlin.collections.Iterator</a><br/>
+<a href="../../index.html">utils</a>&nbsp;/&nbsp;<a href="../index.html">lk.kotlin.utils.collection</a>&nbsp;/&nbsp;<a href="./index.html">kotlin.collections.Iterator</a><br/>
 <br/>
 <h3>Extensions for kotlin.collections.Iterator</h3>
 <table>
@@ -15,8 +15,17 @@
 <p><a href="mapping.html">mapping</a></p>
 </td>
 <td>
-<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">S</span><span class="symbol">, </span><span class="identifier">T</span><span class="symbol">&gt;</span> <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html"><span class="identifier">Iterator</span></a><span class="symbol">&lt;</span><a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-utils/lk.kotlin.utils.collection/mapping/-s/index.html"><span class="identifier">S</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">mapping</span><span class="symbol">(</span><span class="identifier" id="lk.kotlin.utils.collection$mapping(kotlin.collections.Iterator((lk.kotlin.utils.collection.mapping.S)), kotlin.Function1((lk.kotlin.utils.collection.mapping.S, lk.kotlin.utils.collection.mapping.T)))/read">read</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-utils/lk.kotlin.utils.collection/mapping/-s/index.html"><span class="identifier">S</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-utils/lk.kotlin.utils.collection/mapping/-t/index.html"><span class="identifier">T</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html"><span class="identifier">Iterator</span></a><span class="symbol">&lt;</span><a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-utils/lk.kotlin.utils.collection/mapping/-t/index.html"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">S</span><span class="symbol">, </span><span class="identifier">T</span><span class="symbol">&gt;</span> <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html"><span class="identifier">Iterator</span></a><span class="symbol">&lt;</span><a href="https://lightningkite.github.io/lk-kotlin/utils/lk.kotlin.utils.collection/mapping/-s/index.html"><span class="identifier">S</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">mapping</span><span class="symbol">(</span><span class="identifier" id="lk.kotlin.utils.collection$mapping(kotlin.collections.Iterator((lk.kotlin.utils.collection.mapping.S)), kotlin.Function1((lk.kotlin.utils.collection.mapping.S, lk.kotlin.utils.collection.mapping.T)))/read">read</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://lightningkite.github.io/lk-kotlin/utils/lk.kotlin.utils.collection/mapping/-s/index.html"><span class="identifier">S</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://lightningkite.github.io/lk-kotlin/utils/lk.kotlin.utils.collection/mapping/-t/index.html"><span class="identifier">T</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html"><span class="identifier">Iterator</span></a><span class="symbol">&lt;</span><a href="https://lightningkite.github.io/lk-kotlin/utils/lk.kotlin.utils.collection/mapping/-t/index.html"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
 <p>Returns a wrapper that maps the iterator to have items of a different type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="recursive-flat-map.html">recursiveFlatMap</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html"><span class="identifier">Iterator</span></a><span class="symbol">&lt;</span><a href="https://lightningkite.github.io/lk-kotlin/utils/lk.kotlin.utils.collection/recursive-flat-map/-t/index.html"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">recursiveFlatMap</span><span class="symbol">(</span><span class="identifier" id="lk.kotlin.utils.collection$recursiveFlatMap(kotlin.collections.Iterator((lk.kotlin.utils.collection.recursiveFlatMap.T)), kotlin.Function1((lk.kotlin.utils.collection.recursiveFlatMap.T, kotlin.collections.Iterator(()))))/getter">getter</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://lightningkite.github.io/lk-kotlin/utils/lk.kotlin.utils.collection/recursive-flat-map/-t/index.html"><span class="identifier">T</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html"><span class="identifier">Iterator</span></a><span class="symbol">&lt;</span><a href="https://lightningkite.github.io/lk-kotlin/utils/lk.kotlin.utils.collection/recursive-flat-map/-t/index.html"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html"><span class="identifier">Iterator</span></a><span class="symbol">&lt;</span><a href="https://lightningkite.github.io/lk-kotlin/utils/lk.kotlin.utils.collection/recursive-flat-map/-t/index.html"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Creates a recursive iterator, depth first.</p>
 </td>
 </tr>
 </tbody>

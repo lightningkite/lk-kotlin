@@ -2,30 +2,30 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
-      <module name="lk-kotlin-jackson_main" target="1.8" />
-      <module name="lk-kotlin-jackson_test" target="1.8" />
-      <module name="lk-kotlin-jvm-utils_main" target="1.8" />
-      <module name="lk-kotlin-jvm-utils_test" target="1.8" />
-      <module name="lk-kotlin-lifecycle_main" target="1.8" />
-      <module name="lk-kotlin-lifecycle_test" target="1.8" />
-      <module name="lk-kotlin-observable-list-lifecycle_main" target="1.8" />
-      <module name="lk-kotlin-observable-list-lifecycle_test" target="1.8" />
-      <module name="lk-kotlin-observable-list_main" target="1.8" />
-      <module name="lk-kotlin-observable-list_test" target="1.8" />
-      <module name="lk-kotlin-observable-property-jvm_main" target="1.8" />
-      <module name="lk-kotlin-observable-property-jvm_test" target="1.8" />
-      <module name="lk-kotlin-observable-property-lifecycle_main" target="1.8" />
-      <module name="lk-kotlin-observable-property-lifecycle_test" target="1.8" />
-      <module name="lk-kotlin-observable-property_main" target="1.8" />
-      <module name="lk-kotlin-observable-property_test" target="1.8" />
-      <module name="lk-kotlin-okhttp-jackson_main" target="1.8" />
-      <module name="lk-kotlin-okhttp-jackson_test" target="1.8" />
-      <module name="lk-kotlin-okhttp_main" target="1.8" />
-      <module name="lk-kotlin-okhttp_test" target="1.8" />
-      <module name="lk-kotlin-reflect_main" target="1.8" />
-      <module name="lk-kotlin-reflect_test" target="1.8" />
-      <module name="lk-kotlin-utils_main" target="1.8" />
-      <module name="lk-kotlin-utils_test" target="1.8" />
+      <module name="lk-kotlin-jackson_main" target="1.10" />
+      <module name="lk-kotlin-jackson_test" target="1.10" />
+      <module name="lk-kotlin-jvm-utils_main" target="1.10" />
+      <module name="lk-kotlin-jvm-utils_test" target="1.10" />
+      <module name="lk-kotlin-lifecycle_main" target="1.10" />
+      <module name="lk-kotlin-lifecycle_test" target="1.10" />
+      <module name="lk-kotlin-observable-list-lifecycle_main" target="1.10" />
+      <module name="lk-kotlin-observable-list-lifecycle_test" target="1.10" />
+      <module name="lk-kotlin-observable-list_main" target="1.10" />
+      <module name="lk-kotlin-observable-list_test" target="1.10" />
+      <module name="lk-kotlin-observable-property-jvm_main" target="1.10" />
+      <module name="lk-kotlin-observable-property-jvm_test" target="1.10" />
+      <module name="lk-kotlin-observable-property-lifecycle_main" target="1.10" />
+      <module name="lk-kotlin-observable-property-lifecycle_test" target="1.10" />
+      <module name="lk-kotlin-observable-property_main" target="1.10" />
+      <module name="lk-kotlin-observable-property_test" target="1.10" />
+      <module name="lk-kotlin-okhttp-jackson_main" target="1.10" />
+      <module name="lk-kotlin-okhttp-jackson_test" target="1.10" />
+      <module name="lk-kotlin-okhttp_main" target="1.10" />
+      <module name="lk-kotlin-okhttp_test" target="1.10" />
+      <module name="lk-kotlin-reflect_main" target="1.10" />
+      <module name="lk-kotlin-reflect_test" target="1.10" />
+      <module name="lk-kotlin-utils_main" target="1.10" />
+      <module name="lk-kotlin-utils_test" target="1.10" />
     </bytecodeTargetLevel>
   </component>
 </project>

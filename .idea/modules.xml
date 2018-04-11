@@ -2,44 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/lk-kotlin.iml" filepath="$PROJECT_DIR$/lk-kotlin.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-jackson/lk-kotlin-jackson.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-jackson/lk-kotlin-jackson.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-jackson/lk-kotlin-jackson_main.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-jackson/lk-kotlin-jackson_main.iml" group="lk-kotlin-jackson" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-jackson/lk-kotlin-jackson_test.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-jackson/lk-kotlin-jackson_test.iml" group="lk-kotlin-jackson" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-json.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-json.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-jvm-utils/lk-kotlin-jvm-utils.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-jvm-utils/lk-kotlin-jvm-utils.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-jvm-utils/lk-kotlin-jvm-utils_main.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-jvm-utils/lk-kotlin-jvm-utils_main.iml" group="lk-kotlin-jvm-utils" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-jvm-utils/lk-kotlin-jvm-utils_test.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-jvm-utils/lk-kotlin-jvm-utils_test.iml" group="lk-kotlin-jvm-utils" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-lifecycle/lk-kotlin-lifecycle.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-lifecycle/lk-kotlin-lifecycle.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-lifecycle/lk-kotlin-lifecycle_main.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-lifecycle/lk-kotlin-lifecycle_main.iml" group="lk-kotlin-lifecycle" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-lifecycle/lk-kotlin-lifecycle_test.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-lifecycle/lk-kotlin-lifecycle_test.iml" group="lk-kotlin-lifecycle" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-observable-list/lk-kotlin-observable-list.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-observable-list/lk-kotlin-observable-list.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-observable-list-lifecycle/lk-kotlin-observable-list-lifecycle.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-observable-list-lifecycle/lk-kotlin-observable-list-lifecycle.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-observable-list-lifecycle/lk-kotlin-observable-list-lifecycle_main.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-observable-list-lifecycle/lk-kotlin-observable-list-lifecycle_main.iml" group="lk-kotlin-observable-list-lifecycle" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-observable-list-lifecycle/lk-kotlin-observable-list-lifecycle_test.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-observable-list-lifecycle/lk-kotlin-observable-list-lifecycle_test.iml" group="lk-kotlin-observable-list-lifecycle" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-observable-list/lk-kotlin-observable-list_main.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-observable-list/lk-kotlin-observable-list_main.iml" group="lk-kotlin-observable-list" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-observable-list/lk-kotlin-observable-list_test.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-observable-list/lk-kotlin-observable-list_test.iml" group="lk-kotlin-observable-list" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-observable-property/lk-kotlin-observable-property.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-observable-property/lk-kotlin-observable-property.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-observable-property-jvm/lk-kotlin-observable-property-jvm.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-observable-property-jvm/lk-kotlin-observable-property-jvm.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-observable-property-jvm/lk-kotlin-observable-property-jvm_main.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-observable-property-jvm/lk-kotlin-observable-property-jvm_main.iml" group="lk-kotlin-observable-property-jvm" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-observable-property-jvm/lk-kotlin-observable-property-jvm_test.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-observable-property-jvm/lk-kotlin-observable-property-jvm_test.iml" group="lk-kotlin-observable-property-jvm" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-observable-property-lifecycle/lk-kotlin-observable-property-lifecycle.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-observable-property-lifecycle/lk-kotlin-observable-property-lifecycle.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-observable-property-lifecycle/lk-kotlin-observable-property-lifecycle_main.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-observable-property-lifecycle/lk-kotlin-observable-property-lifecycle_main.iml" group="lk-kotlin-observable-property-lifecycle" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-observable-property-lifecycle/lk-kotlin-observable-property-lifecycle_test.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-observable-property-lifecycle/lk-kotlin-observable-property-lifecycle_test.iml" group="lk-kotlin-observable-property-lifecycle" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-observable-property/lk-kotlin-observable-property_main.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-observable-property/lk-kotlin-observable-property_main.iml" group="lk-kotlin-observable-property" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-observable-property/lk-kotlin-observable-property_test.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-observable-property/lk-kotlin-observable-property_test.iml" group="lk-kotlin-observable-property" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-okhttp/lk-kotlin-okhttp.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-okhttp/lk-kotlin-okhttp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-okhttp-jackson/lk-kotlin-okhttp-jackson.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-okhttp-jackson/lk-kotlin-okhttp-jackson.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-okhttp-jackson/lk-kotlin-okhttp-jackson_main.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-okhttp-jackson/lk-kotlin-okhttp-jackson_main.iml" group="lk-kotlin-okhttp-jackson" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-okhttp-jackson/lk-kotlin-okhttp-jackson_test.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-okhttp-jackson/lk-kotlin-okhttp-jackson_test.iml" group="lk-kotlin-okhttp-jackson" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-okhttp/lk-kotlin-okhttp_main.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-okhttp/lk-kotlin-okhttp_main.iml" group="lk-kotlin-okhttp" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-okhttp/lk-kotlin-okhttp_test.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-okhttp/lk-kotlin-okhttp_test.iml" group="lk-kotlin-okhttp" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-reflect/lk-kotlin-reflect.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-reflect/lk-kotlin-reflect.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-reflect/lk-kotlin-reflect_main.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-reflect/lk-kotlin-reflect_main.iml" group="lk-kotlin-reflect" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-reflect/lk-kotlin-reflect_test.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-reflect/lk-kotlin-reflect_test.iml" group="lk-kotlin-reflect" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-utils/lk-kotlin-utils.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-utils/lk-kotlin-utils.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-utils/lk-kotlin-utils_main.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-utils/lk-kotlin-utils_main.iml" group="lk-kotlin-utils" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-utils/lk-kotlin-utils_test.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-utils/lk-kotlin-utils_test.iml" group="lk-kotlin-utils" />
     </modules>
   </component>
 </project>
