@@ -19,7 +19,7 @@ val KAnnotatedElement.friendlyName: String
     get() = kPropertyFriendlyName.getOrPut(this) {
         annotations.findType<FriendlyName>()?.name ?: run{
             when(this){
-                is KClass<*> -> simpleName?.nameify() ?: toString().nameify()
+                is KClass<*> -> classedName?.nameify() ?: toString().nameify()
                 is KProperty1<*, *> -> name.nameify()
                 else -> toString().nameify()
             }
