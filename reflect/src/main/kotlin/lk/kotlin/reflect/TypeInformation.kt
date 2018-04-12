@@ -6,6 +6,7 @@ import java.lang.reflect.WildcardType
 import kotlin.reflect.KAnnotatedElement
 import kotlin.reflect.KClass
 import kotlin.reflect.KType
+import kotlin.reflect.KTypeParameter
 import kotlin.reflect.jvm.jvmErasure
 
 /**
@@ -32,6 +33,17 @@ class TypeInformation(
             is Class<*> -> TypeInformation(type.kotlin)
             is WildcardType -> TypeInformation.fromType(type.upperBounds.first(), annotations)
             else -> throw IllegalArgumentException()
+        }
+
+        fun fromKotlin(type: KType, annotations: List<Annotation> = listOf()): TypeInformation = when (type) {
+            is KTypeParameter -> TypeInformation(Any::class)
+            else -> TypeInformation(
+                    kclass = type.jvmErasure,
+                    nullable = type.isMarkedNullable,
+                    typeParameters = type.arguments.map {
+                        TypeInformation.fromKotlin(it.type!!)
+                    }
+            )
         }
     }
 }

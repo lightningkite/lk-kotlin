@@ -1,9 +1,6 @@
 package lk.kotlin.reflect
 
-import kotlin.reflect.KClass
-import kotlin.reflect.KFunction
-import kotlin.reflect.KMutableProperty1
-import kotlin.reflect.KProperty1
+import kotlin.reflect.*
 import kotlin.reflect.full.*
 
 private val KClassFastProperties = HashMap<KClass<*>, Map<String, KProperty1<*, *>>>()
@@ -60,6 +57,30 @@ private val KClassFastSuperclasses = HashMap<KClass<*>, List<KClass<*>>>()
  */
 val KClass<*>.fastSuperclasses
     get() = KClassFastSuperclasses.getOrPut(this) { this.superclasses.toList() }
+
+
+private val KClassFastAllSuperclasses = HashMap<KClass<*>, List<KClass<*>>>()
+/**
+ * Retrieves the [superclasses] in a faster manner than Kotlin's default by storing them in a map.
+ */
+val KClass<*>.fastAllSuperclasses
+    get() = KClassFastAllSuperclasses.getOrPut(this) { this.allSuperclasses.toList() }
+
+
+private val KClassFastSupertypes = HashMap<KClass<*>, List<KType>>()
+/**
+ * Retrieves the [supertypes] in a faster manner than Kotlin's default by storing them in a map.
+ */
+val KClass<*>.fastSupertypes
+    get() = KClassFastSupertypes.getOrPut(this) { this.supertypes.toList() }
+
+
+private val KClassFastAllSupertypes = HashMap<KClass<*>, List<KType>>()
+/**
+ * Retrieves the [supertypes] in a faster manner than Kotlin's default by storing them in a map.
+ */
+val KClass<*>.fastAllSupertypes
+    get() = KClassFastAllSupertypes.getOrPut(this) { this.allSupertypes.toList() }
 
 
 private val KClassFastIsEnum = HashMap<KClass<*>, Boolean>()

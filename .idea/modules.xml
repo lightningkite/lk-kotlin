@@ -2,7 +2,20 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin-json.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin-json.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jackson/jackson.iml" filepath="$PROJECT_DIR$/.idea/modules/jackson/jackson.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/json/json.iml" filepath="$PROJECT_DIR$/.idea/modules/json/json.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jvm-utils/jvm-utils.iml" filepath="$PROJECT_DIR$/.idea/modules/jvm-utils/jvm-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lifecycle/lifecycle.iml" filepath="$PROJECT_DIR$/.idea/modules/lifecycle/lifecycle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/observable-list/observable-list.iml" filepath="$PROJECT_DIR$/.idea/modules/observable-list/observable-list.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/observable-list-lifecycle/observable-list-lifecycle.iml" filepath="$PROJECT_DIR$/.idea/modules/observable-list-lifecycle/observable-list-lifecycle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/observable-property/observable-property.iml" filepath="$PROJECT_DIR$/.idea/modules/observable-property/observable-property.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/observable-property-jvm/observable-property-jvm.iml" filepath="$PROJECT_DIR$/.idea/modules/observable-property-jvm/observable-property-jvm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/observable-property-lifecycle/observable-property-lifecycle.iml" filepath="$PROJECT_DIR$/.idea/modules/observable-property-lifecycle/observable-property-lifecycle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/okhttp/okhttp.iml" filepath="$PROJECT_DIR$/.idea/modules/okhttp/okhttp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/okhttp-jackson/okhttp-jackson.iml" filepath="$PROJECT_DIR$/.idea/modules/okhttp-jackson/okhttp-jackson.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/reflect/reflect.iml" filepath="$PROJECT_DIR$/.idea/modules/reflect/reflect.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/utils/utils.iml" filepath="$PROJECT_DIR$/.idea/modules/utils/utils.iml" />
     </modules>
   </component>
 </project>
