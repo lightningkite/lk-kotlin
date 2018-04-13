@@ -1,12 +1,14 @@
 package lk.kotlin.reflect
 
 import lk.kotlin.reflect.annotations.externalName
+import java.util.*
 import kotlin.reflect.KClass
 
 object ExternalClassRegistry {
     private val reverseMapJava = HashMap<Class<*>, String>()
     private val reverseMap = HashMap<KClass<*>, String>()
     private val map = HashMap<String, KClass<*>>()
+    val types: Map<String, KClass<*>> get() = map
     fun register(kclass: KClass<*>, asName: String = kclass.externalName) {
         val prev = map.put(asName, kclass)
         reverseMap.put(kclass, asName)
@@ -46,6 +48,8 @@ object ExternalClassRegistry {
 
         register(Char::class)
         register(String::class)
+
+        register(Date::class)
 
         register(List::class)
         register(Map::class)
