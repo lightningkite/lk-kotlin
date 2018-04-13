@@ -4,10 +4,13 @@ import lk.kotlin.reflect.annotations.externalName
 import kotlin.reflect.KClass
 
 object ExternalClassRegistry {
+    private val reverseMapJava = HashMap<Class<*>, String>()
     private val reverseMap = HashMap<KClass<*>, String>()
     private val map = HashMap<String, KClass<*>>()
     fun register(kclass: KClass<*>, asName: String = kclass.externalName) {
         val prev = map.put(asName, kclass)
+        reverseMap.put(kclass, asName)
+        reverseMapJava.put(kclass.java, asName)
         if(prev != null && prev != kclass)
             throw IllegalArgumentException("Type already registered to name ${kclass.externalName}!")
     }
@@ -28,8 +31,12 @@ object ExternalClassRegistry {
         )
     }
     operator fun get(name:String):KClass<*>? = map[name]
+    operator fun get(type: KClass<*>): String? = reverseMap.getOrPut(type) { type.externalName }
+    operator fun get(type: Class<*>): String? = reverseMapJava.getOrPut(type) { type.kotlin.externalName }
 
     init{
+        register(Any::class)
+
         register(Boolean::class)
 
         register(Byte::class)
