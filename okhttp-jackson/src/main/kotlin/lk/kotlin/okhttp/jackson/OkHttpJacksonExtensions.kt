@@ -61,16 +61,14 @@ fun Request.Builder.lambdaJacksonNode(client: OkHttpClient = defaultClient, mapp
  * Transforms the request into a lambda to be executed later.
  * The lambda will return an object of type [T] by using Jackson to convert from JSON, as well as other data about the response.
  */
-inline fun <reified T : Any> Request.Builder.lambdaJackson(client: OkHttpClient = defaultClient, mapper: ObjectMapper = MyJackson.mapper): () -> TypedResponse<T> = lambda<T>(client) {
-    val str = it.body()!!.string()
-    mapper.readValue<T>(str, object : TypeReference<T>() {})
-}
+inline fun <reified T> Request.Builder.lambdaJackson(client: OkHttpClient = defaultClient, mapper: ObjectMapper = MyJackson.mapper): () -> TypedResponse<T>
+    = lambdaJackson(object : TypeReference<T>(){}, client, mapper)
 
 /**
  * Transforms the request into a lambda to be executed later.
  * The lambda will return an object of type [type] by using Jackson to convert from JSON, as well as other data about the response.
  */
-fun <T : Any> Request.Builder.lambdaJackson(type: JavaType, client: OkHttpClient = defaultClient, mapper: ObjectMapper = MyJackson.mapper): () -> TypedResponse<T> = lambda<T>(client) {
+fun <T> Request.Builder.lambdaJackson(type: JavaType, client: OkHttpClient = defaultClient, mapper: ObjectMapper = MyJackson.mapper): () -> TypedResponse<T> = lambda<T>(client) {
     val str = it.body()!!.string()
     mapper.readValue<T>(str, type)
 }
@@ -79,7 +77,7 @@ fun <T : Any> Request.Builder.lambdaJackson(type: JavaType, client: OkHttpClient
  * Transforms the request into a lambda to be executed later.
  * The lambda will return an object of type [type] by using Jackson to convert from JSON, as well as other data about the response.
  */
-fun <T : Any> Request.Builder.lambdaJackson(type: TypeReference<T>, client: OkHttpClient = defaultClient, mapper: ObjectMapper = MyJackson.mapper): () -> TypedResponse<T> = lambda<T>(client) {
+fun <T> Request.Builder.lambdaJackson(type: TypeReference<T>, client: OkHttpClient = defaultClient, mapper: ObjectMapper = MyJackson.mapper): () -> TypedResponse<T> = lambda<T>(client) {
     val str = it.body()!!.string()
     mapper.readValue<T>(str, type)
 }

@@ -13,7 +13,7 @@ inline fun <T> (() -> TypedResponse<T>).thenOnSuccess(executor: Executor, crossi
     return {
         val response = this.invoke()
         if (response.isSuccessful()) {
-            executor.execute { onSuccess(response.result!!) }
+            executor.execute { onSuccess(response.result as T) }
         }
         response
     }
@@ -42,7 +42,7 @@ inline fun <A, B> (() -> TypedResponse<A>).chain(crossinline otherLambdaGenerato
         if (!response.isSuccessful()) {
             TypedResponse(response.code, null, response.headers, response.errorBytes, response.exception)
         } else {
-            otherLambdaGenerator(response.result!!).invoke()
+            otherLambdaGenerator(response.result as A).invoke()
         }
     }
 }
@@ -56,7 +56,7 @@ inline fun <A, B> (() -> TypedResponse<A>).chainTypeless(crossinline default: (T
         if (!response.isSuccessful()) {
             default(response)
         } else {
-            otherLambdaGenerator(response.result!!).invoke()
+            otherLambdaGenerator(response.result as A).invoke()
         }
     }
 }

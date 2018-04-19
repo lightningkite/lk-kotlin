@@ -19,27 +19,35 @@ class UseExternalClassRegistryKtTest {
             var z: Any? = null,
             var d: Date = Date(),
             var sub: HelloWorld? = null,
-            var enum: TestEnum = TestEnum.A
+            var enum: TestEnum = TestEnum.A,
+            var list:List<Int> = listOf()
     )
 
     @Test
     fun testRegister() {
         ExternalClassRegistry.registerWithSubtypes(HelloWorld::class)
+        MyJackson.mapper.useExternalClassRegistry()
+
         println(ExternalClassRegistry.types)
     }
 
     @Test
     fun testSerialize() {
+        ExternalClassRegistry.registerWithSubtypes(HelloWorld::class)
         MyJackson.mapper.useExternalClassRegistry()
-        val subject = HelloWorld(z = HelloWorld())
+
+        val subject = HelloWorld(z = HelloWorld(list = listOf(1,2,3)))
         println(subject.jacksonToString())
     }
 
     @Test
     fun testRoundTrip() {
+        ExternalClassRegistry.registerWithSubtypes(HelloWorld::class)
         MyJackson.mapper.useExternalClassRegistry()
-        val subject = HelloWorld(z = HelloWorld())
+
+        val subject = HelloWorld(z = HelloWorld(list = listOf(1,2,3)))
         val json = subject.jacksonToString()
+        println(json)
         val copy = json.jacksonFromString<HelloWorld>()
         println(copy)
         assert(copy == subject)

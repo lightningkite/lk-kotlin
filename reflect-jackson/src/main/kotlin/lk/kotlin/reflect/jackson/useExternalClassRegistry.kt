@@ -10,7 +10,13 @@ import lk.kotlin.reflect.ExternalClassRegistry
 
 fun ObjectMapper.useExternalClassRegistry() {
     var typer: TypeResolverBuilder<*> = object : ObjectMapper.DefaultTypeResolverBuilder(ObjectMapper.DefaultTyping.NON_FINAL) {
-
+        override fun useForType(t: JavaType): Boolean {
+            if (t.isPrimitive) {
+                return false
+            }
+            if(t.isCollectionLikeType) return false
+            return super.useForType(t)
+        }
     }
     // we'll always use full class name, when using defaulting
     typer = typer.init(JsonTypeInfo.Id.NAME, object : TypeIdResolver {
@@ -28,8 +34,11 @@ fun ObjectMapper.useExternalClassRegistry() {
         override fun getMechanism(): JsonTypeInfo.Id = JsonTypeInfo.Id.NAME
 
         override fun typeFromId(context: DatabindContext, id: String?): JavaType = id
-                ?.let { ExternalClassRegistry[it] }
-                .let { context.constructType(it?.java ?: Any::class.java) }
+                ?.let {
+                    ExternalClassRegistry[it]
+                }
+                ?.let { context.constructType(it.java) }
+                ?: throw IllegalArgumentException("Unknown type '$id'")
 
     })
     typer = typer.inclusion(JsonTypeInfo.As.PROPERTY)

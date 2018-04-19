@@ -51,7 +51,7 @@ dokka {
 
 task sourceJar(type: Jar) {
     classifier 'sources'
-    from sourceSets.main.allJava
+    from sourceSets.main.allSource
 }
 
 task dokkaJar(type: Jar) {
