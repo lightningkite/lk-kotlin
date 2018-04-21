@@ -23,6 +23,7 @@ class CombineObservablePropertyBlind<T>(
     val callbacks = HashMap<ObservableProperty<Any?>, (Any?) -> Unit>()
 
     override fun enable() {
+        combine()
         callbacks += observables.map {
             val newListener = { _: Any? -> update() }
             val itFake = it as ObservableProperty<Any?>

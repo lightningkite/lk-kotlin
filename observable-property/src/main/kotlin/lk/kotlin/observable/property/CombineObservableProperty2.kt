@@ -26,6 +26,7 @@ class CombineObservableProperty2<A, B, T>(
     }
 
     override fun enable() {
+        value = combine(observableA.value, observableB.value)
         observableA.add(callbackA)
         observableB.add(callbackB)
     }

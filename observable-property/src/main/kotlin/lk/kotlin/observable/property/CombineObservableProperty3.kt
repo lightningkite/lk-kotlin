@@ -30,6 +30,7 @@ class CombineObservableProperty3<A, B, C, T>(
     }
 
     override fun enable() {
+        value = combine(observableA.value, observableB.value, observableC.value)
         observableA.add(callbackA)
         observableB.add(callbackB)
         observableC.add(callbackC)
