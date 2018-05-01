@@ -1,8 +1,7 @@
-@file:JvmName("LkKotlinUtils")
-@file:JvmMultifileClass
-
 package lk.kotlin.utils.lambda
 
+
+import kotlin.collections.*
 
 /**
  * These functions are extremely handy for using collections as events.  Example:

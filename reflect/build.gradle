@@ -11,6 +11,7 @@ buildscript {
     }
 }
 
+apply plugin: 'kotlin-platform-jvm'
 apply from: '../common.gradle'
 
 repositories {

@@ -1,5 +1,3 @@
-@file:JvmName("LkKotlinJackson")
-@file:JvmMultifileClass
 
 package lk.kotlin.jackson
 

@@ -1,5 +1,5 @@
-@file:JvmName("LkKotlinOkhttpJackson")
-@file:JvmMultifileClass
+
+
 
 package lk.kotlin.okhttp.jackson
 

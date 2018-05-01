@@ -9,7 +9,7 @@ open class LateInitObservableProperty<T : Any>() : BaseObservableProperty<T>() {
 
     var internalValue: T? = null
     override var value: T
-        get() = internalValue ?: throw throw IllegalAccessException("Value not set.")
+        get() = internalValue ?: throw IllegalStateException("Value not set.")
         set(value) {
             internalValue = value
             update()

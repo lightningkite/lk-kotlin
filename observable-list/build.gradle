@@ -11,6 +11,7 @@ buildscript {
     }
 }
 
+apply plugin: 'kotlin-platform-common'
 apply from: '../common.gradle'
 
 repositories {
@@ -18,9 +19,8 @@ repositories {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:${rootProject.kotlinVersion}"
-    testImplementation 'junit:junit:4.12'
-    testImplementation "org.jetbrains.kotlin:kotlin-test-junit:${rootProject.kotlinVersion}"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-common:${rootProject.kotlinVersion}"
+    testCompile "org.jetbrains.kotlin:kotlin-test-common:$kotlin_version"
 
     implementation project(':utils')
     implementation project(':observable-property')

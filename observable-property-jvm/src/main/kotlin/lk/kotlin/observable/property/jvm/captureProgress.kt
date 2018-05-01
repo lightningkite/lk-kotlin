@@ -1,5 +1,5 @@
-@file:JvmName("LkKotlinObservablePropertyJvm")
-@file:JvmMultifileClass
+
+
 
 package lk.kotlin.observable.property.jvm
 
@@ -25,7 +25,6 @@ fun <T> (() -> T).captureProgress(observable: MutableObservableProperty<Boolean>
     }
 }
 
-@JvmName("attachLoadingObservableInt")
 fun <T> (() -> T).captureProgress(observable: MutableObservableProperty<Int>, executor: Executor): (() -> T) {
     return {
         executor.execute {

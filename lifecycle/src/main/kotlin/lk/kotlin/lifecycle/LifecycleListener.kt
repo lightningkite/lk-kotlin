@@ -8,6 +8,7 @@ package lk.kotlin.lifecycle
  * A: Because you will always need to implement both sides or most likely experience an error, so to mitigate that, this design forces you to handle both.
  *  Created by jivie on 6/1/16.
  */
+@Deprecated("Use a boolean observable property instead.")
 interface LifecycleListener {
     /**
      * Called when the lifecycle starts.

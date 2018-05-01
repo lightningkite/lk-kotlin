@@ -1,4 +1,6 @@
 $dokka.format:html
 $dokka.linkExtension:html
-
+$dokka.location:lk.kotlin.observable.list.lifecycle$bind(lk.kotlin.observable.property.ObservableProperty((kotlin.Boolean)), lk.kotlin.observable.list.ObservableList((lk.kotlin.observable.list.lifecycle.bind.T)), kotlin.Function1((lk.kotlin.observable.list.ObservableList((lk.kotlin.observable.list.lifecycle.bind.T)), kotlin.Unit)))lk.kotlin.observable.list.lifecycle/lk.kotlin.observable.property.-observable-property/bind.html
+$dokka.location:lk.kotlin.observable.list.lifecycle$bind(lk.kotlin.observable.property.ObservableProperty((kotlin.Boolean)), lk.kotlin.observable.list.ObservableList((lk.kotlin.observable.list.lifecycle.bind.T)), lk.kotlin.observable.list.ObservableListListenerSet((lk.kotlin.observable.list.lifecycle.bind.T)))lk.kotlin.observable.list.lifecycle/lk.kotlin.observable.property.-observable-property/bind.html
 lk.kotlin.observable.list
+lk.kotlin.observable.list.lifecycle

@@ -1,7 +1,7 @@
-@file:JvmName("LkKotlinUtils")
-@file:JvmMultifileClass
 
 package lk.kotlin.utils.collection
+
+import kotlin.collections.*
 
 /**
  * A list that calls functions upon changing from empty to not empty and vice versa.
@@ -21,4 +21,4 @@ class MappedMutableSet<S, E>(val source: MutableSet<S>, val mapper: (S) -> E, va
 }
 
 fun <S, E> MutableSet<S>.mapping(read: (S) -> E, write: (E) -> S): MutableSet<E> = MappedMutableSet(this, read, write)
-fun <S, E> MutableSet<S>.mapping(write: (E) -> S): MutableSet<E> = MappedMutableSet(this, { throw IllegalAccessException() }, write)
+fun <S, E> MutableSet<S>.mapping(write: (E) -> S): MutableSet<E> = MappedMutableSet(this, { throw IllegalStateException("Write Only") }, write)

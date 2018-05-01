@@ -8,6 +8,7 @@ import java.util.*
  * A lifecycle that starts immediately and stops upon closing.
  * Created by jivie on 6/28/16.
  */
+@Deprecated("Use a boolean observable property instead.")
 class CloseableLifecycle() : LifecycleConnectable, Closeable {
     val toRemove = ArrayList<LifecycleListener>()
     override fun connect(listener: LifecycleListener) {

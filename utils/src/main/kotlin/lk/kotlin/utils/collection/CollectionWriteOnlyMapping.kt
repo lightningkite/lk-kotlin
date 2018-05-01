@@ -1,7 +1,6 @@
-@file:JvmName("LkKotlinUtils")
-@file:JvmMultifileClass
-
 package lk.kotlin.utils.collection
+
+import kotlin.collections.*
 
 
 /**
@@ -12,7 +11,7 @@ package lk.kotlin.utils.collection
  * Created by joseph on 12/14/16.
  */
 class CollectionWriteOnlyMapping<S, E>(val source: MutableCollection<S>, val inputMapper: (E) -> S) : MutableCollection<E> {
-    val map = HashMap<E, S>()
+    val map:MutableMap<E, S> = mutableMapOf()
 
     override val size: Int get() = source.size
 
@@ -32,11 +31,11 @@ class CollectionWriteOnlyMapping<S, E>(val source: MutableCollection<S>, val inp
     override fun removeAll(elements: Collection<E>): Boolean = source.removeAll(elements.map { map[it] })
     override fun retainAll(elements: Collection<E>): Boolean = source.retainAll(elements.map { map[it] })
 
-    override fun contains(element: E): Boolean = throw IllegalAccessException()
-    override fun containsAll(elements: Collection<E>): Boolean = throw IllegalAccessException()
-    override fun isEmpty(): Boolean = throw IllegalAccessException()
-    override fun clear() = throw IllegalAccessException()
-    override fun iterator(): MutableIterator<E> = throw IllegalAccessException()
+    override fun contains(element: E): Boolean = throw IllegalStateException("Not readable")
+    override fun containsAll(elements: Collection<E>): Boolean = throw IllegalStateException("Not readable")
+    override fun isEmpty(): Boolean = throw IllegalStateException("Not readable")
+    override fun clear() = throw IllegalStateException("Not readable")
+    override fun iterator(): MutableIterator<E> = throw IllegalStateException("Not readable")
 }
 
 fun <S, E> MutableCollection<S>.mappingWriteOnly(inputMapper: (E) -> S) = CollectionWriteOnlyMapping(this, inputMapper)

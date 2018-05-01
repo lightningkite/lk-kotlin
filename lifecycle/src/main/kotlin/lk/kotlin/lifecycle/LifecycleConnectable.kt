@@ -6,6 +6,7 @@ package lk.kotlin.lifecycle
  * Represents an object that has a lifecycle, or in other words, starts and stops activity.
  * Created by jivie on 6/1/16.
  */
+@Deprecated("Use a boolean observable property instead.")
 interface LifecycleConnectable {
     fun connect(listener: LifecycleListener)
 }

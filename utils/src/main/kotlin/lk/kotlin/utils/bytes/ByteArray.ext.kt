@@ -1,6 +1,3 @@
-@file:JvmName("LkKotlinUtils")
-@file:JvmMultifileClass
-
 package lk.kotlin.utils.bytes
 
 
@@ -19,7 +16,7 @@ fun ByteArray.toStringHex(): String {
         hexChars[index * 2 + 1] = hexArray[ubyte and 0x0F]
         index++
     }
-    return String(hexChars)
+    return hexChars.toString()
 }
 
 /**
@@ -28,7 +25,7 @@ fun ByteArray.toStringHex(): String {
  */
 fun String.hexToByteArray(): ByteArray {
     val array = ByteArray(length / 2)
-    for (i in array.indices) {
+    for (i in 0 .. array.size-1) {
         array[i] = ((this[i * 2].toHexValue() shl 4) or (this[i * 2 + 1].toHexValue())).toByte()
     }
     return array

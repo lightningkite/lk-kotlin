@@ -1,5 +1,5 @@
-@file:JvmName("LkKotlinLifecycle")
-@file:JvmMultifileClass
+
+
 
 package lk.kotlin.lifecycle
 

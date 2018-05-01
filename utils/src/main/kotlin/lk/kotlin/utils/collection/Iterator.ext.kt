@@ -1,7 +1,6 @@
-@file:JvmName("LkKotlinUtils")
-@file:JvmMultifileClass
-
 package lk.kotlin.utils.collection
+
+import kotlin.collections.*
 
 /**
  * Returns a wrapper that maps the iterator to have items of a different type.
@@ -23,7 +22,6 @@ fun <S, T> MutableListIterator<S>.mapping(read: (S) -> T, write: (T) -> S): Muta
 /**
  * Returns a wrapper that maps the iterator to have items of a different type.
  */
-@JvmName("mappingMutable")
 fun <S, T> MutableIterator<S>.mapping(read: (S) -> T): MutableIterator<T> {
     return object : MutableIterator<T> {
         override fun hasNext(): Boolean = this@mapping.hasNext()

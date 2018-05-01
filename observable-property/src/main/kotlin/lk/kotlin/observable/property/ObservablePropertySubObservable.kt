@@ -1,5 +1,5 @@
-@file:JvmName("LkKotlinObservableProperty")
-@file:JvmMultifileClass
+
+
 
 package lk.kotlin.observable.property
 
@@ -21,7 +21,7 @@ class ObservablePropertySubObservable<A, B>(
             val currentSub = owningObservable.value.let(getter)
             if (currentSub is MutableObservableProperty<B>) {
                 currentSub.value = value
-            } else throw IllegalAccessException("ObservableProperty is not mutable")
+            } else throw IllegalStateException("ObservableProperty is not mutable")
         }
 
     val outerCallback = { a: A ->

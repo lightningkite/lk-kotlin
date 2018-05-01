@@ -1,6 +1,8 @@
 package lk.kotlin.utils.collection
 
 
+import kotlin.collections.*
+
 /**
  * A class that makes a mutable list's elements act as if it were of a different type.
  */

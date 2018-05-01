@@ -1,5 +1,5 @@
-@file:JvmName("LkKotlinObservableProperty")
-@file:JvmMultifileClass
+
+
 
 package lk.kotlin.observable.property
 

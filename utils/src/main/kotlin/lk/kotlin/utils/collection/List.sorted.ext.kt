@@ -1,7 +1,6 @@
-@file:JvmName("LkKotlinUtils")
-@file:JvmMultifileClass
-
 package lk.kotlin.utils.collection
+
+import kotlin.collections.*
 
 /**
  * Finds the position an item belongs in the list (assuming it's sorted) according to [compare] and inserts it there.

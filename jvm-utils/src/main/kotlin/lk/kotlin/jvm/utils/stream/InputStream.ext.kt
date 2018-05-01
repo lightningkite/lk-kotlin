@@ -1,5 +1,5 @@
-@file:JvmName("LkKotlinJvmUtils")
-@file:JvmMultifileClass
+
+
 
 package lk.kotlin.jvm.utils.stream
 

@@ -1,5 +1,5 @@
-@file:JvmName("LkKotlinObservableList")
-@file:JvmMultifileClass
+
+
 
 package lk.kotlin.observable.list
 

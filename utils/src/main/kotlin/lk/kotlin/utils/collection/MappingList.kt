@@ -1,7 +1,6 @@
-@file:JvmName("LkKotlinUtils")
-@file:JvmMultifileClass
-
 package lk.kotlin.utils.collection
+
+import kotlin.collections.*
 
 /**
  * A class that makes an immutable list's elements act as if it were of a different type.

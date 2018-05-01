@@ -1,8 +1,6 @@
-@file:JvmName("LkKotlinUtils")
-@file:JvmMultifileClass
-
 package lk.kotlin.utils.math
 
+import kotlin.math.*
 
 /**
  * Various math functions.
@@ -20,7 +18,7 @@ infix fun Float.degreesTo(to: Float): Float {
  * Radians from this angle (in radians) to another angle (in radians).
  */
 infix fun Float.radiansTo(to: Float): Float {
-    return (((to - this + Math.PI * 3).rem(Math.PI * 2)) - Math.PI).toFloat()
+    return (((to - this + PI * 3).rem(PI * 2)) - PI).toFloat()
 }
 
 /**
@@ -34,5 +32,5 @@ infix fun Double.degreesTo(to: Double): Double {
  * Radians from this angle (in radians) to another angle (in radians).
  */
 infix fun Double.radiansTo(to: Double): Double {
-    return ((to - this + Math.PI * 3).rem(Math.PI * 2)) - Math.PI
+    return ((to - this + PI * 3).rem(PI * 2)) - PI
 }

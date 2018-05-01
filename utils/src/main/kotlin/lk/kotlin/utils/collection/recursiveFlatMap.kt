@@ -1,5 +1,7 @@
 package lk.kotlin.utils.collection
 
+import kotlin.collections.*
+
 /**
  * Creates a recursive sequence, breadth first.
  */
