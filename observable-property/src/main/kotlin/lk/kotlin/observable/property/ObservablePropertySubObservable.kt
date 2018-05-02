@@ -11,7 +11,7 @@ package lk.kotlin.observable.property
 class ObservablePropertySubObservable<A, B>(
         val owningObservable: ObservableProperty<A>,
         val getter: (A) -> ObservableProperty<B>
-) : EnablingMutableCollection<(B) -> Unit>(), MutableObservableProperty<B> {
+) : EnablingObservableProperty<B>(), MutableObservableProperty<B> {
 
     var currentSub: ObservableProperty<B>? = null
 
@@ -25,13 +25,11 @@ class ObservablePropertySubObservable<A, B>(
         }
 
     val outerCallback = { a: A ->
-        val wrapped = value
-        forEach { it.invoke(wrapped) }
+        update()
         resub()
     }
     val innerCallback = { b: B ->
-        val wrapped = value
-        forEach { it.invoke(wrapped) }
+        update()
     }
 
     override fun enable() {

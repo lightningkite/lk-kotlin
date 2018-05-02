@@ -9,7 +9,7 @@ class VirtualMutableObservableProperty<T>(
         val getterFun: () -> T,
         val setterFun: (T) -> Unit,
         val event: MutableCollection<(T) -> Unit>
-) : EnablingMutableCollection<(T) -> Unit>(), MutableObservableProperty<T> {
+) : EnablingObservableProperty<T>(), MutableObservableProperty<T> {
 
     override var value: T
         get() = getterFun()
@@ -17,7 +17,7 @@ class VirtualMutableObservableProperty<T>(
             setterFun(value)
         }
 
-    val listener = { t: T -> forEach { it.invoke(t) } }
+    val listener = { t: T -> update() }
 
     override fun enable() {
         event.add(listener)

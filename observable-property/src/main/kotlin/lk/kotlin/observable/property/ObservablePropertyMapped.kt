@@ -11,13 +11,12 @@ package lk.kotlin.observable.property
 class ObservablePropertyMapped<S, T>(
         val observable: ObservableProperty<S>,
         val transformer: (S) -> T
-) : EnablingMutableCollection<(T) -> Unit>(), ObservableProperty<T> {
+) : EnablingObservableProperty<T>(), ObservableProperty<T> {
     override val value: T
         get() = transformer(observable.value)
 
     val callback = { a: S ->
-        val wrapped = transformer(observable.value)
-        forEach { it.invoke(wrapped) }
+        super.update()
     }
 
     override fun enable() {

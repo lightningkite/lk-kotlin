@@ -9,15 +9,15 @@ package lk.kotlin.observable.property
 class CombineObservablePropertyBlind<T>(
         val observables: Collection<ObservableProperty<*>>,
         val combine: () -> T
-) : EnablingMutableCollection<(T) -> Unit>(), ObservableProperty<T> {
+) : EnablingObservableProperty<T>(), ObservableProperty<T> {
 
     constructor(vararg observables: ObservableProperty<*>, combine: () -> T) : this(observables.toList(), combine)
 
     override var value = combine()
 
-    fun update() {
+    override fun update() {
         value = combine()
-        forEach { it.invoke(value) }
+        super.update()
     }
 
     val callbacks = HashMap<ObservableProperty<Any?>, (Any?) -> Unit>()

@@ -2,13 +2,13 @@
 <HEAD>
 <meta charset="UTF-8">
 <title>MutableObservablePropertyMapped - observable-property</title>
-<link rel="stylesheet" href="..\..\..\style.css">
+<link rel="stylesheet" href="../../../style.css">
 </HEAD>
 <BODY>
 <a href="../../index.html">observable-property</a>&nbsp;/&nbsp;<a href="../index.html">lk.kotlin.observable.property</a>&nbsp;/&nbsp;<a href="./index.html">MutableObservablePropertyMapped</a><br/>
 <br/>
 <h1>MutableObservablePropertyMapped</h1>
-<code><span class="keyword">class </span><span class="identifier">MutableObservablePropertyMapped</span><span class="symbol">&lt;</span><span class="identifier">S</span><span class="symbol">, </span><span class="identifier">T</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-enabling-mutable-collection/index.html"><span class="identifier">EnablingMutableCollection</span></a><span class="symbol">&lt;</span><span class="symbol">(</span><a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-mutable-observable-property-mapped/-t/index.html"><span class="identifier">T</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-mutable-observable-property/index.html"><span class="identifier">MutableObservableProperty</span></a><span class="symbol">&lt;</span><a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-mutable-observable-property-mapped/-t/index.html"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<code><span class="keyword">class </span><span class="identifier">MutableObservablePropertyMapped</span><span class="symbol">&lt;</span><span class="identifier">S</span><span class="symbol">, </span><span class="identifier">T</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-enabling-observable-property/index.html"><span class="identifier">EnablingObservableProperty</span></a><span class="symbol">&lt;</span><a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-mutable-observable-property-mapped/-t/index.html"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-mutable-observable-property/index.html"><span class="identifier">MutableObservableProperty</span></a><span class="symbol">&lt;</span><a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-mutable-observable-property-mapped/-t/index.html"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
 <p>Transforms an observable property from one type to another.
 Created by jivie on 2/22/16.</p>
 <h3>Constructors</h3>
@@ -73,10 +73,17 @@ Created by jivie on 2/22/16.</p>
 <tbody>
 <tr>
 <td>
-<p><a href="../-enabling-mutable-collection/active.html">active</a></p>
+<p><a href="../-enabling-observable-property/active.html">active</a></p>
 </td>
 <td>
 <code><span class="keyword">var </span><span class="identifier">active</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-enabling-observable-property/list.html">list</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">list</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><span class="symbol">(</span><a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-enabling-observable-property/-e/index.html"><span class="identifier">E</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">&gt;</span></code></td>
 </tr>
 </tbody>
 </table>
@@ -104,59 +111,35 @@ Created by jivie on 2/22/16.</p>
 <tbody>
 <tr>
 <td>
-<p><a href="../-enabling-mutable-collection/add.html">add</a></p>
+<p><a href="../-enabling-observable-property/add.html">add</a></p>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="lk.kotlin.observable.property.EnablingMutableCollection$add(lk.kotlin.observable.property.EnablingMutableCollection.E)/element">element</span><span class="symbol">:</span>&nbsp;<a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-enabling-mutable-collection/-e/index.html"><span class="identifier">E</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="lk.kotlin.observable.property.EnablingObservableProperty$add(kotlin.Function1((lk.kotlin.observable.property.EnablingObservableProperty.E, kotlin.Unit)))/element">element</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-enabling-observable-property/-e/index.html"><span class="identifier">E</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Adds a listener to be notified when the value changes.</p>
+</td>
 </tr>
 <tr>
 <td>
-<p><a href="../-enabling-mutable-collection/add-all.html">addAll</a></p>
-</td>
-<td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addAll</span><span class="symbol">(</span><span class="identifier" id="lk.kotlin.observable.property.EnablingMutableCollection$addAll(kotlin.collections.Collection((lk.kotlin.observable.property.EnablingMutableCollection.E)))/elements">elements</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html"><span class="identifier">Collection</span></a><span class="symbol">&lt;</span><a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-enabling-mutable-collection/-e/index.html"><span class="identifier">E</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="../-enabling-mutable-collection/check-down.html">checkDown</a></p>
+<p><a href="../-enabling-observable-property/check-down.html">checkDown</a></p>
 </td>
 <td>
 <code><span class="keyword">fun </span><span class="identifier">checkDown</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="../-enabling-mutable-collection/check-up.html">checkUp</a></p>
+<p><a href="../-enabling-observable-property/check-up.html">checkUp</a></p>
 </td>
 <td>
 <code><span class="keyword">fun </span><span class="identifier">checkUp</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="../-enabling-mutable-collection/clear.html">clear</a></p>
+<p><a href="../-enabling-observable-property/remove.html">remove</a></p>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="../-enabling-mutable-collection/remove.html">remove</a></p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">remove</span><span class="symbol">(</span><span class="identifier" id="lk.kotlin.observable.property.EnablingObservableProperty$remove(kotlin.Function1((lk.kotlin.observable.property.EnablingObservableProperty.E, kotlin.Unit)))/element">element</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-enabling-observable-property/-e/index.html"><span class="identifier">E</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Removes a listener</p>
 </td>
-<td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">remove</span><span class="symbol">(</span><span class="identifier" id="lk.kotlin.observable.property.EnablingMutableCollection$remove(lk.kotlin.observable.property.EnablingMutableCollection.E)/element">element</span><span class="symbol">:</span>&nbsp;<a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-enabling-mutable-collection/-e/index.html"><span class="identifier">E</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="../-enabling-mutable-collection/remove-all.html">removeAll</a></p>
-</td>
-<td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">removeAll</span><span class="symbol">(</span><span class="identifier" id="lk.kotlin.observable.property.EnablingMutableCollection$removeAll(kotlin.collections.Collection((lk.kotlin.observable.property.EnablingMutableCollection.E)))/elements">elements</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html"><span class="identifier">Collection</span></a><span class="symbol">&lt;</span><a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-enabling-mutable-collection/-e/index.html"><span class="identifier">E</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="../-enabling-mutable-collection/retain-all.html">retainAll</a></p>
-</td>
-<td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">retainAll</span><span class="symbol">(</span><span class="identifier" id="lk.kotlin.observable.property.EnablingMutableCollection$retainAll(kotlin.collections.Collection((lk.kotlin.observable.property.EnablingMutableCollection.E)))/elements">elements</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html"><span class="identifier">Collection</span></a><span class="symbol">&lt;</span><a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-enabling-mutable-collection/-e/index.html"><span class="identifier">E</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
 </tr>
 <tr>
 <td>
@@ -164,6 +147,13 @@ Created by jivie on 2/22/16.</p>
 </td>
 <td>
 <code><span class="keyword">open</span> <span class="keyword">operator</span> <span class="keyword">fun </span><span class="identifier">setValue</span><span class="symbol">(</span><span class="identifier" id="lk.kotlin.observable.property.MutableObservableProperty$setValue(kotlin.Any, kotlin.reflect.KProperty((kotlin.Any)), lk.kotlin.observable.property.MutableObservableProperty.T)/thisRef">thisRef</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="lk.kotlin.observable.property.MutableObservableProperty$setValue(kotlin.Any, kotlin.reflect.KProperty((kotlin.Any)), lk.kotlin.observable.property.MutableObservableProperty.T)/prop">prop</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-property/index.html"><span class="identifier">KProperty</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="lk.kotlin.observable.property.MutableObservableProperty$setValue(kotlin.Any, kotlin.reflect.KProperty((kotlin.Any)), lk.kotlin.observable.property.MutableObservableProperty.T)/v">v</span><span class="symbol">:</span>&nbsp;<a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-mutable-observable-property/-t/index.html"><span class="identifier">T</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-enabling-observable-property/update.html">update</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">update</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 </tbody>
 </table>

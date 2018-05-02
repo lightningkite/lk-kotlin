@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/jackson/jackson.iml" filepath="$PROJECT_DIR$/.idea/modules/jackson/jackson.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/json/json.iml" filepath="$PROJECT_DIR$/.idea/modules/json/json.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/jvm-utils/jvm-utils.iml" filepath="$PROJECT_DIR$/.idea/modules/jvm-utils/jvm-utils.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/lifecycle/lifecycle.iml" filepath="$PROJECT_DIR$/.idea/modules/lifecycle/lifecycle.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin.iml" />

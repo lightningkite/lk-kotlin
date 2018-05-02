@@ -9,13 +9,13 @@ class CombineObservableProperty2<A, B, T>(
         val observableA: ObservableProperty<A>,
         val observableB: ObservableProperty<B>,
         val combine: (A, B) -> T
-) : EnablingMutableCollection<(T) -> Unit>(), ObservableProperty<T> {
+) : EnablingObservableProperty<T>(), ObservableProperty<T> {
 
     override var value = combine(observableA.value, observableB.value)
 
-    fun update() {
+    override fun update() {
         value = combine(observableA.value, observableB.value)
-        forEach { it.invoke(value) }
+        super.update()
     }
 
     val callbackA = { item: A ->

@@ -10,6 +10,5 @@ include ':observable-property-lifecycle'
 include ':observable-list'
 include ':observable-list-lifecycle'
 include ':reflect'
-include ':json'
 include 'reflect-jackson'
 

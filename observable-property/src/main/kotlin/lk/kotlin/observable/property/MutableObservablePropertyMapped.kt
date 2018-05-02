@@ -12,7 +12,7 @@ class MutableObservablePropertyMapped<S, T>(
         val observable: MutableObservableProperty<S>,
         val transformer: (S) -> T,
         val reverseTransformer: (T) -> S
-) : EnablingMutableCollection<(T) -> Unit>(), MutableObservableProperty<T> {
+) : EnablingObservableProperty<T>(), MutableObservableProperty<T> {
     override var value: T
         get() = transformer(observable.value)
         set(value) {
@@ -20,8 +20,7 @@ class MutableObservablePropertyMapped<S, T>(
         }
 
     val callback = { a: S ->
-        val wrapped = transformer(observable.value)
-        forEach { it.invoke(wrapped) }
+        update()
     }
 
     override fun enable() {

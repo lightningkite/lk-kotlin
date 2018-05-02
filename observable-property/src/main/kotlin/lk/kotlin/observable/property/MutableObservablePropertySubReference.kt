@@ -13,7 +13,7 @@ class MutableObservablePropertySubReference<A, B>(
         val observable: MutableObservableProperty<A>,
         val getterFun: (A) -> B,
         val setterFun: (A, B) -> Unit
-) : EnablingMutableCollection<(B) -> Unit>(), MutableObservableProperty<B> {
+) : EnablingObservableProperty<B>(), MutableObservableProperty<B> {
     override var value: B
         get() = getterFun(observable.value)
         set(value) {
@@ -22,8 +22,7 @@ class MutableObservablePropertySubReference<A, B>(
         }
 
     val callback = { a: A ->
-        val wrapped = getterFun(observable.value)
-        forEach { it.invoke(wrapped) }
+        update()
     }
 
     override fun enable() {
