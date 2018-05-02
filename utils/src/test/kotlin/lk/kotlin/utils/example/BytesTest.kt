@@ -1,10 +1,10 @@
-package lk.kotlin.utils.examples
+package lk.kotlin.utils.example
 
 import lk.kotlin.utils.bytes.IntBitArray
 import lk.kotlin.utils.bytes.hexToByteArray
 import lk.kotlin.utils.bytes.toStringHex
-import org.junit.Test
 import kotlin.test.assertEquals
+import org.junit.Test
 
 class BytesTest {
 

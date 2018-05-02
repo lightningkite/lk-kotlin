@@ -21,4 +21,5 @@ repositories {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-common:${rootProject.kotlinVersion}"
     testCompile "org.jetbrains.kotlin:kotlin-test-common:$kotlin_version"
+    implementation 'org.testng:testng:6.9.6'
 }

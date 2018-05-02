@@ -1,4 +1,4 @@
-package lk.kotlin.utils.examples
+package lk.kotlin.utils.example
 
 import lk.kotlin.utils.lambda.invokeAll
 import lk.kotlin.utils.lambda.then
