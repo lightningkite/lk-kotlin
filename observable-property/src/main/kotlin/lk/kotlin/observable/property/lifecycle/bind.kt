@@ -3,6 +3,14 @@ package lk.kotlin.observable.property.lifecycle
 import lk.kotlin.observable.property.ObservableProperty
 
 
+fun ObservableProperty<Boolean>.bind(
+        event: MutableCollection<()->Unit>,
+        listener:()->Unit
+) = openCloseBinding(
+        onOpen = { event.add(listener); listener.invoke() },
+        onClose = { event.remove(listener) }
+)
+
 fun <T> ObservableProperty<Boolean>.bind(
         event: MutableCollection<(T)->Unit>,
         initialValue:T,
