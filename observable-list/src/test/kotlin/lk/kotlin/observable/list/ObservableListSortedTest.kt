@@ -1,4 +1,4 @@
-package list
+package lk.kotlin.observable.list
 
 import lk.kotlin.observable.list.observableListOf
 import lk.kotlin.observable.list.sorting

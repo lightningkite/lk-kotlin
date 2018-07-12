@@ -1,16 +1,14 @@
 package lk.kotlin.observable.property.lifecycle
 
-import lk.kotlin.observable.property.ObservableProperty
-
 /**
  * Runs [onOpen] when the observable becomes true, and [onClose] when it becomes false.
  * If the observable starts out as true, then [onOpen] is run.
  */
-inline fun ObservableProperty<Boolean>.openCloseBinding(
+inline fun Lifecycle.openCloseBinding(
         crossinline onOpen:()->Unit,
         crossinline onClose:()->Unit
 ): (Boolean) -> Unit {
-    var state:Boolean = false
+    var state = false
     val lambda = { newState:Boolean ->
         if(state != newState){
             if(newState){
@@ -22,5 +20,6 @@ inline fun ObservableProperty<Boolean>.openCloseBinding(
         }
     }
     add(lambda)
+    lambda.invoke(this.value)
     return lambda
 }

@@ -1,6 +1,5 @@
-package list
+package lk.kotlin.observable.list
 
-import lk.kotlin.observable.list.*
 import org.junit.Test
 import java.util.*
 

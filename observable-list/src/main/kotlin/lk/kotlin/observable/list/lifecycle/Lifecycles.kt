@@ -3,6 +3,7 @@ package lk.kotlin.observable.list.lifecycle
 
 import lk.kotlin.observable.list.*
 import lk.kotlin.observable.property.ObservableProperty
+import lk.kotlin.observable.property.lifecycle.Lifecycle
 import lk.kotlin.observable.property.plusAssign
 
 /**
@@ -13,7 +14,7 @@ import lk.kotlin.observable.property.plusAssign
  * Creates a multi-grouped view of the list that lives during the lifecycle.
  */
 fun <E, G, L> ObservableList<E>.multiGroupingBy(
-        lifecycle: ObservableProperty<Boolean>,
+        lifecycle: Lifecycle,
         grouper: (E) -> Collection<G>,
         listWrapper: (ObservableList<E>) -> L
 ): ObservableListMultiGroupingBy<E, G, L> {
@@ -28,12 +29,12 @@ fun <E, G, L> ObservableList<E>.multiGroupingBy(
 /**
  * Creates a multi-grouped view of the list that lives during the lifecycle.
  */
-fun <E, G> ObservableList<E>.multiGroupingBy(lifecycle: ObservableProperty<Boolean>, grouper: (E) -> Collection<G>) = multiGroupingBy(lifecycle, grouper, { it })
+fun <E, G> ObservableList<E>.multiGroupingBy(lifecycle: Lifecycle, grouper: (E) -> Collection<G>) = multiGroupingBy(lifecycle, grouper, { it })
 
 /**
  * Creates a sorted view of the list that lives during the lifecycle.
  */
-fun <E> ObservableList<E>.sorting(lifecycle: ObservableProperty<Boolean>, sorter: (E, E) -> Boolean): ObservableListSorted<E> {
+fun <E> ObservableList<E>.sorting(lifecycle: Lifecycle, sorter: (E, E) -> Boolean): ObservableListSorted<E> {
     val list = ObservableListSorted(this, sorter)
     return list
 }
@@ -42,7 +43,7 @@ fun <E> ObservableList<E>.sorting(lifecycle: ObservableProperty<Boolean>, sorter
  * Creates a grouped view of the list that lives during the lifecycle.
  */
 fun <E, G, L> ObservableList<E>.groupingBy(
-        lifecycle: ObservableProperty<Boolean>,
+        lifecycle: Lifecycle,
         grouper: (E) -> G,
         listWrapper: (ObservableList<E>) -> L
 ): ObservableListGroupingBy<E, G, L> {
@@ -58,13 +59,13 @@ fun <E, G, L> ObservableList<E>.groupingBy(
 /**
  * Creates a grouped view of the list that lives during the lifecycle.
  */
-fun <E, G> ObservableList<E>.groupingBy(lifecycle: ObservableProperty<Boolean>, grouper: (E) -> G) = groupingBy(lifecycle, grouper, { it })
+fun <E, G> ObservableList<E>.groupingBy(lifecycle: Lifecycle, grouper: (E) -> G) = groupingBy(lifecycle, grouper, { it })
 
 
 /**
  * Creates a flat-mapped view of the list that lives during the lifecycle.
  */
-fun <S, E> ObservableList<S>.flatMapping(lifecycle: ObservableProperty<Boolean>, mapper: (S) -> ObservableList<E>): ObservableListFlatMapping<S, E> {
+fun <S, E> ObservableList<S>.flatMapping(lifecycle: Lifecycle, mapper: (S) -> ObservableList<E>): ObservableListFlatMapping<S, E> {
     val list = ObservableListFlatMapping(this, mapper)
     lifecycle += {
         if(it) list.setup()
@@ -76,7 +77,7 @@ fun <S, E> ObservableList<S>.flatMapping(lifecycle: ObservableProperty<Boolean>,
 /**
  * Creates a filtered view of the list that lives during the lifecycle.
  */
-fun <E> ObservableList<E>.filtering(lifecycle: ObservableProperty<Boolean>): ObservableListFiltered<E> {
+fun <E> ObservableList<E>.filtering(lifecycle: Lifecycle): ObservableListFiltered<E> {
     val list = ObservableListFiltered(this)
     lifecycle += {
         if(it) list.setup()
@@ -89,7 +90,7 @@ fun <E> ObservableList<E>.filtering(lifecycle: ObservableProperty<Boolean>): Obs
 /**
  * Creates a filtered view of the list that lives during the lifecycle.
  */
-fun <E> ObservableList<E>.filtering(lifecycle: ObservableProperty<Boolean>, initFilter: (E) -> Boolean): ObservableListFiltered<E> {
+fun <E> ObservableList<E>.filtering(lifecycle: Lifecycle, initFilter: (E) -> Boolean): ObservableListFiltered<E> {
     val list = ObservableListFiltered(this).apply {
         filter = initFilter
     }

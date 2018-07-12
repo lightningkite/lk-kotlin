@@ -1,9 +1,14 @@
 package lk.kotlin.observable.property.lifecycle
 
 import lk.kotlin.observable.property.ObservableProperty
+import lk.kotlin.utils.lambda.Event
 
-
-fun ObservableProperty<Boolean>.bind(
+/**
+ * Connects a listener to an event while the lifecycle (receiver) is on and calls the
+ * listener immediately.
+ * This is much simpler and safer than adding and removing the listeners manually.
+ */
+fun Lifecycle.bind(
         event: MutableCollection<()->Unit>,
         listener:()->Unit
 ) = openCloseBinding(
@@ -11,8 +16,13 @@ fun ObservableProperty<Boolean>.bind(
         onClose = { event.remove(listener) }
 )
 
-fun <T> ObservableProperty<Boolean>.bind(
-        event: MutableCollection<(T)->Unit>,
+/**
+ * Connects a listener to an event while the lifecycle (receiver) is on and calls the
+ * listener immediately with the current value [initialValue].
+ * This is much simpler and safer than adding and removing the listeners manually.
+ */
+fun <T> Lifecycle.bind(
+        event: Event<T>,
         initialValue:T,
         listener:(T)->Unit
 ) = openCloseBinding(
@@ -20,7 +30,12 @@ fun <T> ObservableProperty<Boolean>.bind(
         onClose = { event.remove(listener) }
 )
 
-fun <T> ObservableProperty<Boolean>.bind(
+/**
+ * Connects a listener to an observable property while the lifecycle (receiver) is on and calls the
+ * listener immediately with the current value of the property.
+ * This is much simpler and safer than adding and removing the listeners manually.
+ */
+fun <T> Lifecycle.bind(
         property: ObservableProperty<T>,
         listener: (T)->Unit
 ) = openCloseBinding(
@@ -28,7 +43,12 @@ fun <T> ObservableProperty<Boolean>.bind(
         onClose = { property.remove(listener) }
 )
 
-inline fun <A, B> ObservableProperty<Boolean>.bind(
+/**
+ * Connects a listener to multiple observable properties while the lifecycle (receiver) is on and calls the
+ * listener immediately with the current values of the properties.
+ * This is much simpler and safer than adding and removing the listeners manually.
+ */
+inline fun <A, B> Lifecycle.bind(
         propertyA: ObservableProperty<A>,
         propertyB: ObservableProperty<B>,
         crossinline listener: (A, B)->Unit
@@ -48,7 +68,12 @@ inline fun <A, B> ObservableProperty<Boolean>.bind(
     )
 }
 
-inline fun <A, B, C> ObservableProperty<Boolean>.bind(
+/**
+ * Connects a listener to multiple observable properties while the lifecycle (receiver) is on and calls the
+ * listener immediately with the current values of the properties.
+ * This is much simpler and safer than adding and removing the listeners manually.
+ */
+inline fun <A, B, C> Lifecycle.bind(
         propertyA: ObservableProperty<A>,
         propertyB: ObservableProperty<B>,
         propertyC: ObservableProperty<C>,
@@ -72,7 +97,12 @@ inline fun <A, B, C> ObservableProperty<Boolean>.bind(
     )
 }
 
-inline fun ObservableProperty<Boolean>.bind(
+/**
+ * Connects a listener to multiple observable properties while the lifecycle (receiver) is on and calls the
+ * listener immediately.
+ * This is much simpler and safer than adding and removing the listeners manually.
+ */
+inline fun Lifecycle.bind(
         properties: List<ObservableProperty<out Any?>>,
         crossinline listener: ()->Unit
 ): (Boolean)->Unit {

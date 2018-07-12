@@ -1,4 +1,4 @@
-package list
+package lk.kotlin.observable.list
 
 import lk.kotlin.observable.list.observableListOf
 import org.junit.Assert.assertEquals
