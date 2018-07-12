@@ -3,8 +3,8 @@
 
 buildscript {
     ext.repositoryGroupName = 'com.lightningkite.kotlin'
-    ext.kotlinVersion = '1.2.31'
-    ext.libraryVersion = '0.5.1'
+    ext.kotlinVersion = '1.2.51'
+    ext.libraryVersion = '0.5.2'
     ext.dokkaVersion = '0.9.16'
     repositories {
         google()
