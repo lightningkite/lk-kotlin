@@ -5,5 +5,5 @@ include ':okhttp-jackson'
 include ':observable-property'
 include ':observable-list'
 include ':reflect'
-include 'reflect-jackson'
+include ':reflect-jackson'
 

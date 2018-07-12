@@ -9,3 +9,5 @@ class ConstantObservableProperty<T>(override val value: T) : ObservableProperty<
     override fun add(element: (T) -> Unit): Boolean = false
     override fun remove(element: (T) -> Unit): Boolean = false
 }
+
+fun <T> T.constant():ConstantObservableProperty<T> = ConstantObservableProperty(this)
