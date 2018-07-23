@@ -20,7 +20,8 @@ class UseExternalClassRegistryKtTest {
             var d: Date = Date(),
             var sub: HelloWorld? = null,
             var enum: TestEnum = TestEnum.A,
-            var list:List<Int> = listOf()
+            var list:List<Int> = listOf(),
+            var mapList:Map<String, String> = mapOf()
     )
 
     @Test

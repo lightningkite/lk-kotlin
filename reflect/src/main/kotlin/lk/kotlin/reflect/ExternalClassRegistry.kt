@@ -6,10 +6,13 @@ import kotlin.reflect.KClass
 import kotlin.reflect.full.isSubclassOf
 
 object ExternalClassRegistry {
-    private val reverseMapJava = HashMap<Class<*>, String>()
-    private val reverseMap = HashMap<KClass<*>, String>()
+
+    private val reverseMapJava = HashMap<Class<*>, String?>()
+    private val reverseMap = HashMap<KClass<*>, String?>()
     private val map = HashMap<String, KClass<*>>()
+
     val types: Map<String, KClass<*>> get() = map
+
     fun register(kclass: KClass<*>, asName: String = kclass.externalName) {
         val prev = map.put(asName, kclass)
         reverseMap.put(kclass, asName)
@@ -34,8 +37,14 @@ object ExternalClassRegistry {
         )
     }
     operator fun get(name:String):KClass<*>? = map[name]
-    operator fun get(type: KClass<*>): String? = reverseMap.get(type)
-    operator fun get(type: Class<*>): String? = reverseMapJava.get(type)
+    operator fun get(type: KClass<*>): String? = reverseMap.getOrPut(type){
+        //Go through ancestors
+        type.fastAllSuperclasses.asSequence().mapNotNull { reverseMap[it] }.firstOrNull()
+    }
+    operator fun get(type: Class<*>): String? = reverseMapJava.getOrPut(type){
+        //Go through ancestors
+        type.kotlin.fastAllSuperclasses.asSequence().mapNotNull { reverseMap[it] }.firstOrNull()
+    }
 
     init{
         register(Any::class)
