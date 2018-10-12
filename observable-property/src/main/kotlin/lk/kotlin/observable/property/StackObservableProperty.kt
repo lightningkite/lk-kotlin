@@ -158,6 +158,20 @@ class StackObservableProperty<T>() : MutableObservableProperty<T> {
     }
 
     /**
+     * Pops the [from] state off the stack.
+     * If [from] is not on the stack, then this will do nothing and return false.
+     * If [from] is the last item on the stack, then this will do nothing and return false.
+     * If [from] is not the last item on the stack, items will be popped off until it is.
+     */
+    fun swapFrom(from: T, to:T) {
+        if(internalPopTo(from)){
+            internalStack.removeAt(internalStack.lastIndex)
+            internalStack.add(to)
+            listeners.forEach { it.invoke(value) }
+        }
+    }
+
+    /**
      * Gives an observable property that also has the size of the stack in a pair.
      */
     fun withSize(): ObservablePropertyMapped<T, Pair<T, Int>> = this.transform { it to this.stack.size }
