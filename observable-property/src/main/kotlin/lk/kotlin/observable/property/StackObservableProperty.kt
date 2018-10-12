@@ -7,6 +7,7 @@ package lk.kotlin.observable.property
  * Created by joseph on 1/19/18.
  */
 class StackObservableProperty<T>() : MutableObservableProperty<T> {
+
     private val internalStack = ArrayList<T>()
     private val listeners = ArrayList<(T) -> Unit>()
     val stack: List<T> get() = internalStack
@@ -25,6 +26,14 @@ class StackObservableProperty<T>() : MutableObservableProperty<T> {
         internalStack.add(firstItemGenerator(this))
     }
 
+    /**
+     * An exception indicating that there are no states available.
+     */
+    class NoStatesLeftException : IllegalStateException()
+
+    /**
+     * The top value on the stack.
+     */
     override var value: T
         get() {
             if (stack.isEmpty()) throw NoStatesLeftException()
@@ -63,30 +72,23 @@ class StackObservableProperty<T>() : MutableObservableProperty<T> {
     }
 
     /**
-     * An exception indicating that there are no states available.
-     */
-    class NoStatesLeftException : IllegalStateException()
-
-    /**
      * Pops a state off the stack and notifies the listeners.
      */
-    fun pop() {
-        internalStack.removeAt(internalStack.lastIndex)
-        if (internalStack.isEmpty()) throw NoStatesLeftException()
-        val previous = internalStack.last()
-        listeners.forEach { it.invoke(previous) }
+    fun pop():Boolean {
+        return if (stack.size > 1) {
+            internalStack.removeAt(internalStack.lastIndex)
+            val previous = internalStack.last()
+            listeners.forEach { it.invoke(previous) }
+            true
+        } else false
     }
 
     /**
      * Pops a state off the stack and notifies the listeners.
      * If there are no states that can be popped off, the function returns false.
      */
-    fun popOrFalse(): Boolean {
-        return if (stack.size > 1) {
-            pop()
-            true
-        } else false
-    }
+    @Deprecated("Use plain pop instead.", ReplaceWith("pop()"))
+    fun popOrFalse(): Boolean = pop()
 
     /**
      * Pops all of the states off the stack except for the bottom one and notifies the listeners.
@@ -118,5 +120,50 @@ class StackObservableProperty<T>() : MutableObservableProperty<T> {
         listeners.forEach { it.invoke(value) }
     }
 
-    fun withSize() = this.transform { it to this.stack.size }
+    private fun internalPopTo(from: T): Boolean {
+        val index = internalStack.indexOf(from)
+        if(index == -1) return false
+        while (index + 1 < internalStack.size) {
+            internalStack.removeAt(index + 1)
+        }
+        return true
+    }
+
+    /**
+     * Pushes a state onto the stack after [from].
+     * If [from] is not on the stack, then this will do nothing.
+     * If [from] is not the last item on the stack, items will be popped off until it is.
+     */
+    fun pushFrom(from: T, to:T) {
+        if(internalPopTo(from)){
+            internalStack.add(to)
+            listeners.forEach { it.invoke(value) }
+        }
+    }
+
+    /**
+     * Pops the [from] state off the stack.
+     * If [from] is not on the stack, then this will do nothing and return false.
+     * If [from] is the last item on the stack, then this will do nothing and return false.
+     * If [from] is not the last item on the stack, items will be popped off until it is.
+     */
+    fun popFrom(from: T): Boolean{
+        if(internalPopTo(from)){
+            if(internalStack.size <= 1) return false
+            internalStack.removeAt(internalStack.lastIndex)
+            listeners.forEach { it.invoke(value) }
+            return true
+        }
+        return false
+    }
+
+    /**
+     * Gives an observable property that also has the size of the stack in a pair.
+     */
+    fun withSize(): ObservablePropertyMapped<T, Pair<T, Int>> = this.transform { it to this.stack.size }
+
+    /**
+     * Gives an observable property that has the whole stack rather than just the top value.
+     */
+    fun asList(): ObservablePropertyMapped<T, List<T>> = this.transform { this.stack }
 }

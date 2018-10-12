@@ -61,7 +61,7 @@ Created by joseph on 1/19/18.</p>
 </td>
 <td>
 <code><span class="keyword">var </span><span class="identifier">value</span><span class="symbol">: </span><a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-stack-observable-property/-t/index.html"><span class="identifier">T</span></a></code>
-<p>The current value of the observable property.</p>
+<p>The top value on the stack.</p>
 </td>
 </tr>
 </tbody>
@@ -80,6 +80,15 @@ Created by joseph on 1/19/18.</p>
 </tr>
 <tr>
 <td>
+<p><a href="as-list.html">asList</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">asList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-observable-property-mapped/index.html"><span class="identifier">ObservablePropertyMapped</span></a><span class="symbol">&lt;</span><a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-stack-observable-property/-t/index.html"><span class="identifier">T</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-stack-observable-property/-t/index.html"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code>
+<p>Gives an observable property that has the whole stack rather than just the top value.</p>
+</td>
+</tr>
+<tr>
+<td>
 <p><a href="back.html">back</a></p>
 </td>
 <td>
@@ -92,8 +101,20 @@ Created by joseph on 1/19/18.</p>
 <p><a href="pop.html">pop</a></p>
 </td>
 <td>
-<code><span class="keyword">fun </span><span class="identifier">pop</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<code><span class="keyword">fun </span><span class="identifier">pop</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
 <p>Pops a state off the stack and notifies the listeners.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="pop-from.html">popFrom</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">popFrom</span><span class="symbol">(</span><span class="identifier" id="lk.kotlin.observable.property.StackObservableProperty$popFrom(lk.kotlin.observable.property.StackObservableProperty.T)/from">from</span><span class="symbol">:</span>&nbsp;<a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-stack-observable-property/-t/index.html"><span class="identifier">T</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Pops the <a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-stack-observable-property/pop-from/from.html">from</a> state off the stack.
+If <a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-stack-observable-property/pop-from/from.html">from</a> is not on the stack, then this will do nothing and return false.
+If <a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-stack-observable-property/pop-from/from.html">from</a> is the last item on the stack, then this will do nothing and return false.
+If <a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-stack-observable-property/pop-from/from.html">from</a> is not the last item on the stack, items will be popped off until it is.</p>
 </td>
 </tr>
 <tr>
@@ -101,7 +122,7 @@ Created by joseph on 1/19/18.</p>
 <p><a href="pop-or-false.html">popOrFalse</a></p>
 </td>
 <td>
-<code><span class="keyword">fun </span><span class="identifier">popOrFalse</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<code><span class="keyword">fun </span><s><span class="identifier">popOrFalse</span></s><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
 <p>Pops a state off the stack and notifies the listeners.
 If there are no states that can be popped off, the function returns false.</p>
 </td>
@@ -122,6 +143,17 @@ If there are no states that can be popped off, the function returns false.</p>
 <td>
 <code><span class="keyword">fun </span><span class="identifier">push</span><span class="symbol">(</span><span class="identifier" id="lk.kotlin.observable.property.StackObservableProperty$push(lk.kotlin.observable.property.StackObservableProperty.T)/element">element</span><span class="symbol">:</span>&nbsp;<a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-stack-observable-property/-t/index.html"><span class="identifier">T</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
 <p>Pushes a new state onto the stack and notifies the listeners.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="push-from.html">pushFrom</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">pushFrom</span><span class="symbol">(</span><span class="identifier" id="lk.kotlin.observable.property.StackObservableProperty$pushFrom(lk.kotlin.observable.property.StackObservableProperty.T, lk.kotlin.observable.property.StackObservableProperty.T)/from">from</span><span class="symbol">:</span>&nbsp;<a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-stack-observable-property/-t/index.html"><span class="identifier">T</span></a><span class="symbol">, </span><span class="identifier" id="lk.kotlin.observable.property.StackObservableProperty$pushFrom(lk.kotlin.observable.property.StackObservableProperty.T, lk.kotlin.observable.property.StackObservableProperty.T)/to">to</span><span class="symbol">:</span>&nbsp;<a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-stack-observable-property/-t/index.html"><span class="identifier">T</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Pushes a state onto the stack after <a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-stack-observable-property/push-from/from.html">from</a>.
+If <a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-stack-observable-property/push-from/from.html">from</a> is not on the stack, then this will do nothing.
+If <a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-stack-observable-property/push-from/from.html">from</a> is not the last item on the stack, items will be popped off until it is.</p>
 </td>
 </tr>
 <tr>
@@ -165,7 +197,9 @@ If there are no states that can be popped off, the function returns false.</p>
 <p><a href="with-size.html">withSize</a></p>
 </td>
 <td>
-<code><span class="keyword">fun </span><span class="identifier">withSize</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-observable-property-mapped/index.html"><span class="identifier">ObservablePropertyMapped</span></a><span class="symbol">&lt;</span><a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-stack-observable-property/-t/index.html"><span class="identifier">T</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-pair/index.html"><span class="identifier">Pair</span></a><span class="symbol">&lt;</span><a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-stack-observable-property/-t/index.html"><span class="identifier">T</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+<code><span class="keyword">fun </span><span class="identifier">withSize</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-observable-property-mapped/index.html"><span class="identifier">ObservablePropertyMapped</span></a><span class="symbol">&lt;</span><a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-stack-observable-property/-t/index.html"><span class="identifier">T</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-pair/index.html"><span class="identifier">Pair</span></a><span class="symbol">&lt;</span><a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-stack-observable-property/-t/index.html"><span class="identifier">T</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code>
+<p>Gives an observable property that also has the size of the stack in a pair.</p>
+</td>
 </tr>
 </tbody>
 </table>
