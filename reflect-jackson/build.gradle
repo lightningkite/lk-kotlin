@@ -26,6 +26,6 @@ dependencies {
     implementation project(':reflect')
     implementation project(':jackson')
 
-    implementation "com.fasterxml.jackson.core:jackson-databind:2.9.+"
-    implementation "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.+"
+    implementation "com.fasterxml.jackson.core:jackson-databind:2.9.6"
+    implementation "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.6"
 }

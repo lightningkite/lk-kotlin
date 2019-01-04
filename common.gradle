@@ -33,13 +33,13 @@ dokka {
     externalDocumentationLink { url = new URL("http://fasterxml.github.io/jackson-core/javadoc/2.9/") }
     externalDocumentationLink { url = new URL("http://fasterxml.github.io/jackson-databind/javadoc/2.9/") }
 
-    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/utils/") }
-    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/jackson/") }
-    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/okhttp/") }
-    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/okhttp-jackson/") }
-    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/observable-property/") }
-    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/observable-list/") }
-    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/reflect/") }
+//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/utils/") }
+//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/jackson/") }
+//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/okhttp/") }
+//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/okhttp-jackson/") }
+//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/observable-property/") }
+//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/observable-list/") }
+//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/reflect/") }
 }
 
 //Bintray

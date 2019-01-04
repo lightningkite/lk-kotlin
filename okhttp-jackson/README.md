@@ -22,8 +22,8 @@ Include the desired libraries:
 
 ```
 dependencies {
-    implementation "com.fasterxml.jackson.core:jackson-databind:2.9.+"
-    implementation "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.+"
+    implementation "com.fasterxml.jackson.core:jackson-databind:2.9.6"
+    implementation "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.6"
     implementation 'com.squareup.okhttp3:okhttp:3.9.0'
     implementation "com.lightningkite.kotlin:jackson:[version]"
     implementation "com.lightningkite.kotlin:okhttp:[version]"
