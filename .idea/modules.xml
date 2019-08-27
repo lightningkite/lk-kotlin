@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jackson/jackson.iml" filepath="$PROJECT_DIR$/.idea/modules/jackson/jackson.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/observable-list/observable-list.iml" filepath="$PROJECT_DIR$/.idea/modules/observable-list/observable-list.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/observable-property/observable-property.iml" filepath="$PROJECT_DIR$/.idea/modules/observable-property/observable-property.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/okhttp/okhttp.iml" filepath="$PROJECT_DIR$/.idea/modules/okhttp/okhttp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/okhttp-jackson/okhttp-jackson.iml" filepath="$PROJECT_DIR$/.idea/modules/okhttp-jackson/okhttp-jackson.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/reflect/reflect.iml" filepath="$PROJECT_DIR$/.idea/modules/reflect/reflect.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/reflect-jackson/reflect-jackson.iml" filepath="$PROJECT_DIR$/.idea/modules/reflect-jackson/reflect-jackson.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/utils/utils.iml" filepath="$PROJECT_DIR$/.idea/modules/utils/utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jackson/jackson.iml" filepath="$PROJECT_DIR$/.idea/modules/jackson/jackson.iml" group="lk-kotlin/jackson" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lk-kotlin.iml" filepath="$PROJECT_DIR$/.idea/modules/lk-kotlin.iml" group="lk-kotlin" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/observable-list/observable-list.iml" filepath="$PROJECT_DIR$/.idea/modules/observable-list/observable-list.iml" group="lk-kotlin/observable-list" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/observable-property/observable-property.iml" filepath="$PROJECT_DIR$/.idea/modules/observable-property/observable-property.iml" group="lk-kotlin/observable-property" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/okhttp/okhttp.iml" filepath="$PROJECT_DIR$/.idea/modules/okhttp/okhttp.iml" group="lk-kotlin/okhttp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/okhttp-jackson/okhttp-jackson.iml" filepath="$PROJECT_DIR$/.idea/modules/okhttp-jackson/okhttp-jackson.iml" group="lk-kotlin/okhttp-jackson" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/reflect/reflect.iml" filepath="$PROJECT_DIR$/.idea/modules/reflect/reflect.iml" group="lk-kotlin/reflect" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/reflect-jackson/reflect-jackson.iml" filepath="$PROJECT_DIR$/.idea/modules/reflect-jackson/reflect-jackson.iml" group="lk-kotlin/reflect-jackson" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/utils/utils.iml" filepath="$PROJECT_DIR$/.idea/modules/utils/utils.iml" group="lk-kotlin/utils" />
     </modules>
   </component>
 </project>

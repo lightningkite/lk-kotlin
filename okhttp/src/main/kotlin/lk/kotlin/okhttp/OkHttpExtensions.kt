@@ -85,7 +85,7 @@ inline fun <T> Request.Builder.lambdaCustom(
 ): () -> TypedResponse<T> {
     val request = build()
     return {
-        convert(client.newCall(request).execute())
+        client.newCall(request).execute().use(convert)
     }
 }
 
@@ -99,12 +99,13 @@ inline fun <T> Request.Builder.lambda(
     val request = build()
     return {
         try {
-            val it = client.newCall(request).execute()
-            if (it.isSuccessful) {
-                val result = convert(it)
-                TypedResponse(it.code(), result, it.getKotlinHeaders(), null, debugNetworkRequestInfo = request.getDebugInfoString())
-            } else {
-                TypedResponse(it.code(), null, it.getKotlinHeaders(), it.body()!!.bytes(), debugNetworkRequestInfo = request.getDebugInfoString())
+            client.newCall(request).execute().use {
+                if (it.isSuccessful) {
+                    val result = convert(it)
+                    TypedResponse(it.code(), result, it.getKotlinHeaders(), null, debugNetworkRequestInfo = request.getDebugInfoString())
+                } else {
+                    TypedResponse(it.code(), null, it.getKotlinHeaders(), it.body()!!.bytes(), debugNetworkRequestInfo = request.getDebugInfoString())
+                }
             }
         } catch (e: Exception) {
             TypedResponse(0, null, listOf(), null, e, debugNetworkRequestInfo = request.getDebugInfoString())
