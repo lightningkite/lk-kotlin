@@ -22,6 +22,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     testImplementation "org.jetbrains.kotlin:kotlin-test-junit:${rootProject.kotlinVersion}"
 
-    implementation project(':utils')
-    implementation project(':observable-property')
+    api project(':utils')
+    api project(':observable-property')
 }

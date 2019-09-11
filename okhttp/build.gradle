@@ -22,5 +22,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     testImplementation "org.jetbrains.kotlin:kotlin-test-junit:${rootProject.kotlinVersion}"
 
-    implementation 'com.squareup.okhttp3:okhttp:3.9.0'
+    api 'com.squareup.okhttp3:okhttp:3.9.0'
 }

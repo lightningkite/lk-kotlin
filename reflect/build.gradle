@@ -22,5 +22,5 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-reflect:${rootProject.kotlinVersion}"
     testImplementation 'junit:junit:4.12'
     testImplementation "org.jetbrains.kotlin:kotlin-test-junit:${rootProject.kotlinVersion}"
-    implementation project(':utils')
+    api project(':utils')
 }
